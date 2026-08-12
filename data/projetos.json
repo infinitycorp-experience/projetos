@@ -13,31 +13,42 @@
         "id": "fase_1786548715663_rfbk",
         "nome": "Elaboração",
         "status": "concluida",
-        "ordem": 1
+        "ordem": 1,
+        "anotacoes": []
       },
       {
         "id": "fase_1786548728018_91ci",
         "nome": "Criação de HTML Básico",
         "status": "concluida",
-        "ordem": 2
+        "ordem": 2,
+        "anotacoes": []
       },
       {
         "id": "fase_1786548746603_pf7t",
         "nome": "Repositório",
         "status": "concluida",
-        "ordem": 3
+        "ordem": 3,
+        "anotacoes": []
       },
       {
         "id": "fase_1786548755133_ifxz",
         "nome": "Definição de Site",
         "status": "em_andamento",
-        "ordem": 4
+        "ordem": 4,
+        "anotacoes": [
+          {
+            "id": "anot_1786553297114_yh94",
+            "ts": "2026-08-12T16:48:17.114Z",
+            "texto": "Efetuando ajustes no HTML"
+          }
+        ]
       },
       {
         "id": "fase_1786548769043_sf87",
         "nome": "Refinamento",
         "status": "pendente",
-        "ordem": 5
+        "ordem": 5,
+        "anotacoes": []
       }
     ],
     "anexos": [],
@@ -116,6 +127,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-12T16:13:07.598Z"
+    "updatedAt": "2026-08-12T16:48:17.114Z"
   }
 ]
