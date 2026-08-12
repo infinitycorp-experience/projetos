@@ -11,12 +11,12 @@
       {
         "id": "fase_1786542621167_e30b",
         "nome": "Planejamento",
-        "status": "em_andamento",
+        "status": "concluida",
         "ordem": 1
       },
       {
         "id": "fase_1786542633240_nkdh",
-        "nome": "Criação HTML",
+        "nome": "CriaÃ§Ã£o HTML",
         "status": "pendente",
         "ordem": 2
       },
@@ -36,6 +36,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786543622577",
+        "timestamp": "2026-08-12T14:07:02.577Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Planejamento\" concluída."
+      },
+      {
         "id": "hist_1786542664703",
         "timestamp": "2026-08-12T13:51:04.703Z",
         "action": "Projeto criado",
@@ -43,6 +49,6 @@
       }
     ],
     "createdAt": "2026-08-12T13:51:04.703Z",
-    "updatedAt": "2026-08-12T13:51:04.703Z"
+    "updatedAt": "2026-08-12T14:07:02.577Z"
   }
 ]
