@@ -1179,35 +1179,46 @@
             }
 
             function loadFromGitHub() {
-                if (!_githubOwner) return Promise.reject('Owner não definido');
-                return githubApi('GET', DATA_PATH)
-                    .then(function(data) {
-                        var content = data.content;
-                        // Decodifica base64 (remove quebras de linha)
-                        var decoded = atob(content.replace(/\s/g, ''));
-                        var parsed = JSON.parse(decoded);
-                        if (Array.isArray(parsed)) {
-                            projetos = parsed;
-                            projetos.forEach(p => {
-                                p.fases = p.fases || [];
-                                p.anexos = p.anexos || [];
-                                p.historico = p.historico || [];
-                            });
-                            saveLocal();
-                            setSyncStatus('online', 'Sincronizado com GitHub');
-                            isOnline = true;
-                            console.log('📥 Carregado do GitHub:', projetos.length, 'projetos');
-                        }
-                        return projetos;
-                    })
-                    .catch(function(err) {
-                        console.warn('⚠️ Não foi possível carregar do GitHub, usando cache local:', err.message);
-                        loadLocal();
-                        setSyncStatus('offline', 'Offline — cache local');
-                        isOnline = false;
-                        return projetos;
-                    });
-            }
+  if (!_owner) return Promise.reject('Owner desconhecido');
+  
+  return githubApi('GET', 'data/projetos.json')
+    .then(d => {
+      if (!d || !d.content) {
+        console.warn('⚠️ Arquivo projetos.json vazio ou ausente');
+        return projetos;
+      }
+      
+      const dataStr = atob(d.content);  // ✅ sem replace!
+      const data = JSON.parse(dataStr);
+      
+      if (!Array.isArray(data)) {
+        throw new Error('Formato inválido: esperado array');
+      }
+      
+      projetos = data;
+      projetos.forEach(p => {
+        p.fases = p.fases || [];
+        p.anexos = p.anexos || [];
+        p.historico = p.historico || [];
+      });
+      
+      saveLocal();
+      $('#syncBadge').className = 'sync-badge online';
+      $('#syncLabel').textContent = 'Conectado';
+      offline = false;
+      console.log('✔️ Carregou do GitHub:', projetos.length, 'projetos');
+      return projetos;
+    })
+    .catch(e => {
+      console.warn('⚠️ GitHub offline ou sem dados, usando cache local:', e.message);
+      loadLocal();
+      $('#syncBadge').className = 'sync-badge offline';
+      $('#syncLabel').textContent = 'Offline (cache local)';
+      offline = true;
+      return projetos;
+    });
+}
+
 
             function saveToGitHub() {
                 if (!_githubOwner || !isOnline) {
