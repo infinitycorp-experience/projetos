@@ -24,7 +24,7 @@
       {
         "id": "fase_1786548746603_pf7t",
         "nome": "Repositório",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 3
       },
       {
@@ -42,6 +42,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786550515319",
+        "timestamp": "2026-08-12T16:01:55.319Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Repositório\": em_andamento"
+      },
       {
         "id": "hist_1786550509971",
         "timestamp": "2026-08-12T16:01:49.971Z",
@@ -80,6 +86,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-12T16:01:49.971Z"
+    "updatedAt": "2026-08-12T16:01:55.319Z"
   }
 ]
