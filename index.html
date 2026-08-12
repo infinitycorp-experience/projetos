@@ -48,6 +48,24 @@
             background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
             transform: skewX(-20deg); animation: shineSweep 3.5s ease-in-out infinite; z-index: 1;
         }
+        .logo-link {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; color: inherit; cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.logo-link:hover { opacity: 0.85; }
+.logo-link:hover .logo { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(16,185,129,.5); }
+
+.nav-item-logo { display: flex; align-items: center; gap: 12px; }
+
+.nav-logo-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
         @keyframes shineSweep { 0%{left:-75%} 40%{left:130%} 100%{left:130%} }
         .brand-name { font-size: 15px; font-weight: 800; letter-spacing: -.02em; }
         .brand-sub { color: var(--muted); font-size: 10.5px; font-weight: 600; margin-top: 1px; }
@@ -392,17 +410,18 @@
     <!-- ========== SIDEBAR ========== -->
     <aside class="sidebar">
         <div class="brand">
-            <div class="logo">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="8" y="2" width="8" height="4" rx="1"></rect>
-                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                    <path d="M9 12l2 2 4-4"></path>
-                </svg>
-            </div>
-            <div>
-                <div class="brand-name">InfinityCorp</div>
-                <div class="brand-sub">Depto Comercial</div>
-            </div>
+           <a href="https://sites.google.com/infinitycorp.com.br/deptocomercial" target="_blank" rel="noopener" class="logo-link">
+    <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
+        </svg>
+    </div>
+    <div class="logo-text">
+        <div class="title">Gestão de Projetos</div>
+        <div class="subtitle">Dashboard Comercial</div>
+    </div>
+</a>
+
         </div>
 
         <nav class="nav">
@@ -431,6 +450,13 @@
         </nav>
 
         <div class="sidebar-bottom">
+
+       <a href="https://sites.google.com/infinitycorp.com.br/deptocomercial" target="_blank" rel="noopener" class="nav-item nav-item-logo" style="margin-bottom:8px;">
+    <img src="https://i.ibb.co/p6D7KfHF/LOGO-CORP-Letra-Preta-Img-ID1.png" alt="Infinity Corp" class="nav-logo-img">
+    
+    <span>Depto Comercial</span>
+</a>
+
             <span class="sync-badge" id="syncBadge"><span class="dot"></span> <span id="syncLabel">Conectando...</span></span>
             <div class="gear-menu" id="gearMenu">
                 <button class="btn-gear" id="btnGear" title="Ferramentas">
