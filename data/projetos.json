@@ -1,5 +1,63 @@
 [
   {
+    "id": "proj_1786558567290_gegfxl",
+    "nome": "Página de Equipamentos",
+    "responsavel": "Tácio",
+    "status": "em_planejamento",
+    "dataInicio": "2026-08-12",
+    "dataFim": "2026-08-20",
+    "descricao": "Criar página com quantidade de equipamentos locados",
+    "procedimentos": "",
+    "fases": [
+      {
+        "id": "fase_1786558465209_q2v9",
+        "nome": "Entender Extração de Dados",
+        "status": "pendente",
+        "ordem": 1,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786558465703_e3af",
+        "nome": "Análise de Dados Obtidos",
+        "status": "pendente",
+        "ordem": 2,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786558467025_vo2m",
+        "nome": "Planejar o que pode ser Mostrado",
+        "status": "pendente",
+        "ordem": 3,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786558525826_jici",
+        "nome": "Montagem do HTML",
+        "status": "pendente",
+        "ordem": 4,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786558560792_38t0",
+        "nome": "Refinamento",
+        "status": "pendente",
+        "ordem": 5,
+        "anotacoes": []
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1786558567290",
+        "timestamp": "2026-08-12T18:16:07.290Z",
+        "action": "Projeto criado",
+        "descricao": "\"Página de Equipamentos\" com 5 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-12T18:16:07.290Z",
+    "updatedAt": "2026-08-12T18:16:07.290Z"
+  },
+  {
     "id": "proj_1786548776137_o68d9i",
     "nome": "Página de Projeto",
     "responsavel": "Tácio",
