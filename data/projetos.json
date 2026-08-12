@@ -1,1 +1,55 @@
-[]
+[
+  {
+    "id": "proj_1786548776137_o68d9i",
+    "nome": "Página de Projeto",
+    "responsavel": "Tácio",
+    "status": "em_planejamento",
+    "dataInicio": "2026-08-12",
+    "dataFim": "2026-08-14",
+    "descricao": "Criar uma página de PROJETOS",
+    "procedimentos": "",
+    "fases": [
+      {
+        "id": "fase_1786548715663_rfbk",
+        "nome": "Elaboração",
+        "status": "em_andamento",
+        "ordem": 1
+      },
+      {
+        "id": "fase_1786548728018_91ci",
+        "nome": "Criação de HTML Básico",
+        "status": "pendente",
+        "ordem": 2
+      },
+      {
+        "id": "fase_1786548746603_pf7t",
+        "nome": "Repositório",
+        "status": "pendente",
+        "ordem": 3
+      },
+      {
+        "id": "fase_1786548755133_ifxz",
+        "nome": "Definição de Site",
+        "status": "pendente",
+        "ordem": 4
+      },
+      {
+        "id": "fase_1786548769043_sf87",
+        "nome": "Refinamento",
+        "status": "pendente",
+        "ordem": 5
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1786548776138",
+        "timestamp": "2026-08-12T15:32:56.138Z",
+        "action": "Projeto criado",
+        "descricao": "\"Página de Projeto\" com 5 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-12T15:32:56.137Z",
+    "updatedAt": "2026-08-12T15:32:56.138Z"
+  }
+]
