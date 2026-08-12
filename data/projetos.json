@@ -1,1 +1,48 @@
-[]
+[
+  {
+    "id": "proj_1786542664703_x6v2y9",
+    "nome": "Pagina de Projeto",
+    "status": "em_planejamento",
+    "dataInicio": "2026-08-12",
+    "dataFim": "2026-08-14",
+    "descricao": "Pagina de projetos em geral",
+    "procedimentos": "",
+    "fases": [
+      {
+        "id": "fase_1786542621167_e30b",
+        "nome": "Planejamento",
+        "status": "em_andamento",
+        "ordem": 1
+      },
+      {
+        "id": "fase_1786542633240_nkdh",
+        "nome": "Criação HTML",
+        "status": "pendente",
+        "ordem": 2
+      },
+      {
+        "id": "fase_1786542636560_o0wr",
+        "nome": "Repositorio",
+        "status": "pendente",
+        "ordem": 3
+      },
+      {
+        "id": "fase_1786542637631_kh4c",
+        "nome": "Ajustes Finais",
+        "status": "pendente",
+        "ordem": 4
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1786542664703",
+        "timestamp": "2026-08-12T13:51:04.703Z",
+        "action": "Projeto criado",
+        "descricao": "\"Pagina de Projeto\" com 4 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-12T13:51:04.703Z",
+    "updatedAt": "2026-08-12T13:51:04.703Z"
+  }
+]
