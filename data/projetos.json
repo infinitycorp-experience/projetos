@@ -30,7 +30,7 @@
       {
         "id": "fase_1786548755133_ifxz",
         "nome": "Definição de Site",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 4
       },
       {
@@ -42,6 +42,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786550525259",
+        "timestamp": "2026-08-12T16:02:05.259Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Definição de Site\": em_andamento"
+      },
       {
         "id": "hist_1786550521503",
         "timestamp": "2026-08-12T16:02:01.503Z",
@@ -98,6 +104,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-12T16:02:01.503Z"
+    "updatedAt": "2026-08-12T16:02:05.259Z"
   }
 ]
