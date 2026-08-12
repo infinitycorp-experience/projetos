@@ -1,5 +1,56 @@
 [
   {
+    "id": "proj_1786558958701_u2wis4",
+    "nome": "StarLink",
+    "responsavel": "Tácio",
+    "status": "em_planejamento",
+    "dataInicio": "2026-08-12",
+    "dataFim": "2026-09-30",
+    "descricao": "Entender para colocar como produto no portfólio",
+    "procedimentos": "",
+    "fases": [
+      {
+        "id": "fase_1786558854920_xhz2",
+        "nome": "Entender o Produto",
+        "status": "pendente",
+        "ordem": 1,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786558871090_hm4o",
+        "nome": "Pós e Contras",
+        "status": "pendente",
+        "ordem": 2,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786558871920_ctyq",
+        "nome": "Apresentação",
+        "status": "pendente",
+        "ordem": 3,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786558953097_wgql",
+        "nome": "Debate",
+        "status": "pendente",
+        "ordem": 4,
+        "anotacoes": []
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1786558958701",
+        "timestamp": "2026-08-12T18:22:38.701Z",
+        "action": "Projeto criado",
+        "descricao": "\"StarLink\" com 4 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-12T18:22:38.701Z",
+    "updatedAt": "2026-08-12T18:22:38.701Z"
+  },
+  {
     "id": "proj_1786558567290_gegfxl",
     "nome": "Página de Equipamentos",
     "responsavel": "Tácio",
