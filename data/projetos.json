@@ -18,7 +18,7 @@
       {
         "id": "fase_1786548728018_91ci",
         "nome": "Criação de HTML Básico",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 2
       },
       {
@@ -43,6 +43,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786548806221",
+        "timestamp": "2026-08-12T15:33:26.221Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Criação de HTML Básico\": em_andamento"
+      },
+      {
         "id": "hist_1786548804168",
         "timestamp": "2026-08-12T15:33:24.168Z",
         "action": "Fase concluída",
@@ -56,6 +62,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-12T15:33:24.168Z"
+    "updatedAt": "2026-08-12T15:33:26.221Z"
   }
 ]
