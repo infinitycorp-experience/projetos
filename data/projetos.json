@@ -12,7 +12,7 @@
       {
         "id": "fase_1786548715663_rfbk",
         "nome": "Elaboração",
-        "status": "em_andamento",
+        "status": "concluida",
         "ordem": 1
       },
       {
@@ -43,6 +43,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786548804168",
+        "timestamp": "2026-08-12T15:33:24.168Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Elaboração\": concluida"
+      },
+      {
         "id": "hist_1786548776138",
         "timestamp": "2026-08-12T15:32:56.138Z",
         "action": "Projeto criado",
@@ -50,6 +56,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-12T15:32:56.138Z"
+    "updatedAt": "2026-08-12T15:33:24.168Z"
   }
 ]
