@@ -3,7 +3,7 @@
     "id": "proj_1786548776137_o68d9i",
     "nome": "Página de Projeto",
     "responsavel": "Tácio",
-    "status": "cancelado",
+    "status": "em_andamento",
     "dataInicio": "2026-08-12",
     "dataFim": "2026-08-14",
     "descricao": "Criar uma página de PROJETOS",
@@ -42,6 +42,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786551187598",
+        "timestamp": "2026-08-12T16:13:07.598Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 5"
+      },
       {
         "id": "hist_1786551171557",
         "timestamp": "2026-08-12T16:12:51.557Z",
@@ -110,6 +116,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-12T16:12:51.557Z"
+    "updatedAt": "2026-08-12T16:13:07.598Z"
   }
 ]
