@@ -17,7 +17,7 @@
       {
         "id": "fase_1786542633240_nkdh",
         "nome": "CriaÃ§Ã£o HTML",
-        "status": "pendente",
+        "status": "pulada",
         "ordem": 2
       },
       {
@@ -36,6 +36,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786543628745",
+        "timestamp": "2026-08-12T14:07:08.745Z",
+        "action": "Fase pulada",
+        "descricao": "Fase \"CriaÃ§Ã£o HTML\" pulada."
+      },
+      {
         "id": "hist_1786543622577",
         "timestamp": "2026-08-12T14:07:02.577Z",
         "action": "Fase concluída",
@@ -49,6 +55,6 @@
       }
     ],
     "createdAt": "2026-08-12T13:51:04.703Z",
-    "updatedAt": "2026-08-12T14:07:02.577Z"
+    "updatedAt": "2026-08-12T14:07:08.745Z"
   }
 ]
