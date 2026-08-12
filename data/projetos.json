@@ -11,7 +11,7 @@
       {
         "id": "fase_1786542621167_e30b",
         "nome": "Planejamento",
-        "status": "concluida",
+        "status": "pendente",
         "ordem": 1
       },
       {
@@ -35,6 +35,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786544804502",
+        "timestamp": "2026-08-12T14:26:44.502Z",
+        "action": "Fase reaberta",
+        "descricao": "Fase \"Planejamento\": pendente"
+      },
       {
         "id": "hist_1786543669650",
         "timestamp": "2026-08-12T14:07:49.650Z",
@@ -73,6 +79,7 @@
       }
     ],
     "createdAt": "2026-08-12T13:51:04.703Z",
-    "updatedAt": "2026-08-12T14:07:49.650Z"
+    "updatedAt": "2026-08-12T14:26:44.502Z",
+    "responsavel": ""
   }
 ]
