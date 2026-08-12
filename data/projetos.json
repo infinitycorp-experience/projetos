@@ -17,24 +17,30 @@
       {
         "id": "fase_1786542633240_nkdh",
         "nome": "CriaÃ§Ã£o HTML",
-        "status": "concluida",
+        "status": "em_andamento",
         "ordem": 2
       },
       {
         "id": "fase_1786542636560_o0wr",
         "nome": "Repositorio",
-        "status": "concluida",
+        "status": "pendente",
         "ordem": 3
       },
       {
         "id": "fase_1786542637631_kh4c",
         "nome": "Ajustes Finais",
-        "status": "concluida",
+        "status": "pendente",
         "ordem": 4
       }
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786543669650",
+        "timestamp": "2026-08-12T14:07:49.650Z",
+        "action": "Projeto editado",
+        "descricao": "Nome: Pagina de Projeto, Status: concluido, Fases: 4"
+      },
       {
         "id": "hist_1786543660561",
         "timestamp": "2026-08-12T14:07:40.561Z",
@@ -67,6 +73,6 @@
       }
     ],
     "createdAt": "2026-08-12T13:51:04.703Z",
-    "updatedAt": "2026-08-12T14:07:40.560Z"
+    "updatedAt": "2026-08-12T14:07:49.650Z"
   }
 ]
