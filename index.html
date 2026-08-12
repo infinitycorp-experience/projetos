@@ -56,18 +56,13 @@
 .logo-link:hover { opacity: 0.85; }
 .logo-link:hover .logo { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(16,185,129,.5); }
 
-.nav-item-logo { display: flex; align-items: center; gap: 12px; }
+.nav-ico-logo { background: #fff; border: 1px solid var(--line); }
+.nav-logo-img { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
 
-.nav-logo-img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
 
 
         @keyframes shineSweep { 0%{left:-75%} 40%{left:130%} 100%{left:130%} }
-        .brand-name { font-size: 15px; font-weight: 800; letter-spacing: -.02em; }
+        .brand-name { font-size: 17px; font-weight: 800; letter-spacing: -.02em; }
         .brand-sub { color: var(--muted); font-size: 10.5px; font-weight: 600; margin-top: 1px; }
 
         /* ============ NAV PREMIUM ============ */
@@ -78,6 +73,7 @@
             padding: 10px 12px; border: 1px solid transparent; border-radius: 14px; cursor: pointer;
             background: transparent; color: var(--muted); font-weight: 700; font-size: 13.5px;
             font-family: 'Inter', sans-serif; transition: all .25s cubic-bezier(0.16,1,0.3,1); text-align: left;
+        text-decoration: none;
         }
         .nav-ico {
             width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center;
@@ -101,17 +97,22 @@
 
         .sidebar-bottom { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
 
-        .sync-badge {
-            display: inline-flex; align-items: center; gap: 7px; padding: 7px 12px;
-            border-radius: 999px; font-size: 10.5px; font-weight: 700;
-            background: #f1f5f9; color: var(--muted); border: 1px solid var(--line);
-            justify-content: center;
-        }
-        .sync-badge.online { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
-        .sync-badge.offline { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
-        .sync-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: #94a3b8; flex-shrink: 0; }
-        .sync-badge.online .dot { background: #10b981; box-shadow: 0 0 6px #10b981; animation: dotPulse 2s ease-in-out infinite; }
-        .sync-badge.offline .dot { background: #ef4444; }
+        .sync-item {
+    display: flex; align-items: center; gap: 12px; width: 100%;
+    padding: 10px 12px; border: 1px solid transparent; border-radius: 14px;
+    background: transparent; color: var(--muted);
+    font-weight: 700; font-size: 13.5px; font-family: 'Inter', sans-serif;
+    cursor: default; transition: all .25s cubic-bezier(0.16,1,0.3,1);
+}
+.sync-item .nav-ico { background: #f1f5f9; color: #64748b; }
+.sync-item .dot { width: 7px; height: 7px; border-radius: 50%; background: #94a3b8; flex-shrink: 0; }
+.sync-item.online { color: #047857; }
+.sync-item.online .nav-ico { background: #ecfdf5; color: #10b981; }
+.sync-item.online .dot { background: #10b981; box-shadow: 0 0 6px #10b981; animation: dotPulse 2s ease-in-out infinite; }
+.sync-item.offline { color: #b91c1c; }
+.sync-item.offline .nav-ico { background: #fef2f2; color: #ef4444; }
+.sync-item.offline .dot { background: #ef4444; }
+
         @keyframes dotPulse { 0%,100% { transform: scale(1); opacity:1; } 50% { transform: scale(1.6); opacity:.5; } }
 
         /* ============ GEAR MENU ============ */
@@ -130,15 +131,9 @@
             font-family: 'Inter', sans-serif; transition: all .15s;
         }
         .gear-dropdown button:hover { background: #f1f5f9; color: var(--brand); }
-        .btn-gear {
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-            border: 1px solid var(--line); background: var(--card); color: var(--ink);
-            padding: 9px 14px; border-radius: 12px; font-weight: 700; font-size: 12.5px;
-            cursor: pointer; transition: all .2s; font-family: 'Inter', sans-serif;
-        }
-        .btn-gear:hover { border-color: var(--brand); color: var(--brand); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(15,23,42,0.05); }
         .gear-svg { transition: transform .35s ease; }
-        .btn-gear:hover .gear-svg { transform: rotate(45deg); }
+.nav-item:hover .gear-svg { transform: rotate(45deg); }
+
 
         /* ============ TOPBAR ============ */
         .topbar {
@@ -395,7 +390,7 @@
             .sidebar { position: static; width: 100%; flex-direction: column; padding: 16px; }
             .sidebar .nav { flex-direction: row; margin-top: 14px; overflow-x: auto; }
             .nav-item { white-space: nowrap; }
-            .sidebar-bottom { flex-direction: row; align-items: center; margin-top: 14px; }
+            .sidebar-bottom { flex-direction: column; align-items: stretch; margin-top: 14px; }
             .main { margin-left: 0; padding: 16px; }
             .kpis { grid-template-columns: repeat(2,1fr); }
             .detail-grid { grid-template-columns: 1fr; }
@@ -410,17 +405,15 @@
     <!-- ========== SIDEBAR ========== -->
     <aside class="sidebar">
         <div class="brand">
-           <a href="https://sites.google.com/infinitycorp.com.br/deptocomercial" target="_blank" rel="noopener" class="logo-link">
-    <div class="logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
-        </svg>
-    </div>
-    <div class="logo-text">
-        <div class="title">Gestão de Projetos</div>
-        <div class="subtitle">Dashboard Comercial</div>
-    </div>
-</a>
+    <a href="https://sites.google.com/infinitycorp.com.br/deptocomercial" target="_blank" rel="noopener" class="logo-link">
+        <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
+            </svg>
+        </div>
+        <div class="brand-name">Projetos</div>
+    </a>
+
 
         </div>
 
@@ -451,35 +444,46 @@
 
         <div class="sidebar-bottom">
 
-       <a href="https://sites.google.com/infinitycorp.com.br/deptocomercial" target="_blank" rel="noopener" class="nav-item nav-item-logo" style="margin-bottom:8px;">
-    <img src="https://i.ibb.co/p6D7KfHF/LOGO-CORP-Letra-Preta-Img-ID1.png" alt="Infinity Corp" class="nav-logo-img">
-    
-    <span>Depto Comercial</span>
-</a>
+    <!-- 1. Depto Comercial (botão externo) -->
+    <a href="https://sites.google.com/infinitycorp.com.br/deptocomercial" target="_blank" rel="noopener" class="nav-item">
+        <span class="nav-ico nav-ico-logo">
+            <img src="https://i.ibb.co/p6D7KfHF/LOGO-CORP-Letra-Preta-Img-ID1.png" alt="Infinity Corp" class="nav-logo-img">
+        </span>
+        <span>Depto Comercial</span>
+    </a>
 
-            <span class="sync-badge" id="syncBadge"><span class="dot"></span> <span id="syncLabel">Conectando...</span></span>
-            <div class="gear-menu" id="gearMenu">
-                <button class="btn-gear" id="btnGear" title="Ferramentas">
-                    <svg class="gear-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="3"></circle>
-                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                    </svg>
-                    <span>Ferramentas</span>
-                </button>
-                <div class="gear-dropdown" id="gearDropdown">
-                    <button id="btnForceSync">🔄 Sincronizar</button>
-                    <button id="btnExportarJSON">📦 Backup</button>
-                    <button id="btnImportarJSON">📥 Restaurar</button>
-                </div>
-            </div>
+    <!-- 2. Ferramentas (menu suspenso) -->
+    <div class="gear-menu" id="gearMenu">
+        <button class="nav-item" id="btnGear" title="Ferramentas">
+            <span class="nav-ico">
+                <svg class="gear-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+            </span>
+            <span>Ferramentas</span>
+        </button>
+        <div class="gear-dropdown" id="gearDropdown">
+            <button id="btnForceSync">🔄 Sincronizar</button>
+            <button id="btnExportarJSON">📦 Backup</button>
+            <button id="btnImportarJSON">📥 Restaurar</button>
         </div>
-    </aside>
+    </div>
+
+    <!-- 3. Sincronizado (status) -->
+    <div class="sync-item" id="syncBadge">
+        <span class="nav-ico"><span class="dot"></span></span>
+        <span id="syncLabel">Conectando...</span>
+    </div>
+
+</div>
+ </aside>
 
     <!-- ========== MAIN ========== -->
     <main class="main">
         <div class="topbar">
             <div>
-                <h1>Projetos</h1>
+                <h1>Gestão de Projetos</h1>
                 <p id="lastUpdate">InfinityCorp · Depto Comercial — Inicializando...</p>
             </div>
            <div class="top-actions">
@@ -623,6 +627,8 @@
 <!-- ========== TOAST ========== -->
 <div class="toast" id="toast"></div>
 <input type="file" id="importFileInput" accept=".json" style="display:none;">
+</main>
+</div>
 
 <script>
 (function() {
@@ -759,10 +765,11 @@
         });
     }
     function setSyncStatus(status, label) {
-        var badge = $('#syncBadge');
-        badge.className = 'sync-badge ' + status;
-        $('#syncLabel').textContent = label || status;
-    }
+    var badge = $('#syncBadge');
+    badge.className = 'sync-item ' + status;   // ← era 'sync-badge ' + status
+    $('#syncLabel').textContent = label || status;
+}
+
 
     // ============ DATA LAYER ============
     const STORAGE_KEY = 'myhub_nitro_projetos_local';
@@ -1454,10 +1461,10 @@
     $('#modalAnotBg').onclick = function(e){ if(e.target===this) $('#modalAnotBg').classList.remove('show'); };
     $('#confirmBg').onclick = function(e){ if(e.target===this) $('#confirmBg').classList.remove('show'); };
     $('#centerBg').onclick = function(e){ if(e.target===this) $('#centerBg').classList.remove('show'); };
+all('.nav-item[data-view]').forEach(function(item){
+    item.onclick = function(){ setView(item.getAttribute('data-view')); };
+});
 
-    all('.nav-item').forEach(function(item){
-        item.onclick = function(){ setView(item.getAttribute('data-view')); };
-    });
     all('.kpi[data-filter]').forEach(function(k){
         k.addEventListener('click', function(){ goToProjetos(k.getAttribute('data-filter')); });
     });
