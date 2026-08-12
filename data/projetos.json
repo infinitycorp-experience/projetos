@@ -17,7 +17,7 @@
       {
         "id": "fase_1786542633240_nkdh",
         "nome": "CriaÃ§Ã£o HTML",
-        "status": "pulada",
+        "status": "em_andamento",
         "ordem": 2
       },
       {
@@ -35,6 +35,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786543649967",
+        "timestamp": "2026-08-12T14:07:29.967Z",
+        "action": "Projeto editado",
+        "descricao": "Nome: Pagina de Projeto, Status: em_planejamento, Fases: 4"
+      },
       {
         "id": "hist_1786543628745",
         "timestamp": "2026-08-12T14:07:08.745Z",
@@ -55,6 +61,6 @@
       }
     ],
     "createdAt": "2026-08-12T13:51:04.703Z",
-    "updatedAt": "2026-08-12T14:07:08.745Z"
+    "updatedAt": "2026-08-12T14:07:29.967Z"
   }
 ]
