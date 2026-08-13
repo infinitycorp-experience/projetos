@@ -320,7 +320,7 @@
       {
         "id": "fase_1786558467025_vo2m",
         "nome": "Planejar Visual",
-        "status": "em_andamento",
+        "status": "concluida",
         "ordem": 3,
         "anotacoes": [
           {
@@ -353,6 +353,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786635274347",
+        "timestamp": "2026-08-13T15:34:34.347Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Planejar Visual\": concluida"
+      },
       {
         "id": "hist_1786632764118",
         "timestamp": "2026-08-13T14:52:44.118Z",
@@ -439,7 +445,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T15:34:30.151Z"
+    "updatedAt": "2026-08-13T15:34:34.347Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
