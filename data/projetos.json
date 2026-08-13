@@ -362,7 +362,7 @@
       {
         "id": "fase_1786558560792_38t0",
         "nome": "Refinamento",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 5,
         "anotacoes": [],
         "responsavel": "Tacio / Osmar",
@@ -371,6 +371,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786643289916",
+        "timestamp": "2026-08-13T17:48:09.916Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Refinamento\": em_andamento"
+      },
       {
         "id": "hist_1786643280822",
         "timestamp": "2026-08-13T17:48:00.822Z",
@@ -475,7 +481,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T17:48:00.822Z"
+    "updatedAt": "2026-08-13T17:48:09.916Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
