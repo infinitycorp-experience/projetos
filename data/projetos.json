@@ -320,7 +320,7 @@
         "status": "pendente",
         "ordem": 4,
         "anotacoes": [],
-        "responsavel": "",
+        "responsavel": "Tacio",
         "descricao": ""
       },
       {
@@ -335,6 +335,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786621189193",
+        "timestamp": "2026-08-13T11:39:49.193Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Montagem do HTML\" atualizada."
+      },
       {
         "id": "hist_1786621182534",
         "timestamp": "2026-08-13T11:39:42.534Z",
@@ -367,7 +373,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T11:39:42.534Z"
+    "updatedAt": "2026-08-13T11:39:49.193Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
