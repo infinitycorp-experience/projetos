@@ -302,7 +302,7 @@
         "status": "pendente",
         "ordem": 2,
         "anotacoes": [],
-        "responsavel": "",
+        "responsavel": "Tacio",
         "descricao": ""
       },
       {
@@ -336,6 +336,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786621175043",
+        "timestamp": "2026-08-13T11:39:35.043Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Análise de Dados Obtidos\" atualizada."
+      },
+      {
         "id": "hist_1786621167857",
         "timestamp": "2026-08-13T11:39:27.857Z",
         "action": "Fase editada",
@@ -355,7 +361,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T11:39:27.857Z"
+    "updatedAt": "2026-08-13T11:39:35.043Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
