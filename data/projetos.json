@@ -320,7 +320,7 @@
       {
         "id": "fase_1786558467025_vo2m",
         "nome": "Planejar o que pode ser Mostrado",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 3,
         "anotacoes": [],
         "responsavel": "Tacio",
@@ -347,6 +347,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786632729996",
+        "timestamp": "2026-08-13T14:52:09.996Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Planejar o que pode ser Mostrado\": em_andamento"
+      },
       {
         "id": "hist_1786632722381",
         "timestamp": "2026-08-13T14:52:02.381Z",
@@ -421,7 +427,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T14:52:02.381Z"
+    "updatedAt": "2026-08-13T14:52:09.996Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
