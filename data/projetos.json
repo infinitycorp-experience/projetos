@@ -329,12 +329,18 @@
         "status": "pendente",
         "ordem": 5,
         "anotacoes": [],
-        "responsavel": "",
+        "responsavel": "Tacio / Osmar",
         "descricao": ""
       }
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786621202489",
+        "timestamp": "2026-08-13T11:40:02.489Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Refinamento\" atualizada."
+      },
       {
         "id": "hist_1786621189193",
         "timestamp": "2026-08-13T11:39:49.193Z",
@@ -373,7 +379,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T11:39:49.193Z"
+    "updatedAt": "2026-08-13T11:40:02.489Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
