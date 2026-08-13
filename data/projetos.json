@@ -347,7 +347,7 @@
       {
         "id": "fase_1786558525826_jici",
         "nome": "Montagem do HTML",
-        "status": "em_andamento",
+        "status": "concluida",
         "ordem": 4,
         "anotacoes": [
           {
@@ -371,6 +371,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786643280822",
+        "timestamp": "2026-08-13T17:48:00.822Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Montagem do HTML\": concluida"
+      },
       {
         "id": "hist_1786635278613",
         "timestamp": "2026-08-13T15:34:38.613Z",
@@ -469,7 +475,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T17:46:13.601Z"
+    "updatedAt": "2026-08-13T17:48:00.822Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
