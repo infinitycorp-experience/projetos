@@ -565,7 +565,7 @@
       {
         "id": "fase_1786548769043_sf87",
         "nome": "Refinamento",
-        "status": "em_andamento",
+        "status": "pausada",
         "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 5,
@@ -594,6 +594,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786643401414",
+        "timestamp": "2026-08-13T17:50:01.414Z",
+        "action": "Fase pausada",
+        "descricao": "Fase \"Refinamento\" foi pausada."
+      },
       {
         "id": "hist_1786643209433",
         "timestamp": "2026-08-13T17:46:49.433Z",
@@ -752,6 +758,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-13T17:46:49.433Z"
+    "updatedAt": "2026-08-13T17:50:01.414Z"
   }
 ]
