@@ -517,6 +517,11 @@
             "id": "anot_1786635384784_d7w1",
             "ts": "2026-08-13T15:36:24.784Z",
             "texto": "Refinamento efetuado"
+          },
+          {
+            "id": "anot_1786635410098_vucy",
+            "ts": "2026-08-13T15:36:50.098Z",
+            "texto": "Discutir sobre o visual"
           }
         ]
       },
@@ -678,6 +683,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-13T15:36:24.785Z"
+    "updatedAt": "2026-08-13T15:36:50.099Z"
   }
 ]
