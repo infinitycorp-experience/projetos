@@ -21,7 +21,13 @@
         "nome": "Compra de Equipamentos",
         "status": "em_andamento",
         "ordem": 2,
-        "anotacoes": []
+        "anotacoes": [
+          {
+            "id": "anot_1786617838393_13xm",
+            "ts": "2026-08-13T10:43:58.393Z",
+            "texto": "Compra efetuada 2 Totem e 1 Painel"
+          }
+        ]
       },
       {
         "id": "fase_1786617562565_il9l",
@@ -75,7 +81,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T10:43:33.721Z"
+    "updatedAt": "2026-08-13T10:43:58.393Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
