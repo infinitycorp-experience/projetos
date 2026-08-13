@@ -512,13 +512,7 @@
         "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 5,
-        "anotacoes": [
-          {
-            "id": "anot_1786635371661_wwzd",
-            "ts": "2026-08-13T15:36:11.661Z",
-            "texto": "Refinamento efetuado\nAguardando aprovação"
-          }
-        ]
+        "anotacoes": []
       },
       {
         "id": "fase_1786635305941_9tdz",
@@ -678,6 +672,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-13T15:36:11.661Z"
+    "updatedAt": "2026-08-13T15:36:17.331Z"
   }
 ]
