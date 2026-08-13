@@ -307,7 +307,13 @@
         "nome": "Análise de Dados Obtidos",
         "status": "em_andamento",
         "ordem": 2,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1786631169483_fyhu",
+            "ts": "2026-08-13T14:26:09.483Z",
+            "texto": "Analisando para ver o que pode ser criado"
+          }
+        ],
         "responsavel": "Tacio",
         "descricao": ""
       },
@@ -409,7 +415,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T14:25:43.640Z"
+    "updatedAt": "2026-08-13T14:26:09.483Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
