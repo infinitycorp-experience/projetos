@@ -305,7 +305,7 @@
       {
         "id": "fase_1786558465703_e3af",
         "nome": "Análise de Dados Obtidos",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 2,
         "anotacoes": [],
         "responsavel": "Tacio",
@@ -341,6 +341,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786631143640",
+        "timestamp": "2026-08-13T14:25:43.640Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Análise de Dados Obtidos\": em_andamento"
+      },
       {
         "id": "hist_1786631140786",
         "timestamp": "2026-08-13T14:25:40.786Z",
@@ -403,7 +409,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T14:25:40.786Z"
+    "updatedAt": "2026-08-13T14:25:43.640Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
