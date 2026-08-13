@@ -335,7 +335,7 @@
       {
         "id": "fase_1786558525826_jici",
         "nome": "Montagem do HTML",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 4,
         "anotacoes": [],
         "responsavel": "Tacio",
@@ -353,6 +353,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786635278613",
+        "timestamp": "2026-08-13T15:34:38.613Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Montagem do HTML\": em_andamento"
+      },
       {
         "id": "hist_1786635274347",
         "timestamp": "2026-08-13T15:34:34.347Z",
@@ -445,7 +451,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T15:34:34.347Z"
+    "updatedAt": "2026-08-13T15:34:38.613Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
