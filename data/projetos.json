@@ -19,7 +19,7 @@
       {
         "id": "fase_1786617561672_dtj1",
         "nome": "Compra de Equipamentos",
-        "status": "em_andamento",
+        "status": "concluida",
         "ordem": 2,
         "anotacoes": [
           {
@@ -68,6 +68,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786617845858",
+        "timestamp": "2026-08-13T10:44:05.858Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Compra de Equipamentos\": concluida"
+      },
+      {
         "id": "hist_1786617813721",
         "timestamp": "2026-08-13T10:43:33.721Z",
         "action": "Fase iniciada",
@@ -81,7 +87,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T10:43:58.393Z"
+    "updatedAt": "2026-08-13T10:44:05.858Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
