@@ -85,7 +85,7 @@
             "texto": "Definidos com o material já existente"
           }
         ],
-        "responsavel": "",
+        "responsavel": "Todos",
         "descricao": ""
       },
       {
@@ -118,6 +118,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786620056637",
+        "timestamp": "2026-08-13T11:20:56.637Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Brindes\" atualizada."
+      },
       {
         "id": "hist_1786620041859",
         "timestamp": "2026-08-13T11:20:41.859Z",
@@ -192,7 +198,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T11:20:41.860Z"
+    "updatedAt": "2026-08-13T11:20:56.637Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
