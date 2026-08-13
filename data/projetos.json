@@ -292,7 +292,13 @@
         "nome": "Entender Extração de Dados",
         "status": "em_andamento",
         "ordem": 1,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1786631135415_mbu1",
+            "ts": "2026-08-13T14:25:35.415Z",
+            "texto": "Extração efetuada"
+          }
+        ],
         "responsavel": "Tacio",
         "descricao": ""
       },
@@ -391,7 +397,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T14:25:22.588Z"
+    "updatedAt": "2026-08-13T14:25:35.416Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
