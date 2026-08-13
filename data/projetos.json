@@ -1,5 +1,77 @@
 [
   {
+    "id": "proj_1786617800801_xrhfs2",
+    "nome": "Preparação 1º EVENTO",
+    "responsavel": "Todos",
+    "status": "em_andamento",
+    "dataInicio": "2026-08-13",
+    "dataFim": "2026-09-30",
+    "descricao": "Criar o primeiro evento InfinityCorp",
+    "procedimentos": "Cotações, pesquisa, preparação de equipamentos, apresentações, lugares e temas",
+    "fases": [
+      {
+        "id": "fase_1786617559573_z8oz",
+        "nome": "Definir Data e Local",
+        "status": "pendente",
+        "ordem": 1,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786617561672_dtj1",
+        "nome": "Compra de Equipamentos",
+        "status": "pendente",
+        "ordem": 2,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786617562565_il9l",
+        "nome": "Preparação de Equipamentos",
+        "status": "pendente",
+        "ordem": 3,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786617563229_adrd",
+        "nome": "Buffet",
+        "status": "pendente",
+        "ordem": 4,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786617564857_lrzw",
+        "nome": "Brindes",
+        "status": "pendente",
+        "ordem": 5,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786617565551_yzwt",
+        "nome": "Temas",
+        "status": "pendente",
+        "ordem": 6,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1786617644707_idih",
+        "nome": "Definir Convidados",
+        "status": "pendente",
+        "ordem": 7,
+        "anotacoes": []
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1786617800801",
+        "timestamp": "2026-08-13T10:43:20.801Z",
+        "action": "Projeto criado",
+        "descricao": "\"Preparação 1º EVENTO\" com 7 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-13T10:43:20.801Z",
+    "updatedAt": "2026-08-13T10:43:20.801Z"
+  },
+  {
     "id": "proj_1786558958701_u2wis4",
     "nome": "StarLink",
     "responsavel": "Tácio",
