@@ -36,7 +36,7 @@
       {
         "id": "fase_1786617562565_il9l",
         "nome": "Preparar Equipamentos",
-        "status": "em_andamento",
+        "status": "pausada",
         "responsavel": "Tácio",
         "descricao": "",
         "ordem": 3,
@@ -118,6 +118,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786643415491",
+        "timestamp": "2026-08-13T17:50:15.491Z",
+        "action": "Fase pausada",
+        "descricao": "Fase \"Preparar Equipamentos\" foi pausada."
+      },
       {
         "id": "hist_1786643413330",
         "timestamp": "2026-08-13T17:50:13.330Z",
@@ -234,7 +240,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T17:50:13.330Z"
+    "updatedAt": "2026-08-13T17:50:15.491Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
