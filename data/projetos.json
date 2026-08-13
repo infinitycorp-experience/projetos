@@ -61,7 +61,7 @@
       {
         "id": "fase_1786617563229_adrd",
         "nome": "Buffet",
-        "status": "em_andamento",
+        "status": "pausada",
         "responsavel": "Jonathan",
         "descricao": "Cotação de buffets",
         "ordem": 4,
@@ -118,6 +118,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786643413330",
+        "timestamp": "2026-08-13T17:50:13.330Z",
+        "action": "Fase pausada",
+        "descricao": "Fase \"Buffet\" foi pausada."
+      },
       {
         "id": "hist_1786638514087",
         "timestamp": "2026-08-13T16:28:34.087Z",
@@ -228,7 +234,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T16:28:34.087Z"
+    "updatedAt": "2026-08-13T17:50:13.330Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
