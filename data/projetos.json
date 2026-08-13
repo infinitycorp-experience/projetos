@@ -303,6 +303,8 @@
         "id": "fase_1786558465209_q2v9",
         "nome": "Entender Extração de Dados",
         "status": "concluida",
+        "responsavel": "Tacio",
+        "descricao": "",
         "ordem": 1,
         "anotacoes": [
           {
@@ -310,14 +312,14 @@
             "ts": "2026-08-13T14:25:35.415Z",
             "texto": "Extração efetuada"
           }
-        ],
-        "responsavel": "Tacio",
-        "descricao": ""
+        ]
       },
       {
         "id": "fase_1786558465703_e3af",
         "nome": "Análise de Dados Obtidos",
         "status": "concluida",
+        "responsavel": "Tacio",
+        "descricao": "",
         "ordem": 2,
         "anotacoes": [
           {
@@ -325,14 +327,14 @@
             "ts": "2026-08-13T14:26:09.483Z",
             "texto": "Analisando para ver o que pode ser criado"
           }
-        ],
-        "responsavel": "Tacio",
-        "descricao": ""
+        ]
       },
       {
         "id": "fase_1786558467025_vo2m",
         "nome": "Planejar Visual",
         "status": "concluida",
+        "responsavel": "Tacio",
+        "descricao": "",
         "ordem": 3,
         "anotacoes": [
           {
@@ -340,14 +342,14 @@
             "ts": "2026-08-13T15:34:30.151Z",
             "texto": "Idéia concretizada"
           }
-        ],
-        "responsavel": "Tacio",
-        "descricao": ""
+        ]
       },
       {
         "id": "fase_1786558525826_jici",
         "nome": "Montagem do HTML",
         "status": "concluida",
+        "responsavel": "Tacio",
+        "descricao": "",
         "ordem": 4,
         "anotacoes": [
           {
@@ -355,14 +357,14 @@
             "ts": "2026-08-13T17:46:13.601Z",
             "texto": "Pagina liberada para uso"
           }
-        ],
-        "responsavel": "Tacio",
-        "descricao": ""
+        ]
       },
       {
         "id": "fase_1786558560792_38t0",
         "nome": "Refinamento",
         "status": "em_andamento",
+        "responsavel": "Tacio / Osmar",
+        "descricao": "",
         "ordem": 5,
         "anotacoes": [
           {
@@ -370,13 +372,26 @@
             "ts": "2026-08-13T17:48:19.955Z",
             "texto": "Discutir sobre o visual"
           }
-        ],
-        "responsavel": "Tacio / Osmar",
-        "descricao": ""
+        ]
+      },
+      {
+        "id": "fase_1786643354035_8la0",
+        "nome": "Aprovação",
+        "status": "pendente",
+        "responsavel": "Osmar",
+        "descricao": "",
+        "ordem": 6,
+        "anotacoes": []
       }
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786643365014",
+        "timestamp": "2026-08-13T17:49:25.014Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 6"
+      },
       {
         "id": "hist_1786643289916",
         "timestamp": "2026-08-13T17:48:09.916Z",
@@ -487,7 +502,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T17:48:19.956Z"
+    "updatedAt": "2026-08-13T17:49:25.014Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
