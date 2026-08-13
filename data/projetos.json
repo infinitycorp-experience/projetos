@@ -281,7 +281,7 @@
     "id": "proj_1786558567290_gegfxl",
     "nome": "Página Web de Equipamentos",
     "responsavel": "Tácio",
-    "status": "em_planejamento",
+    "status": "em_andamento",
     "dataInicio": "2026-08-12",
     "dataFim": "2026-08-20",
     "descricao": "Criar página com quantidade de equipamentos locados",
@@ -290,7 +290,7 @@
       {
         "id": "fase_1786558465209_q2v9",
         "nome": "Entender Extração de Dados",
-        "status": "pendente",
+        "status": "em_andamento",
         "ordem": 1,
         "anotacoes": [],
         "responsavel": "Tacio",
@@ -336,6 +336,18 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786631122588",
+        "timestamp": "2026-08-13T14:25:22.588Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Entender Extração de Dados\": em_andamento"
+      },
+      {
+        "id": "hist_1786631122588",
+        "timestamp": "2026-08-13T14:25:22.588Z",
+        "action": "Projeto em andamento",
+        "descricao": "Status alterado automaticamente (fase iniciada)."
+      },
+      {
         "id": "hist_1786621202489",
         "timestamp": "2026-08-13T11:40:02.489Z",
         "action": "Fase editada",
@@ -379,7 +391,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T11:40:02.489Z"
+    "updatedAt": "2026-08-13T14:25:22.588Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
