@@ -397,7 +397,7 @@
         "status": "concluida",
         "ordem": 1,
         "anotacoes": [],
-        "responsavel": "",
+        "responsavel": "Tacio",
         "descricao": ""
       },
       {
@@ -445,6 +445,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786621220880",
+        "timestamp": "2026-08-13T11:40:20.880Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Elaboração\" atualizada."
+      },
       {
         "id": "hist_1786619295422",
         "timestamp": "2026-08-13T11:08:15.422Z",
@@ -549,6 +555,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-13T11:08:15.422Z"
+    "updatedAt": "2026-08-13T11:40:20.880Z"
   }
 ]
