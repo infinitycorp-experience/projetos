@@ -55,7 +55,7 @@
             "texto": "Sistema Interativo de manuseio"
           }
         ],
-        "responsavel": "",
+        "responsavel": "Tácio",
         "descricao": ""
       },
       {
@@ -119,6 +119,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786619999074",
+        "timestamp": "2026-08-13T11:19:59.074Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Preparar Equipamentos\" atualizada."
+      },
+      {
         "id": "hist_1786619980931",
         "timestamp": "2026-08-13T11:19:40.931Z",
         "action": "Fase editada",
@@ -174,7 +180,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T11:19:40.932Z"
+    "updatedAt": "2026-08-13T11:19:59.074Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
