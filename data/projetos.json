@@ -415,7 +415,7 @@
         "status": "concluida",
         "ordem": 3,
         "anotacoes": [],
-        "responsavel": "",
+        "responsavel": "Tacio",
         "descricao": ""
       },
       {
@@ -445,6 +445,18 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786621236677",
+        "timestamp": "2026-08-13T11:40:36.677Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Repositório\" atualizada."
+      },
+      {
+        "id": "hist_1786621228309",
+        "timestamp": "2026-08-13T11:40:28.309Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Criação de HTML Básico\" atualizada."
+      },
       {
         "id": "hist_1786621227150",
         "timestamp": "2026-08-13T11:40:27.150Z",
@@ -561,6 +573,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-13T11:40:27.150Z"
+    "updatedAt": "2026-08-13T11:40:36.677Z"
   }
 ]
