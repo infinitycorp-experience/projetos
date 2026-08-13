@@ -364,7 +364,13 @@
         "nome": "Refinamento",
         "status": "em_andamento",
         "ordem": 5,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1786643299955_us5w",
+            "ts": "2026-08-13T17:48:19.955Z",
+            "texto": "Discutir sobre o visual"
+          }
+        ],
         "responsavel": "Tacio / Osmar",
         "descricao": ""
       }
@@ -481,7 +487,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T17:48:09.916Z"
+    "updatedAt": "2026-08-13T17:48:19.956Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
