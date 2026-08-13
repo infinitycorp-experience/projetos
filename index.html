@@ -272,6 +272,7 @@
         .phase-info { flex: 1; min-width: 0; }
         .phase-name { font-weight: 700; font-size: 13px; color: var(--ink); }
         .phase-desc { font-size: 11px; color: var(--muted); margin-top: 2px; }
+        .phase-resp { font-size: 10.5px; color: var(--brand); font-weight: 600; margin-top: 2px; }
         .phase-status { flex-shrink: 0; }
         .phase-actions { display: flex; gap: 4px; flex-shrink: 0; flex-wrap: wrap; }
 
@@ -323,7 +324,7 @@
         .modal.wide { max-width: 960px; }
         .modal h3 { margin-bottom: 16px; font-size: 17px; }
         @keyframes modalIn { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
-        #modalAnotBg, #centerBg { z-index: 1150; }
+        #modalAnotBg, #centerBg, #modalFaseBg { z-index: 1150; }
 
         .center-modal { text-align: center; padding: 34px 30px; }
         .center-icon { width: 76px; height: 76px; border-radius: 50%; margin: 0 auto 16px; display: grid; place-items: center; animation: popIn .45s cubic-bezier(.16,1,.3,1); }
@@ -373,7 +374,7 @@
         .insight-item .t { font-weight: 700; font-size: 13px; color: var(--ink); }
         .insight-item .d { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-        .detail-grid { display: grid; grid-template-columns: 45fr 55fr; gap: 24px; }
+        .detail-grid { display: grid; grid-template-columns: 35fr 65fr; gap: 24px; }
 
         .detail-block h4 { font-size: 10.5px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
         .empty-state { text-align: center; padding: 48px 20px; color: var(--muted); }
@@ -397,6 +398,26 @@
             .row-2,.row-3 { grid-template-columns: 1fr; }
             .topbar { flex-direction: column; align-items: flex-start; }
         }
+        .history-toggle {
+    display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer; padding: 10px 14px; background: #f8fafc;
+    border: 1px solid var(--line); border-radius: 10px;
+    font-weight: 600; color: var(--muted); margin-bottom: 8px;
+    font-size: 12px; transition: all .2s ease;
+}
+.history-toggle:hover { color: var(--ink); border-color: var(--brand); }
+.history-toggle .arrow {
+    transition: transform .3s ease;
+    font-size: 12px;
+}
+.history-toggle.open .arrow { transform: rotate(90deg); }
+.hist-collapse {
+    max-height: 0; overflow: hidden;
+    transition: max-height .4s ease;
+}
+.hist-collapse.open { max-height: 2000px; }
+
+
     </style>
 </head>
 <body>
@@ -598,6 +619,31 @@
     </div>
 </div>
 
+<!-- ========== MODAL: EDITAR FASE ========== -->
+<div class="modal-bg" id="modalFaseBg">
+    <div class="modal" style="max-width:520px;">
+        <h3 id="modalFaseTitle">Editar Fase</h3>
+        <input type="hidden" id="mFaseProjId">
+        <input type="hidden" id="mFaseId">
+        <div class="field"><label>Nome da Fase *</label><input id="mFaseNome" placeholder="Ex: Levantamento de requisitos"></div>
+        <div class="field"><label>Responsável da Fase</label><input id="mFaseResponsavel" placeholder="Ex: Tacio"></div>
+        <div class="field"><label>Descrição</label><textarea id="mFaseDescricao" rows="2" placeholder="Detalhes desta fase..."></textarea></div>
+        <div class="field"><label>Status</label>
+            <select id="mFaseStatus">
+                <option value="pendente">⏳ Pendente</option>
+                <option value="em_andamento">🔄 Em Andamento</option>
+                <option value="pausada">⏸️ Pausada</option>
+                <option value="concluida">✅ Concluída</option>
+                <option value="pulada">⏭️ Pulada</option>
+            </select>
+        </div>
+        <div class="modal-foot">
+            <button class="btn ghost" id="btnFaseCancel">Cancelar</button>
+            <button class="btn primary" id="btnFaseSalvar">💾 Salvar Fase</button>
+        </div>
+    </div>
+</div>
+
 <!-- ========== MODAL: CONFIRMAÇÃO ========== -->
 <div class="modal-bg" id="confirmBg">
     <div class="modal" style="max-width:420px">
@@ -766,7 +812,7 @@
     }
     function setSyncStatus(status, label) {
     var badge = $('#syncBadge');
-    badge.className = 'sync-item ' + status;   // ← era 'sync-badge ' + status
+    badge.className = 'sync-item ' + status;
     $('#syncLabel').textContent = label || status;
 }
 
@@ -779,7 +825,11 @@
     function normalizeProjeto(p) {
         p.fases = p.fases || []; p.anexos = p.anexos || [];
         p.historico = p.historico || []; p.responsavel = p.responsavel || '';
-        (p.fases||[]).forEach(function(f){ f.anotacoes = f.anotacoes || []; });
+        (p.fases||[]).forEach(function(f){
+            f.anotacoes = f.anotacoes || [];
+            f.responsavel = f.responsavel || '';
+            f.descricao = f.descricao || '';
+        });
         return p;
     }
     function loadLocal() {
@@ -854,6 +904,7 @@
         var map = {
             'pendente': ['⏳ Pendente', 'var(--muted)'],
             'em_andamento': ['🔄 Em Andamento', 'var(--amber)'],
+            'pausada': ['⏸️ Pausada', '#8b5cf6'],
             'concluida': ['✅ Concluída', 'var(--green)'],
             'pulada': ['⏭️ Pulada', 'var(--brand)']
         };
@@ -868,6 +919,7 @@
     function getFaseAtual(proj) {
         if (!proj.fases || proj.fases.length === 0) return null;
         for (var i=0;i<proj.fases.length;i++) if (proj.fases[i].status==='em_andamento') return proj.fases[i];
+        for (var i=0;i<proj.fases.length;i++) if (proj.fases[i].status==='pausada') return proj.fases[i];
         for (var i=0;i<proj.fases.length;i++) if (proj.fases[i].status==='pendente') return proj.fases[i];
         return null;
     }
@@ -1048,8 +1100,10 @@
     function salvarValoresFasesTemp() {
         var nomes = all('#fasesWrap input[data-fase-field="nome"]');
         var statusSel = all('#fasesWrap select[data-fase-field="status"]');
+        var resps = all('#fasesWrap input[data-fase-field="responsavel"]');
         nomes.forEach(function(inp,i){ if(fasesTemp[i]) fasesTemp[i].nome = inp.value; });
         statusSel.forEach(function(sel,i){ if(fasesTemp[i]) fasesTemp[i].status = sel.value; });
+        resps.forEach(function(inp,i){ if(fasesTemp[i]) fasesTemp[i].responsavel = inp.value; });
     }
     function renderFasesTemp() {
         var wrap = $('#fasesWrap');
@@ -1058,9 +1112,11 @@
             return '<div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap;">' +
                 '<span style="width:28px;height:28px;border-radius:50%;background:'+getFaseColor(i)+';color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex-shrink:0;">'+(i+1)+'</span>' +
                 '<input value="'+esc(f.nome)+'" placeholder="Nome da fase" style="flex:1;min-width:120px;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:12px;font-family:\'Inter\',sans-serif;" data-fase-idx="'+i+'" data-fase-field="nome">' +
+                '<input value="'+esc(f.responsavel||'')+'" placeholder="Responsável" title="Responsável desta fase" style="width:110px;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:11px;font-family:\'Inter\',sans-serif;" data-fase-idx="'+i+'" data-fase-field="responsavel">' +
                 '<select style="border:1px solid var(--line);border-radius:10px;padding:7px 8px;font-size:11px;font-family:\'Inter\',sans-serif;width:130px;" data-fase-idx="'+i+'" data-fase-field="status">' +
                     '<option value="pendente"'+ (f.status==='pendente'?' selected':'') +'>⏳ Pendente</option>' +
                     '<option value="em_andamento"'+ (f.status==='em_andamento'?' selected':'') +'>🔄 Em Andamento</option>' +
+                    '<option value="pausada"'+ (f.status==='pausada'?' selected':'') +'>⏸️ Pausada</option>' +
                     '<option value="concluida"'+ (f.status==='concluida'?' selected':'') +'>✅ Concluída</option>' +
                     '<option value="pulada"'+ (f.status==='pulada'?' selected':'') +'>⏭️ Pulada</option>' +
                 '</select>' +
@@ -1095,20 +1151,30 @@
     };
     $('#btnAddFase').onclick = function(){
         salvarValoresFasesTemp();
-        fasesTemp.push({ id: faseUid(), nome: '', status: 'pendente', ordem: fasesTemp.length + 1, anotacoes: [] });
+        fasesTemp.push({ id: faseUid(), nome: '', status: 'pendente', ordem: fasesTemp.length + 1, responsavel: '', descricao: '', anotacoes: [] });
         renderFasesTemp();
     };
     function coletarFasesTemp() {
         salvarValoresFasesTemp();
         var inputs = all('#fasesWrap input[data-fase-field="nome"]');
         var selects = all('#fasesWrap select[data-fase-field="status"]');
+        var resps = all('#fasesWrap input[data-fase-field="responsavel"]');
         return inputs.map(function(inp,i){
-            return { id: fasesTemp[i] ? fasesTemp[i].id : faseUid(), nome: inp.value.trim(), status: selects[i] ? selects[i].value : 'pendente', ordem: i+1, anotacoes: (fasesTemp[i] && fasesTemp[i].anotacoes) || [] };
+            return {
+                id: fasesTemp[i] ? fasesTemp[i].id : faseUid(),
+                nome: inp.value.trim(),
+                status: selects[i] ? selects[i].value : 'pendente',
+                responsavel: resps[i] ? resps[i].value.trim() : '',
+                descricao: (fasesTemp[i] && fasesTemp[i].descricao) || '',
+                ordem: i+1,
+                anotacoes: (fasesTemp[i] && fasesTemp[i].anotacoes) || []
+            };
         }).filter(function(f){ return f.nome; });
     }
 
     // ============ ANOTAÇÕES ============
     var anotRef = null, anotOnChange = null;
+    var NOTA_COLORS = ['#4f46e5','#10b981','#f59e0b','#ec4899','#06b6d4','#8b5cf6','#f97316','#14b8a6'];
     function abrirAnotacoes(faseRef, faseNome, onChange) {
         anotRef = faseRef; anotOnChange = onChange || null;
         if (!anotRef.anotacoes) anotRef.anotacoes = [];
@@ -1135,8 +1201,11 @@
         var notas = (anotRef.anotacoes || []).slice().sort(function(a,b){ return new Date(b.ts) - new Date(a.ts); });
         var el = $('#anotList');
         if (notas.length === 0) { el.innerHTML = '<p class="muted" style="text-align:center;padding:16px;font-size:12px;">Nenhuma anotação ainda.</p>'; return; }
-        el.innerHTML = notas.map(function(n){
-            return '<div class="anot-item"><div class="anot-head"><span class="anot-ts">🕒 ' + fmtDT(n.ts) + '</span>' +
+        el.innerHTML = notas.map(function(n, i){
+            var cor = NOTA_COLORS[i % NOTA_COLORS.length];
+            var bg = cor + '1A';
+            return '<div class="anot-item" style="background:'+bg+';border-left:4px solid '+cor+';">' +
+                '<div class="anot-head"><span class="anot-ts" style="color:'+cor+';">🕒 ' + fmtDT(n.ts) + '</span>' +
                 '<button class="btn sm danger" onclick="excluirAnotacao(\''+esc(n.id)+'\')" style="padding:3px 7px;font-size:10px;">✕</button></div>' +
                 '<div class="anot-texto">' + esc(n.texto) + '</div></div>';
         }).join('');
@@ -1263,9 +1332,6 @@
                 (proj.status!=='cancelado'&&proj.status!=='concluido' ? '<button class="btn-action danger" onclick="cancelarProjeto(\''+esc(proj.id)+'\')">🚫 Cancelar</button>' : '') +
                 '<button class="btn-action danger" onclick="excluirProjeto(\''+esc(proj.id)+'\')">🗑️ Excluir</button>' +
                 '<button class="btn ghost" onclick="fecharDetalhe()" style="padding:4px 10px;font-size:15px;">✕</button>' +
-            
-            
-            
             '</div>' +
         '</div>' +
         '<div class="detail-grid">' +
@@ -1281,9 +1347,8 @@
                 '<div class="detail-block" style="margin-top:16px;"><h4>📊 Progresso</h4>' +
                     '<div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;font-weight:700;color:'+progColor+';">'+prog+'%</span><span style="font-size:11px;color:var(--muted);">'+(proj.fases.filter(function(f){return f.status==='concluida'||f.status==='pulada';}).length)+'/'+proj.fases.length+' fases</span></div>' +
                     '<div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:'+prog+'%;background:'+progColor+';"></div></div>' +
-             
-
-'<div class="detail-block" style="margin-top:16px;"><h4>📎 Anexos ('+(proj.anexos||[]).length+')</h4>' +
+                '</div>' +
+                '<div class="detail-block" style="margin-top:16px;"><h4>📎 Anexos ('+(proj.anexos||[]).length+')</h4>' +
                     ((proj.anexos||[]).length===0?'<p class="muted" style="font-size:11px;">Nenhum anexo.</p>':
                     (proj.anexos||[]).map(function(a){
                         var ic={'image':'🖼️','pdf':'📄','doc':'📝','sheet':'📊','presentation':'📽️','archive':'📦','default':'📎'};
@@ -1296,53 +1361,111 @@
                         '</div>';
                     }).join('')) +
                 '</div>' +
-
-                '</div>' +
             '</div>' +
             '<div>' +
                 '<div class="detail-block"><h4>📌 Fases ('+proj.fases.length+')</h4>' +
                     (proj.fases.length===0?'<p class="muted" style="font-size:11px;">Nenhuma fase.</p>':
                     proj.fases.map(function(f,i){
+                        var editBtn = '<button class="btn sm" onclick="editarFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" title="Editar fase" style="padding:4px 8px;font-size:10px;">✏️</button>';
                         var anotBtn = '<button class="btn sm" onclick="abrirAnotacoesFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" title="Anotações desta fase" style="padding:4px 8px;font-size:10px;color:var(--brand);border-color:var(--brand);">💬 '+(f.anotacoes||[]).length+'</button>';
                         var statusBtns = '';
                         if (f.status === 'pendente') {
                             statusBtns = '<button class="btn sm" onclick="iniciarFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" style="padding:4px 8px;font-size:10px;color:var(--amber);border-color:var(--amber);">▶️ Iniciar</button>' +
                                    '<button class="btn sm" onclick="pularFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" style="padding:4px 8px;font-size:10px;color:var(--brand);border-color:var(--brand);">⏭️</button>';
                         } else if (f.status === 'em_andamento') {
-                            statusBtns = '<button class="btn sm success" onclick="avancarFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" style="padding:4px 8px;font-size:10px;">✅</button>' +
+                            statusBtns = '<button class="btn sm" onclick="pausarFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" title="Pausar fase" style="padding:4px 8px;font-size:10px;color:#8b5cf6;border-color:#8b5cf6;">⏸️</button>' +
+                                   '<button class="btn sm success" onclick="avancarFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" title="Concluir fase" style="padding:4px 8px;font-size:10px;">✅</button>' +
+                                   '<button class="btn sm" onclick="pularFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" style="padding:4px 8px;font-size:10px;color:var(--brand);border-color:var(--brand);">⏭️</button>';
+                        } else if (f.status === 'pausada') {
+                            statusBtns = '<button class="btn sm" onclick="retomarFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" title="Retomar fase" style="padding:4px 8px;font-size:10px;color:var(--green);border-color:var(--green);">▶️ Retomar</button>' +
+                                   '<button class="btn sm success" onclick="avancarFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" title="Concluir fase" style="padding:4px 8px;font-size:10px;">✅</button>' +
                                    '<button class="btn sm" onclick="pularFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" style="padding:4px 8px;font-size:10px;color:var(--brand);border-color:var(--brand);">⏭️</button>';
                         } else if (f.status === 'concluida' || f.status === 'pulada') {
                             statusBtns = '<button class="btn sm" onclick="reabrirFase(\''+esc(proj.id)+'\',\''+esc(f.id)+'\')" style="padding:4px 8px;font-size:10px;">🔄 Reabrir</button>';
                         }
                         return '<div class="phase-item" style="margin-bottom:6px;">' +
                             '<div class="phase-order" style="background:'+getFaseColor(i)+'">'+(i+1)+'</div>' +
-                            '<div class="phase-info"><div class="phase-name">'+esc(f.nome)+'</div>'+(f.descricao?'<div class="phase-desc">'+esc(f.descricao)+'</div>':'')+'</div>' +
+                            '<div class="phase-info"><div class="phase-name">'+esc(f.nome)+'</div>' +
+                                (f.responsavel?'<div class="phase-resp">👤 '+esc(f.responsavel)+'</div>':'') +
+                                (f.descricao?'<div class="phase-desc">'+esc(f.descricao)+'</div>':'') +
+                            '</div>' +
                             '<div class="phase-status">'+faseStatusBadge(f.status)+'</div>' +
-                            '<div class="phase-actions">'+anotBtn+statusBtns+'</div>' +
+                            '<div class="phase-actions">'+editBtn+anotBtn+statusBtns+'</div>' +
                         '</div>';
                     }).join('')) +
                 '</div>' +
                 
-                '<div class="detail-block" style="margin-top:16px;"><h4>📜 Histórico</h4>' +
     ((proj.historico||[]).length===0?'<p class="muted" style="font-size:11px;">Nenhuma modificação.</p>':
-    '<div class="scroll-elegant" style="max-height:200px;">' +
-    (proj.historico||[]).slice(0,15).map(function(h){
+    '<div class="history-toggle" onclick="toggleHist(this)"><span>📜 Mostrar histórico ('+(proj.historico||[]).length+')</span><span class="arrow">▶</span></div>' +
+    '<div class="hist-collapse"><div class="scroll-elegant" style="max-height:200px;">' +
+    (proj.historico||[]).slice().sort(function(a,b){ return new Date(b.timestamp) - new Date(a.timestamp); }).slice(0,15).map(function(h){
         return '<div class="history-item"><div class="history-dot" style="background:var(--brand)"></div>' +
         '<div class="history-content"><span class="history-action">'+esc(h.action)+'</span>' +
         '<div class="history-meta">'+esc(h.descricao)+' • '+fmtDT(h.timestamp)+'</div></div></div>';
     }).join('') +
-    '</div>') +
+    '</div></div>') +
 '</div>' +
+
+            '</div>' +
         '</div>';
         $('#modalDetalheBg').classList.add('show');
     };
 
     window.fecharDetalhe = function(){ $('#modalDetalheBg').classList.remove('show'); };
+    window.toggleHist = function(btn){
+    btn.classList.toggle('open');
+    var next = btn.nextElementSibling;
+    if(next) next.classList.toggle('open');
+};
+
     window.editarProjeto = function(id){
         $('#modalDetalheBg').classList.remove('show');
         var proj = getProjetoById(id);
         if (proj) openModalProjeto(proj);
     };
+
+    // ============ EDIÇÃO DE FASE ============
+    window.editarFase = function(projId, faseId){
+        var proj = getProjetoById(projId); if(!proj) return;
+        var fase = proj.fases.find(function(f){ return f.id===faseId; }); if(!fase) return;
+        $('#mFaseProjId').value = projId;
+        $('#mFaseId').value = faseId;
+        $('#mFaseNome').value = fase.nome || '';
+        $('#mFaseResponsavel').value = fase.responsavel || '';
+        $('#mFaseDescricao').value = fase.descricao || '';
+        $('#mFaseStatus').value = fase.status || 'pendente';
+        $('#modalFaseTitle').textContent = 'Editar Fase';
+        $('#modalFaseBg').classList.add('show');
+    };
+    $('#btnFaseSalvar').onclick = function(){
+        var projId = $('#mFaseProjId').value, faseId = $('#mFaseId').value;
+        var proj = getProjetoById(projId); if(!proj) return;
+        var fase = proj.fases.find(function(f){ return f.id===faseId; }); if(!fase) return;
+        var nome = $('#mFaseNome').value.trim();
+        if(!nome){ toast('Informe o nome da fase.','err'); return; }
+        fase.nome = nome;
+        fase.responsavel = $('#mFaseResponsavel').value.trim();
+        fase.descricao = $('#mFaseDescricao').value.trim();
+        var novoStatus = $('#mFaseStatus').value;
+        if(novoStatus !== fase.status){
+            addHistory(proj, 'Fase atualizada', 'Fase "'+nome+'": status '+fase.status+' → '+novoStatus);
+            fase.status = novoStatus;
+            if(novoStatus==='em_andamento' && proj.status!=='em_andamento'){
+                proj.status='em_andamento';
+                addHistory(proj, 'Projeto em andamento', 'Status alterado automaticamente (fase em andamento).');
+            }
+        } else {
+            addHistory(proj, 'Fase editada', 'Fase "'+nome+'" atualizada.');
+        }
+        proj.updatedAt = new Date().toISOString();
+        saveLocal();
+        saveToGitHub().then(function(){
+            $('#modalFaseBg').classList.remove('show');
+            verDetalheProjeto(projId); refreshAll();
+        });
+    };
+    $('#btnFaseCancel').onclick = function(){ $('#modalFaseBg').classList.remove('show'); };
+    $('#modalFaseBg').onclick = function(e){ if(e.target===this) $('#modalFaseBg').classList.remove('show'); };
 
     // ============ AÇÕES DE FASES ============
     function atualizarFase(projId, faseId, novoStatus, acaoLabel) {
@@ -1364,6 +1487,28 @@
     window.pularFase = function(projId, faseId){ atualizarFase(projId, faseId, 'pulada', 'Fase pulada'); };
     window.iniciarFase = function(projId, faseId){ atualizarFase(projId, faseId, 'em_andamento', 'Fase iniciada'); };
     window.reabrirFase = function(projId, faseId){ atualizarFase(projId, faseId, 'pendente', 'Fase reaberta'); };
+    window.pausarFase = function(projId, faseId){
+        var proj = getProjetoById(projId); if (!proj) return;
+        var fase = proj.fases.find(function(f){ return f.id === faseId; }); if (!fase) return;
+        fase.status = 'pausada';
+        proj.updatedAt = new Date().toISOString();
+        addHistory(proj, 'Fase pausada', 'Fase "'+fase.nome+'" foi pausada.');
+        saveLocal();
+        saveToGitHub().then(function(){ verDetalheProjeto(projId); refreshAll(); });
+    };
+    window.retomarFase = function(projId, faseId){
+        var proj = getProjetoById(projId); if (!proj) return;
+        var fase = proj.fases.find(function(f){ return f.id === faseId; }); if (!fase) return;
+        fase.status = 'em_andamento';
+        if(proj.status !== 'em_andamento'){
+            proj.status = 'em_andamento';
+            addHistory(proj, 'Projeto em andamento', 'Status alterado automaticamente (fase retomada).');
+        }
+        proj.updatedAt = new Date().toISOString();
+        addHistory(proj, 'Fase retomada', 'Fase "'+fase.nome+'" retomada.');
+        saveLocal();
+        saveToGitHub().then(function(){ verDetalheProjeto(projId); refreshAll(); });
+    };
 
     // ============ AÇÕES DO PROJETO ============
     function atualizarStatusProjeto(id, novoStatus, msg, actionLabel) {
