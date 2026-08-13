@@ -305,7 +305,7 @@
       {
         "id": "fase_1786558465703_e3af",
         "nome": "Análise de Dados Obtidos",
-        "status": "em_andamento",
+        "status": "concluida",
         "ordem": 2,
         "anotacoes": [
           {
@@ -347,6 +347,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786632722381",
+        "timestamp": "2026-08-13T14:52:02.381Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Análise de Dados Obtidos\": concluida"
+      },
       {
         "id": "hist_1786631143640",
         "timestamp": "2026-08-13T14:25:43.640Z",
@@ -415,7 +421,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T14:26:09.483Z"
+    "updatedAt": "2026-08-13T14:52:02.381Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
