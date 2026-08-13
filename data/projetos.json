@@ -1,7 +1,7 @@
 [
   {
     "id": "proj_1786617800801_xrhfs2",
-    "nome": "Preparação 1º EVENTO",
+    "nome": "1º EVENTO INFINITYCORP",
     "responsavel": "Todos",
     "status": "em_andamento",
     "dataInicio": "2026-08-13",
@@ -13,15 +13,17 @@
         "id": "fase_1786617559573_z8oz",
         "nome": "Definir Data e Local",
         "status": "pendente",
-        "ordem": 1,
-        "anotacoes": [],
         "responsavel": "Osmar",
-        "descricao": ""
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": []
       },
       {
         "id": "fase_1786617561672_dtj1",
         "nome": "Compra de Equipamentos",
         "status": "concluida",
+        "responsavel": "",
+        "descricao": "",
         "ordem": 2,
         "anotacoes": [
           {
@@ -29,14 +31,14 @@
             "ts": "2026-08-13T10:43:58.393Z",
             "texto": "Compra efetuada 2 Totem e 1 Painel"
           }
-        ],
-        "responsavel": "",
-        "descricao": ""
+        ]
       },
       {
         "id": "fase_1786617562565_il9l",
         "nome": "Preparar Equipamentos",
         "status": "em_andamento",
+        "responsavel": "Tácio",
+        "descricao": "",
         "ordem": 3,
         "anotacoes": [
           {
@@ -54,14 +56,14 @@
             "ts": "2026-08-13T10:45:09.737Z",
             "texto": "Sistema Interativo de manuseio"
           }
-        ],
-        "responsavel": "Tácio",
-        "descricao": ""
+        ]
       },
       {
         "id": "fase_1786617563229_adrd",
         "nome": "Buffet",
         "status": "em_andamento",
+        "responsavel": "Jonathan",
+        "descricao": "Cotação de buffets",
         "ordem": 4,
         "anotacoes": [
           {
@@ -69,14 +71,14 @@
             "ts": "2026-08-13T10:45:37.190Z",
             "texto": "Em cotação - Jonathan"
           }
-        ],
-        "responsavel": "Jonathan",
-        "descricao": "Cotação de buffets"
+        ]
       },
       {
         "id": "fase_1786617564857_lrzw",
         "nome": "Brindes",
         "status": "concluida",
+        "responsavel": "Todos",
+        "descricao": "",
         "ordem": 5,
         "anotacoes": [
           {
@@ -84,40 +86,44 @@
             "ts": "2026-08-13T10:46:14.529Z",
             "texto": "Definidos com o material já existente"
           }
-        ],
-        "responsavel": "Todos",
-        "descricao": ""
+        ]
       },
       {
         "id": "fase_1786617565551_yzwt",
         "nome": "Temas",
         "status": "pendente",
-        "ordem": 6,
-        "anotacoes": [],
         "responsavel": "Osmar",
-        "descricao": "Temas para palestra/workshop"
+        "descricao": "Temas para palestra/workshop",
+        "ordem": 6,
+        "anotacoes": []
       },
       {
         "id": "fase_1786617644707_idih",
         "nome": "Definir Convidados",
         "status": "pendente",
-        "ordem": 7,
-        "anotacoes": [],
         "responsavel": "Osmar",
-        "descricao": ""
+        "descricao": "",
+        "ordem": 7,
+        "anotacoes": []
       },
       {
         "id": "fase_1786618005021_nt2q",
         "nome": "Definir Ajudantes",
         "status": "pendente",
-        "ordem": 8,
-        "anotacoes": [],
         "responsavel": "Osmar",
-        "descricao": ""
+        "descricao": "",
+        "ordem": 8,
+        "anotacoes": []
       }
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786638484480",
+        "timestamp": "2026-08-13T16:28:04.480Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 8"
+      },
       {
         "id": "hist_1786620996315",
         "timestamp": "2026-08-13T11:36:36.315Z",
@@ -216,7 +222,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T11:36:36.315Z"
+    "updatedAt": "2026-08-13T16:28:04.480Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
