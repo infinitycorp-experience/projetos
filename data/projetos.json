@@ -293,7 +293,7 @@
         "status": "pendente",
         "ordem": 1,
         "anotacoes": [],
-        "responsavel": "",
+        "responsavel": "Tacio",
         "descricao": ""
       },
       {
@@ -336,6 +336,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786621167857",
+        "timestamp": "2026-08-13T11:39:27.857Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Entender Extração de Dados\" atualizada."
+      },
+      {
         "id": "hist_1786619310384",
         "timestamp": "2026-08-13T11:08:30.384Z",
         "action": "Projeto editado",
@@ -349,7 +355,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T11:08:30.384Z"
+    "updatedAt": "2026-08-13T11:39:27.857Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
