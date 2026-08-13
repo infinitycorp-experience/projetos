@@ -207,7 +207,7 @@
   },
   {
     "id": "proj_1786558567290_gegfxl",
-    "nome": "Página de Equipamentos",
+    "nome": "Página Web de Equipamentos",
     "responsavel": "Tácio",
     "status": "em_planejamento",
     "dataInicio": "2026-08-12",
@@ -254,6 +254,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786619310384",
+        "timestamp": "2026-08-13T11:08:30.384Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_planejamento, Fases: 5"
+      },
+      {
         "id": "hist_1786558567290",
         "timestamp": "2026-08-12T18:16:07.290Z",
         "action": "Projeto criado",
@@ -261,7 +267,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-12T18:16:07.290Z"
+    "updatedAt": "2026-08-13T11:08:30.384Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
