@@ -290,7 +290,7 @@
       {
         "id": "fase_1786558465209_q2v9",
         "nome": "Entender Extração de Dados",
-        "status": "em_andamento",
+        "status": "concluida",
         "ordem": 1,
         "anotacoes": [
           {
@@ -341,6 +341,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786631140786",
+        "timestamp": "2026-08-13T14:25:40.786Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Entender Extração de Dados\": concluida"
+      },
       {
         "id": "hist_1786631122588",
         "timestamp": "2026-08-13T14:25:22.588Z",
@@ -397,7 +403,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-13T14:25:35.416Z"
+    "updatedAt": "2026-08-13T14:25:40.786Z"
   },
   {
     "id": "proj_1786548776137_o68d9i",
