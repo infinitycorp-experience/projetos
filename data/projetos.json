@@ -57,7 +57,13 @@
         "nome": "Buffet",
         "status": "em_andamento",
         "ordem": 4,
-        "anotacoes": []
+        "anotacoes": [
+          {
+            "id": "anot_1786617937190_8ccz",
+            "ts": "2026-08-13T10:45:37.190Z",
+            "texto": "Em cotação - Jonathan"
+          }
+        ]
       },
       {
         "id": "fase_1786617564857_lrzw",
@@ -115,7 +121,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T10:45:23.265Z"
+    "updatedAt": "2026-08-13T10:45:37.190Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
