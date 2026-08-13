@@ -39,6 +39,11 @@
             "id": "anot_1786617876959_x27d",
             "ts": "2026-08-13T10:44:36.959Z",
             "texto": "Sistema de Checkin Ok"
+          },
+          {
+            "id": "anot_1786617891176_y9x7",
+            "ts": "2026-08-13T10:44:51.176Z",
+            "texto": "Sistema Interativo para apresentação"
           }
         ]
       },
@@ -93,7 +98,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-13T10:44:36.960Z"
+    "updatedAt": "2026-08-13T10:44:51.177Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
