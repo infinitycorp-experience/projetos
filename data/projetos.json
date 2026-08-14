@@ -16,7 +16,13 @@
         "responsavel": "Osmar",
         "descricao": "",
         "ordem": 1,
-        "anotacoes": []
+        "anotacoes": [
+          {
+            "id": "anot_1786715150069_7xoy",
+            "ts": "2026-08-14T13:45:50.069Z",
+            "texto": "Pinheiros - SP"
+          }
+        ]
       },
       {
         "id": "fase_1786617561672_dtj1",
@@ -311,7 +317,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-14T13:45:14.556Z"
+    "updatedAt": "2026-08-14T13:45:50.069Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
