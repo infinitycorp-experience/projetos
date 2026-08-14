@@ -12,7 +12,7 @@
       {
         "id": "fase_1786617559573_z8oz",
         "nome": "Definir Data e Local",
-        "status": "em_andamento",
+        "status": "pausada",
         "responsavel": "Osmar",
         "descricao": "",
         "ordem": 1,
@@ -159,6 +159,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786715161113",
+        "timestamp": "2026-08-14T13:46:01.113Z",
+        "action": "Fase pausada",
+        "descricao": "Fase \"Definir Data e Local\" foi pausada."
+      },
       {
         "id": "hist_1786715158121",
         "timestamp": "2026-08-14T13:45:58.121Z",
@@ -323,7 +329,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-14T13:45:58.121Z"
+    "updatedAt": "2026-08-14T13:46:01.113Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
