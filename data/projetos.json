@@ -101,7 +101,7 @@
         "id": "fase_1786617644707_idih",
         "nome": "Definir Convidados",
         "status": "pendente",
-        "responsavel": "Osmar/Jonathan",
+        "responsavel": "Todos",
         "descricao": "",
         "ordem": 7,
         "anotacoes": []
@@ -118,6 +118,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786714952036",
+        "timestamp": "2026-08-14T13:42:32.036Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Definir Convidados\" atualizada."
+      },
       {
         "id": "hist_1786714926538",
         "timestamp": "2026-08-14T13:42:06.538Z",
@@ -246,7 +252,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-14T13:42:06.538Z"
+    "updatedAt": "2026-08-14T13:42:32.036Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
