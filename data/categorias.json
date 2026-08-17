@@ -13,5 +13,11 @@
     "id": "cat_1786984994987_5x4c",
     "nome": "Novos Produtos - PORTIFÓLIO",
     "createdAt": "2026-08-17T16:43:14.987Z"
+  },
+  {
+    "id": "cat_concluidos",
+    "nome": "Concluídos",
+    "createdAt": "2026-08-17T19:04:30.967Z",
+    "sistema": true
   }
 ]
