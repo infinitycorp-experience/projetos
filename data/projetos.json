@@ -707,7 +707,7 @@
       {
         "id": "fase_1786635305941_9tdz",
         "nome": "Aprovação (Conclusão)",
-        "status": "pendente",
+        "status": "concluida",
         "responsavel": "Osmar",
         "descricao": "",
         "ordem": 6,
@@ -722,6 +722,18 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786990021880",
+        "timestamp": "2026-08-17T18:07:01.880Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Aprovação (Conclusão)\": concluida"
+      },
+      {
+        "id": "hist_1786990017126",
+        "timestamp": "2026-08-17T18:06:57.126Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Aprovação (Conclusão)\": em_andamento"
+      },
       {
         "id": "hist_1786989989448",
         "timestamp": "2026-08-17T18:06:29.448Z",
@@ -898,7 +910,7 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-17T18:06:51.798Z",
+    "updatedAt": "2026-08-17T18:07:01.880Z",
     "categoria": "cat_1786984972435_fmjc"
   }
 ]
