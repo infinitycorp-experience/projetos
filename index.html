@@ -1366,7 +1366,7 @@ function faseActionIcon(type) {
         if (cur && sel.querySelector('option[value="' + cur + '"]')) sel.value = cur;
     }
     function populateModalCategoria() {
-        var sel = $('#mCategoria');
+        var sel = $('#mPasta');
         if (!sel) return;
         var opts = categorias.map(function(c){ return '<option value="' + esc(c.id) + '">📁 ' + esc(c.nome) + '</option>'; }).join('');
         sel.innerHTML = '<option value="">📂 Sem pasta</option>' + opts;
@@ -1385,7 +1385,7 @@ function faseActionIcon(type) {
         $('#mResponsavel').value = proj ? (proj.responsavel || '') : '';
         $('#mStatus').value = proj ? proj.status : 'em_planejamento';
         populateModalCategoria(); // PASTAS
-        $('#mCategoria').value = proj ? (proj.categoria || '') : ''; // PASTAS
+        $('#mPasta').value = proj ? (proj.categoria || '') : ''; // PASTAS
         $('#mDataInicio').value = proj ? (proj.dataInicio || '') : new Date().toISOString().slice(0,10);
         $('#mDataFim').value = proj ? (proj.dataFim || '') : '';
         $('#mDescricao').value = proj ? (proj.descricao || '') : '';
@@ -1662,7 +1662,7 @@ function initModalFaseStatusSelect() {
         var dataFim = $('#mDataFim').value;
         var descricao = $('#mDescricao').value.trim();
         var procedimentos = $('#mProcedimentos').value.trim();
-        var categoria = $('#mCategoria') ? ($('#mCategoria').value || '') : ''; // PASTAS
+        var categoria = $('#mPasta') ? ($('#mPasta').value || '') : ''; // PASTAS
 
         if (status === 'em_planejamento' && fases.some(function(f){ return f.status==='em_andamento'; })) {
             status = 'em_andamento';
