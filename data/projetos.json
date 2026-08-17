@@ -636,7 +636,7 @@
     "id": "proj_1786548776137_o68d9i",
     "nome": "Página Web de Projetos",
     "responsavel": "Tácio",
-    "status": "em_andamento",
+    "status": "concluido",
     "dataInicio": "2026-08-12",
     "dataFim": "2026-08-17",
     "descricao": "Criar uma página de PROJETOS",
@@ -722,6 +722,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786990027950",
+        "timestamp": "2026-08-17T18:07:07.950Z",
+        "action": "Projeto concluído",
+        "descricao": "Marcado como concluído."
+      },
       {
         "id": "hist_1786990021880",
         "timestamp": "2026-08-17T18:07:01.880Z",
@@ -910,7 +916,7 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-17T18:07:01.880Z",
+    "updatedAt": "2026-08-17T18:07:07.950Z",
     "categoria": "cat_1786984972435_fmjc"
   }
 ]
