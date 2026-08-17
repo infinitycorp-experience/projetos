@@ -300,7 +300,6 @@
         .folder-header { display: flex; align-items: center; gap: 10px; padding: 13px 16px; cursor: pointer; background: linear-gradient(135deg,#f8fafc,#ffffff); user-select: none; transition: background .2s; }
         .folder-header:hover { background: #f1f5f9; }
         .folder-chevron { font-size: 11px; color: var(--muted); transition: transform .3s ease; width: 14px; text-align: center; }
-        .folder.folder-open .folder-chevron { transform: rotate(90deg); }
         .folder-icon { font-size: 17px; }
         .folder-title { font-weight: 800; font-size: 14px; letter-spacing: -.01em; color: var(--ink); }
         .folder-count { font-size: 11px; font-weight: 700; color: #4f46e5; background: #eef2ff; padding: 2px 9px; border-radius: 999px; }
@@ -388,9 +387,11 @@
         <div class="brand">
             <a href="https://sites.google.com/infinitycorp.com.br/deptocomercial" class="logo-link">
                 <div class="logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+  <line x1="12" y1="11" x2="12" y2="17"></line>
+  <line x1="9" y1="14" x2="15" y2="14"></line>
+</svg>
                 </div>
                 <div class="brand-name">Projetos</div>
             </a>
@@ -1268,19 +1269,22 @@ function faseActionIcon(type) {
             if (ps.length) html += renderFolderSection(cat, ps);
         });
         listEl.innerHTML = html;
-    }
+       }
 
 
     // PASTAS: seção de uma pasta (accordion)
-    function renderFolderSection(cat, lista) {
+        function renderFolderSection(cat, lista) {
         var count = lista.length;
+        var idx = categorias.findIndex(function(c){ return c.id === cat.id; });
+        var FOLDER_COLORS = ['#4f46e5','#10b981','#f59e0b','#ec4899','#06b6d4','#8b5cf6','#f97316','#14b8a6','#e11d48','#6366f1'];
+        var cor = FOLDER_COLORS[idx % FOLDER_COLORS.length];
         var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
-        return '<div class="folder folder-open">' +
+        return '<div class="folder" style="border-top:4px solid ' + cor + ';">' +
             '<div class="folder-header" onclick="toggleFolder(this)">' +
-                '<span class="folder-chevron">▼</span>' +
-                '<span class="folder-icon">📁</span>' +
-                '<span class="folder-title">' + esc(cat.nome) + '</span>' +
-                '<span class="folder-count">' + count + ' projeto' + (count > 1 ? 's' : '') + '</span>' +
+                '<span class="folder-chevron">▶</span>' +
+                '<span class="folder-icon" style="background:' + cor + '1A;color:' + cor + ';border-radius:8px;padding:4px;">📁</span>' +
+                '<span class="folder-title" style="color:' + cor + ';">' + esc(cat.nome) + '</span>' +
+                '<span class="folder-count" style="background:' + cor + '1A;color:' + cor + ';">' + count + ' projeto' + (count > 1 ? 's' : '') + '</span>' +
                 '<span class="folder-actions" onclick="event.stopPropagation();">' +
                     '<button class="btn sm" onclick="editarPasta(\'' + esc(cat.id) + '\')" title="Editar pasta">✏️</button>' +
                     '<button class="btn sm danger" onclick="excluirPasta(\'' + esc(cat.id) + '\')" title="Excluir pasta">🗑️</button>' +
@@ -1291,11 +1295,11 @@ function faseActionIcon(type) {
     }
 
     // PASTAS: seção "Sem pasta"
-    function renderSemPastaSection(lista) {
+        function renderSemPastaSection(lista) {
         var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
-        return '<div class="folder folder-open">' +
+        return '<div class="folder">' +
             '<div class="folder-header" onclick="toggleFolder(this)">' +
-                '<span class="folder-chevron">▼</span>' +
+                '<span class="folder-chevron">▶</span>' +
                 '<span class="folder-icon">📂</span>' +
                 '<span class="folder-title">Sem pasta</span>' +
                 '<span class="folder-count">' + lista.length + ' projeto' + (lista.length > 1 ? 's' : '') + '</span>' +
@@ -1303,6 +1307,7 @@ function faseActionIcon(type) {
             '<div class="folder-body"><div class="folder-grid">' + grid + '</div></div>' +
         '</div>';
     }
+
 
     // PASTAS: abre/fecha accordion
     window.toggleFolder = function(header) {
