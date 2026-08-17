@@ -294,6 +294,27 @@
 
         @keyframes spin { to { transform: rotate(360deg); } }
 
+        /* ===== PASTAS (CATEGORIAS) ===== */
+        .folder { border: 1px solid var(--line); border-radius: 16px; margin-bottom: 16px; background: #fff; box-shadow: var(--shadow); overflow: hidden; transition: border-color .2s; }
+        .folder:hover { border-color: #c7d2fe; }
+        .folder-header { display: flex; align-items: center; gap: 10px; padding: 13px 16px; cursor: pointer; background: linear-gradient(135deg,#f8fafc,#ffffff); user-select: none; transition: background .2s; }
+        .folder-header:hover { background: #f1f5f9; }
+        .folder-chevron { font-size: 11px; color: var(--muted); transition: transform .3s ease; width: 14px; text-align: center; }
+        .folder.folder-open .folder-chevron { transform: rotate(90deg); }
+        .folder-icon { font-size: 17px; }
+        .folder-title { font-weight: 800; font-size: 14px; letter-spacing: -.01em; color: var(--ink); }
+        .folder-count { font-size: 11px; font-weight: 700; color: #4f46e5; background: #eef2ff; padding: 2px 9px; border-radius: 999px; }
+        .folder-actions { margin-left: auto; display: flex; gap: 6px; }
+        .folder-body { display: none; padding: 14px 16px 16px; }
+        .folder.folder-open .folder-body { display: block; animation: folderIn .25s ease; }
+        @keyframes folderIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+        .folder-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+        .folder-empty { padding: 10px 2px; font-size: 12px; color: var(--muted); }
+        .folder-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 700; color: #4f46e5; background: #eef2ff; padding: 3px 9px; border-radius: 999px; }
+        .mover-wrap { margin-top: 10px; }
+        .mover-select { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 7px 9px; font-size: 11.5px; font-family: 'Inter', sans-serif; background: #f8fafc; color: var(--ink); cursor: pointer; transition: all .15s; }
+        .mover-select:hover, .mover-select:focus { border-color: var(--brand); outline: 0; background: #fff; box-shadow: 0 0 0 3px rgba(79,70,229,.08); }
+
         @media(max-width:900px) {
             .app { flex-direction: column; }
             .sidebar { position: static; width: 100%; flex-direction: column; padding: 16px; }
@@ -357,6 +378,7 @@
         .fase-status-select .fss-option { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 7px; cursor: pointer; font-size: 11px; font-weight: 600; color: var(--ink); transition: background .12s ease; }
         .fase-status-select .fss-option:hover { background: #f8fafc; }
         .fase-status-select .fss-option.selected { background: #eff6ff; color: var(--brand); }
+            
     </style>
 </head>
 <body>
@@ -436,6 +458,11 @@
                 <p id="lastUpdate">InfinityCorp · Depto Comercial — Inicializando...</p>
             </div>
             <div class="top-actions">
+                <!-- PASTAS: botão Nova Pasta -->
+                <button class="btn btn-action" id="btnNovaPasta" title="Criar nova pasta para organizar projetos">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg>
+                    Nova Pasta
+                </button>
                 <button class="btn btn-green" id="btnNovoProjeto">➕ Novo Projeto</button>
             </div>
         </div>
@@ -468,8 +495,14 @@
                     <option value="cancelado">Cancelado</option>
                     <option value="atencao">⚠️ Atenção (pausados/cancelados)</option>
                 </select>
-            </div>
-            <div id="projectList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;"></div>
+                <!-- PASTAS: filtro por pasta -->
+                <select id="filterCategoria">
+                    <option value="todos">Todas as pastas</option>
+                    <option value="sem_pasta">📂 Sem pasta</option>
+                </select>
+                </div>
+            <!-- PASTAS: lista agora vira contêiner de pastas (accordion) -->
+            <div id="projectList"></div>
             <div id="emptyProjects" class="empty-state hide">
                 <div class="icon">📁</div><h3>Nenhum projeto encontrado</h3><p>Crie seu primeiro projeto ou ajuste os filtros.</p>
                 <button class="btn btn-green" id="btnEmptyCreate">➕ Criar Projeto</button>
@@ -494,9 +527,11 @@
                         </select>
                     </div>
                 </div>
-                <div class="row-2">
+                <div class="row-3">
+                    <!-- PASTAS: campo de pasta no modal -->
                     <div class="field"><label>Data de Início</label><input type="date" id="mDataInicio"></div>
                     <div class="field"><label>Previsão de Término</label><input type="date" id="mDataFim"></div>
+                    <div class="field"><label>Pasta</label><select id="mPasta"><option value="">📁 Sem pasta</option></select></div>
                 </div>
                 <div class="field"><label>Descrição / Objetivo</label><textarea id="mDescricao" rows="3" placeholder="Descreva o objetivo e escopo do projeto..."></textarea></div>
                 <div class="field"><label>Procedimentos / Metodologia</label><textarea id="mProcedimentos" rows="3" placeholder="Descreva os procedimentos, metodologia ou abordagem..."></textarea></div>
@@ -563,6 +598,22 @@
             </div>
         </div>
 
+        <!-- MODAL: PASTA (NOVO) -->
+        <div class="modal-bg" id="modalPastaBg">
+            <div class="modal" style="max-width:420px;">
+                <h3 id="modalPastaTitle">Nova Pasta</h3>
+                <input type="hidden" id="mPastaId">
+                <div class="field">
+                    <label>Nome da Pasta *</label>
+                    <input id="mPastaNome" placeholder="Ex: Eventos, Vendas, Infraestrutura...">
+                </div>
+                <div class="modal-foot">
+                    <button class="btn ghost" id="btnPastaCancel">Cancelar</button>
+                    <button class="btn primary" id="btnPastaSalvar">💾 Salvar Pasta</button>
+                </div>
+            </div>
+        </div>
+
         <!-- MODAL: CONFIRMAÇÃO -->
         <div class="modal-bg" id="confirmBg">
             <div class="modal" style="max-width:420px">
@@ -615,6 +666,7 @@
     /* ============ CONFIGURAÇÃO DO GITHUB ============ */
     const GITHUB_REPO = 'projetos';
     const DATA_PATH = 'data/projetos.json';
+    const CATEGORIES_PATH = 'data/categorias.json'; // PASTAS
     const ANEXOS_PATH = 'anexos';
     const BRANCH = 'main';
 
@@ -698,6 +750,7 @@
     function uid() { return 'proj_' + Date.now() + '_' + Math.random().toString(36).slice(2,8); }
     function faseUid() { return 'fase_' + Date.now() + '_' + Math.random().toString(36).slice(2,6); }
     function attUid() { return 'att_' + Date.now() + '_' + Math.random().toString(36).slice(2,6); }
+    function categoriaUid() { return 'cat_' + Date.now() + '_' + Math.random().toString(36).slice(2,6); } // PASTAS
 
     // ============ CORES DO PROGRESSO ============
     function progressHue(prog) { return Math.max(0, Math.min(120, prog * 1.2)); }
@@ -749,16 +802,24 @@
     // ============ DATA LAYER ============
     const STORAGE_KEY = 'myhub_nitro_projetos_local';
     const DIRTY_KEY = 'myhub_nitro_projetos_dirty';
+    const CATEGORIES_KEY = 'myhub_nitro_projetos_categorias'; // PASTAS
+    const CATEGORIES_DIRTY_KEY = 'myhub_nitro_projetos_categorias_dirty'; // PASTAS
     function markDirty(){ try { localStorage.setItem(DIRTY_KEY, '1'); } catch(e){} }
     function clearDirty(){ try { localStorage.removeItem(DIRTY_KEY); } catch(e){} }
     function isDirty(){ try { return localStorage.getItem(DIRTY_KEY) === '1'; } catch(e){ return false; } }
+    function markDirtyCategorias(){ try { localStorage.setItem(CATEGORIES_DIRTY_KEY, '1'); } catch(e){} } // PASTAS
+    function clearDirtyCategorias(){ try { localStorage.removeItem(CATEGORIES_DIRTY_KEY); } catch(e){} } // PASTAS
+    function isDirtyCategorias(){ try { return localStorage.getItem(CATEGORIES_DIRTY_KEY) === '1'; } catch(e){ return false; } } // PASTAS
 
     let projetos = [];
+    let categorias = []; // PASTAS
     let isOnline = false;
 
     function normalizeProjeto(p) {
         p.fases = p.fases || []; p.anexos = p.anexos || [];
         p.historico = p.historico || []; p.responsavel = p.responsavel || '';
+        p.categoria = p.categoria || ''; // PASTAS
+        
         (p.fases||[]).forEach(function(f){
             f.anotacoes = f.anotacoes || [];
             f.responsavel = f.responsavel || '';
@@ -775,6 +836,39 @@
         projetos.forEach(normalizeProjeto);
     }
     function saveLocal() { localStorage.setItem(STORAGE_KEY, JSON.stringify(projetos)); }
+
+    // PASTAS: data layer de categorias
+    function loadCategoriasLocal() {
+        try {
+            var raw = localStorage.getItem(CATEGORIES_KEY);
+            categorias = raw ? JSON.parse(raw) : [];
+            categorias = sanitizeStrings(categorias);
+        } catch(e) { categorias = []; }
+    }
+    function saveCategoriasLocal() { localStorage.setItem(CATEGORIES_KEY, JSON.stringify(categorias)); }
+    function loadCategoriasFromGitHub() {
+        if (!_githubOwner) return Promise.resolve(categorias);
+        return githubApi('GET', CATEGORIES_PATH)
+        .then(function(d) {
+            if (!d || !d.content) return categorias;
+            var data = JSON.parse(strFromBase64(d.content));
+            if (!Array.isArray(data)) throw new Error('Formato inválido');
+            categorias = data;
+            saveCategoriasLocal();
+            return categorias;
+        })
+        .catch(function() { loadCategoriasLocal(); return categorias; });
+    }
+    function saveCategoriasToGitHub() {
+        if (!_githubOwner || !isOnline) { saveCategoriasLocal(); markDirtyCategorias(); return Promise.resolve(); }
+        var base64 = strToBase64(JSON.stringify(categorias, null, 2));
+        return githubUploadFile(CATEGORIES_PATH, base64, 'Atualização das pastas')
+        .then(function() { saveCategoriasLocal(); clearDirtyCategorias(); })
+        .catch(function(err) {
+            saveCategoriasLocal(); markDirtyCategorias();
+            toast('Erro ao sincronizar pastas com GitHub. Salvas localmente.', 'err');
+        });
+    }
 
     function loadFromGitHub() {
         if (!_githubOwner) return Promise.reject('Owner desconhecido');
@@ -848,6 +942,8 @@ function fasePillHTML(status) {
         if (proj.historico.length > 100) proj.historico.length = 100;
     }
     function getProjetoById(id) { return projetos.find(function(p){ return p.id === id; }); }
+    function getCategoriaById(id) { return categorias.find(function(c){ return c.id === id; }); } // PASTAS
+    function categoriaNome(id) { var c = getCategoriaById(id); return c ? c.nome : ''; } // PASTAS
 
     // ============ RENDER HELPERS ============
    function statusBadge(status) {
@@ -946,7 +1042,11 @@ function faseActionIcon(type) {
     } else if (p.fases && p.fases.length > 0) {
         faseHtml = '<div class="proj-fase-atual" style="color:var(--muted)">📍 ' + p.fases.length + ' fase(s)</div>';
     }
-    return '<div class="project-card" style="background:linear-gradient(140deg,' + tint + ' 0%, #ffffff 55%);border-color:' + border + ';" onclick="verDetalheProjeto(\'' + esc(p.id) + '\')">' +
+        var moverOpts = '<option value="">📂 Sem pasta</option>' +
+        categorias.map(function(c){ return '<option value="' + esc(c.id) + '"' + (p.categoria === c.id ? ' selected' : '') + '>🗂️ ' + esc(c.nome) + '</option>'; }).join('');
+        var moverSel = '<select title="Mover projeto de pasta" onclick="event.stopPropagation()" onchange="moverProjeto(\'' + esc(p.id) + '\', this.value)" style="border:1px solid var(--line);border-radius:8px;padding:4px 6px;font-size:10.5px;font-family:\'Inter\',sans-serif;background:#fff;cursor:pointer;max-width:150px;">' + moverOpts + '</select>';
+
+        return '<div class="project-card" style="background:linear-gradient(140deg,' + tint + ' 0%, #ffffff 55%);border-color:' + border + ';" onclick="verDetalheProjeto(\'' + esc(p.id) + '\')">' +
         '<div class="proj-header"><span class="proj-name">' + esc(p.nome) + '</span>' + statusBadge(p.status) + '</div>' +
         '<div class="proj-desc">' + esc(p.descricao || 'Sem descrição.') + '</div>' +
         '<div class="proj-meta-row">' +
@@ -959,9 +1059,10 @@ function faseActionIcon(type) {
             '<span style="font-size:11px;font-weight:800;color:' + progColor + ';">' + prog + '%</span>' +
         '</div>' +
         '<div class="prog-bar-wrap"><div class="prog-bar-fill" style="width:' + prog + '%;background:' + progColor + ';"></div></div>' +
-        '<div class="proj-meta" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:11px;color:var(--muted);margin-top:10px;">' +
+        '<div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:11px;color:var(--muted);margin-top:10px;">' +
             '<span>📌 ' + (p.fases||[]).length + ' fase(s)</span>' +
             '<span>📎 ' + (p.anexos||[]).length + ' anexo(s)</span>' +
+            '<span style="margin-left:auto;">' + moverSel + '</span>' +
         '</div>' +
     '</div>';
 }
@@ -973,6 +1074,7 @@ function faseActionIcon(type) {
         $('#view-projetos').classList.toggle('hide', view !== 'projetos');
         if (view === 'dashboard') {
             $('#filterStatus').value = 'todos';
+            $('#filterCategoria').value = 'todos'; // PASTAS
             $('#searchInput').value = '';
             renderDashboard();
         }
@@ -981,6 +1083,7 @@ function faseActionIcon(type) {
 
     function goToProjetos(filter) {
         $('#filterStatus').value = filter;
+        $('#filterCategoria').value = 'todos'; // PASTAS
         $('#searchInput').value = '';
         setView('projetos');
     }
@@ -1133,10 +1236,12 @@ function faseActionIcon(type) {
                        coluna('🆕 Recém-Criados', criados, 'criados');
     }
 
-    // ============ PROJECT LIST ============
-    function renderProjectList() {
+    // ============ PROJECT LIST (COM PASTAS) ============
+        function renderProjectList() {
         var searchTerm = ($('#searchInput').value || '').toLowerCase();
         var filterStatus = $('#filterStatus').value;
+        var filterCategoria = $('#filterCategoria') ? $('#filterCategoria').value : 'todos';
+
         var filtered = projetos;
         if (searchTerm) {
             filtered = filtered.filter(function(p){
@@ -1147,9 +1252,95 @@ function faseActionIcon(type) {
         }
         if (filterStatus === 'atencao') filtered = filtered.filter(function(p){ return p.status==='pausado'||p.status==='cancelado'; });
         else if (filterStatus !== 'todos') filtered = filtered.filter(function(p){ return p.status === filterStatus; });
+
+        if (filterCategoria === 'sem_pasta') filtered = filtered.filter(function(p){ return !p.categoria; });
+        else if (filterCategoria !== 'todos') filtered = filtered.filter(function(p){ return p.categoria === filterCategoria; });
+
         var listEl = $('#projectList'), emptyEl = $('#emptyProjects');
-        if (filtered.length === 0) { listEl.innerHTML = ''; emptyEl.classList.remove('hide'); }
-        else { emptyEl.classList.add('hide'); listEl.innerHTML = filtered.map(function(p){ return renderProjectCard(p); }).join(''); }
+        if (filtered.length === 0) { listEl.innerHTML = ''; emptyEl.classList.remove('hide'); return; }
+        emptyEl.classList.add('hide');
+
+        var html = '';
+        var semPasta = filtered.filter(function(p){ return !p.categoria; });
+        if (semPasta.length) html += renderSemPastaSection(semPasta);
+        categorias.forEach(function(cat) {
+            var ps = filtered.filter(function(p){ return p.categoria === cat.id; });
+            if (ps.length) html += renderFolderSection(cat, ps);
+        });
+        listEl.innerHTML = html;
+    }
+
+
+    // PASTAS: seção de uma pasta (accordion)
+    function renderFolderSection(cat, lista) {
+        var count = lista.length;
+        var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
+        return '<div class="folder folder-open">' +
+            '<div class="folder-header" onclick="toggleFolder(this)">' +
+                '<span class="folder-chevron">▼</span>' +
+                '<span class="folder-icon">📁</span>' +
+                '<span class="folder-title">' + esc(cat.nome) + '</span>' +
+                '<span class="folder-count">' + count + ' projeto' + (count > 1 ? 's' : '') + '</span>' +
+                '<span class="folder-actions" onclick="event.stopPropagation();">' +
+                    '<button class="btn sm" onclick="editarPasta(\'' + esc(cat.id) + '\')" title="Editar pasta">✏️</button>' +
+                    '<button class="btn sm danger" onclick="excluirPasta(\'' + esc(cat.id) + '\')" title="Excluir pasta">🗑️</button>' +
+                '</span>' +
+            '</div>' +
+            '<div class="folder-body"><div class="folder-grid">' + grid + '</div></div>' +
+        '</div>';
+    }
+
+    // PASTAS: seção "Sem pasta"
+    function renderSemPastaSection(lista) {
+        var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
+        return '<div class="folder folder-open">' +
+            '<div class="folder-header" onclick="toggleFolder(this)">' +
+                '<span class="folder-chevron">▼</span>' +
+                '<span class="folder-icon">📂</span>' +
+                '<span class="folder-title">Sem pasta</span>' +
+                '<span class="folder-count">' + lista.length + ' projeto' + (lista.length > 1 ? 's' : '') + '</span>' +
+            '</div>' +
+            '<div class="folder-body"><div class="folder-grid">' + grid + '</div></div>' +
+        '</div>';
+    }
+
+    // PASTAS: abre/fecha accordion
+    window.toggleFolder = function(header) {
+        var folder = header.closest('.folder');
+        if (!folder) return;
+        var isOpen = folder.classList.toggle('folder-open');
+        var chevron = header.querySelector('.folder-chevron');
+        if (chevron) chevron.textContent = isOpen ? '▼' : '▶';
+    };
+
+    // PASTAS: mover projeto para outra pasta
+    window.moverProjeto = function(projId, categoriaId) {
+        var proj = getProjetoById(projId);
+        if (!proj) return;
+        var destino = categoriaId || '';
+        if (proj.categoria === destino) return;
+        proj.categoria = destino;
+        proj.updatedAt = new Date().toISOString();
+        addHistory(proj, 'Projeto movido', destino ? 'Movido para a pasta "' + categoriaNome(destino) + '".' : 'Removido de pastas (sem pasta).');
+        saveLocal();
+        saveToGitHub().then(function(){ renderProjectList(); renderDashboard(); });
+        toast(destino ? 'Movido para "' + categoriaNome(destino) + '".' : 'Movido para "Sem pasta".', 'ok');
+    };
+
+    // PASTAS: preencher selects de categorias
+    function populateFilterCategorias() {
+        var sel = $('#filterCategoria');
+        if (!sel) return;
+        var cur = sel.value;
+        var opts = categorias.map(function(c){ return '<option value="' + esc(c.id) + '">📁 ' + esc(c.nome) + '</option>'; }).join('');
+        sel.innerHTML = '<option value="todos">Todas as pastas</option>' + opts + '<option value="sem_pasta">📂 Sem pasta</option>';
+        if (cur && sel.querySelector('option[value="' + cur + '"]')) sel.value = cur;
+    }
+    function populateModalCategoria() {
+        var sel = $('#mCategoria');
+        if (!sel) return;
+        var opts = categorias.map(function(c){ return '<option value="' + esc(c.id) + '">📁 ' + esc(c.nome) + '</option>'; }).join('');
+        sel.innerHTML = '<option value="">📂 Sem pasta</option>' + opts;
     }
 
     // ============ MODAL PROJETO ============
@@ -1164,6 +1355,8 @@ function faseActionIcon(type) {
         $('#mNome').value = proj ? proj.nome : '';
         $('#mResponsavel').value = proj ? (proj.responsavel || '') : '';
         $('#mStatus').value = proj ? proj.status : 'em_planejamento';
+        populateModalCategoria(); // PASTAS
+        $('#mCategoria').value = proj ? (proj.categoria || '') : ''; // PASTAS
         $('#mDataInicio').value = proj ? (proj.dataInicio || '') : new Date().toISOString().slice(0,10);
         $('#mDataFim').value = proj ? (proj.dataFim || '') : '';
         $('#mDescricao').value = proj ? (proj.descricao || '') : '';
@@ -1440,6 +1633,7 @@ function initModalFaseStatusSelect() {
         var dataFim = $('#mDataFim').value;
         var descricao = $('#mDescricao').value.trim();
         var procedimentos = $('#mProcedimentos').value.trim();
+        var categoria = $('#mCategoria') ? ($('#mCategoria').value || '') : ''; // PASTAS
 
         if (status === 'em_planejamento' && fases.some(function(f){ return f.status==='em_andamento'; })) {
             status = 'em_andamento';
@@ -1456,6 +1650,7 @@ function initModalFaseStatusSelect() {
             id: editandoProjeto ? editandoProjeto.id : uid(),
             nome: nome, responsavel: responsavel, status: status,
             dataInicio: dataInicio, dataFim: dataFim, descricao: descricao, procedimentos: procedimentos,
+            categoria: categoria, // PASTAS
             fases: fases, anexos: todosAnexos,
             historico: editandoProjeto ? (editandoProjeto.historico || []) : [],
             createdAt: editandoProjeto ? editandoProjeto.createdAt : new Date().toISOString(),
@@ -1497,6 +1692,7 @@ function initModalFaseStatusSelect() {
         content.innerHTML =
         '<div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px;flex-wrap:wrap;gap:12px;">' +
             '<div><h3 style="font-size:18px;">'+esc(proj.nome)+'</h3><div style="margin-top:4px;">'+statusBadge(proj.status)+'</div>' +
+            (proj.categoria ? '<div style="margin-top:4px;font-size:11px;font-weight:700;color:var(--brand);">📁 '+esc(categoriaNome(proj.categoria))+'</div>' : '<div style="margin-top:4px;font-size:11px;font-weight:700;color:var(--muted);">📂 Sem pasta</div>') +
             (proj.responsavel ? '<div style="margin-top:4px;font-size:12px;color:var(--brand);font-weight:600;">👤 '+esc(proj.responsavel)+'</div>' : '') +
             '</div>' +
             '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
@@ -1721,6 +1917,54 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
         });
     };
 
+    // ============ PASTAS: CRUD ============
+    function openModalPasta(cat) {
+        $('#mPastaId').value = cat ? cat.id : '';
+        $('#mPastaNome').value = cat ? cat.nome : '';
+        $('#modalPastaTitle').textContent = cat ? 'Editar Pasta' : 'Nova Pasta';
+        $('#modalPastaBg').classList.add('show');
+    }
+    window.novaPasta = function(){ openModalPasta(null); };
+    window.editarPasta = function(id){ openModalPasta(getCategoriaById(id)); };
+    window.excluirPasta = function(id) {
+        var cat = getCategoriaById(id);
+        if (!cat) return;
+        var qtd = projetos.filter(function(p){ return p.categoria === id; }).length;
+        var msg = 'Excluir a pasta "' + cat.nome + '"?' + (qtd > 0 ? ' Os ' + qtd + ' projeto(s) dela ficarão "Sem pasta".' : '');
+        askConfirm(msg, function(){
+            categorias = categorias.filter(function(c){ return c.id !== id; });
+            projetos.forEach(function(p){ if(p.categoria === id) p.categoria = ''; });
+            saveLocal(); saveCategoriasLocal();
+            saveToGitHub().then(function(){ return saveCategoriasToGitHub(); })
+            .then(function(){
+                refreshAll(); populateFilterCategorias();
+                showCenterModal('Pasta excluída', 'A pasta foi removida com sucesso.');
+            });
+        });
+    };
+    $('#btnPastaSalvar').onclick = function(){
+        var nome = $('#mPastaNome').value.trim();
+        if (!nome) { toast('Informe o nome da pasta.','err'); return; }
+        var id = $('#mPastaId').value;
+        if (id) {
+            var cat = getCategoriaById(id);
+            if (cat) cat.nome = nome;
+        } else {
+            categorias.push({ id: categoriaUid(), nome: nome, createdAt: new Date().toISOString() });
+        }
+        saveCategoriasLocal();
+        saveCategoriasToGitHub().then(function(){
+            $('#modalPastaBg').classList.remove('show');
+            populateFilterCategorias();
+            populateModalCategoria();
+            renderProjectList();
+            renderDashboard();
+            showCenterModal('Pasta salva', 'A pasta "' + nome + '" foi salva com sucesso.');
+        });
+    };
+    $('#btnPastaCancel').onclick = function(){ $('#modalPastaBg').classList.remove('show'); };
+    $('#modalPastaBg').onclick = function(e){ if(e.target === this) $('#modalPastaBg').classList.remove('show'); };
+
     // ============ CONFIRM ============
     var _confirmCb = null;
     function askConfirm(msg, cb){ $('#confirmMsg').textContent = msg; _confirmCb = cb; $('#confirmBg').classList.add('show'); }
@@ -1735,7 +1979,7 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
     $('#btnExportarJSON').onclick = function(){
         $('#gearDropdown').classList.remove('show');
         var blob = new Blob([JSON.stringify(projetos, null, 2)], {type:'application/json'});
-        var url = URL.createObjectURL(blob);
+                var url = URL.createObjectURL(blob);
         var a = document.createElement('a');
         a.href = url; a.download = 'myhub_projetos_backup_'+new Date().toISOString().slice(0,10)+'.json';
         a.click(); URL.revokeObjectURL(url);
@@ -1818,7 +2062,8 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
         syncStepsState = [
             syncStep('connect', 'Conectando ao GitHub'),
             syncStep('receive', 'Recebendo dados do servidor'),
-            syncStep('send', 'Enviando dados salvos offline')
+            syncStep('send', 'Enviando dados salvos offline'),
+            syncStep('pastas', 'Sincronizando pastas')
         ];
         renderSyncSteps();
         setSyncStatus('online', 'Sincronizando...');
@@ -1855,6 +2100,12 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
             }
         })
         .then(function() {
+            updateSyncStep('pastas', 'loading', 'Enviando pastas ao servidor...');
+              return saveCategoriasToGitHub().then(function() {
+             updateSyncStep('pastas', 'done', 'Pastas sincronizadas.');
+            });
+        })
+        .then(function() {
             setSyncStatus('online', 'Sincronizado ✓');
             refreshAll();
             showSyncResult('ok', 'Sincronização concluída', 'Os dados estão atualizados com o servidor.');
@@ -1880,10 +2131,11 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
     $('#syncModalBg').onclick = function(e){ if(e.target === this) $('#syncModalBg').classList.remove('show'); };
 
     // ============ REFRESH ============
-    function refreshAll() { renderDashboard(); renderProjectList(); updateNavBadges(); }
+    function refreshAll() { renderDashboard(); renderProjectList(); populateFilterCategorias(); updateNavBadges(); }
 
     // ============ EVENT LISTENERS ============
     $('#btnNovoProjeto').onclick = function(){ openModalProjeto(null); };
+    $('#btnNovaPasta').onclick = function(){ openModalPasta(null); };
     $('#btnCancelProj').onclick = closeModalProjeto;
     $('#btnEmptyCreate').onclick = function(){ openModalProjeto(null); };
     $('#centerOk').onclick = function(){ $('#centerBg').classList.remove('show'); };
@@ -1900,17 +2152,23 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
     });
     $('#searchInput').oninput = renderProjectList;
     $('#filterStatus').onchange = renderProjectList;
+    $('#filterCategoria').onchange = renderProjectList;
+
 
     // ============ INIT ============
+    loadCategoriasLocal();
     loadLocal();
     refreshAll();
     discoverOwner()
     .then(function(owner){
-        if (isDirty()) {
-            return githubUploadFile(DATA_PATH, strToBase64(JSON.stringify(projetos, null, 2)), 'Sincronização de dados offline')
-                .then(function(){ clearDirty(); saveLocal(); setSyncStatus('online', 'Sincronizado ✓'); return projetos; });
-        }
-        return loadFromGitHub();
+        return loadCategoriasFromGitHub().then(function(){
+
+            if (isDirty()) {
+                return githubUploadFile(DATA_PATH, strToBase64(JSON.stringify(projetos, null, 2)), 'Sincronização de dados offline')
+                    .then(function(){ clearDirty(); saveLocal(); setSyncStatus('online', 'Sincronizado ✓'); return projetos; });
+            }
+            return loadFromGitHub();
+        });
     })
     .then(function(){ refreshAll(); })
     .catch(function(){ refreshAll(); });
@@ -1920,3 +2178,4 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
 </script>
 </body>
 </html>
+
