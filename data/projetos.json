@@ -636,16 +636,17 @@
     "id": "proj_1786548776137_o68d9i",
     "nome": "Página Web de Projetos",
     "responsavel": "Tácio",
-    "status": "concluido",
+    "status": "pausado",
     "dataInicio": "2026-08-12",
     "dataFim": "2026-08-17",
     "descricao": "Criar uma página de PROJETOS",
     "procedimentos": "",
+    "categoria": "cat_1786984972435_fmjc",
     "fases": [
       {
         "id": "fase_1786548715663_rfbk",
         "nome": "Elaboração",
-        "status": "concluida",
+        "status": "pendente",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
@@ -654,7 +655,7 @@
       {
         "id": "fase_1786548728018_91ci",
         "nome": "Criação de HTML Básico",
-        "status": "concluida",
+        "status": "pendente",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
@@ -663,7 +664,7 @@
       {
         "id": "fase_1786548746603_pf7t",
         "nome": "Repositório",
-        "status": "concluida",
+        "status": "pendente",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 3,
@@ -672,7 +673,7 @@
       {
         "id": "fase_1786548755133_ifxz",
         "nome": "Definição de Site",
-        "status": "concluida",
+        "status": "pendente",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 4,
@@ -687,7 +688,7 @@
       {
         "id": "fase_1786548769043_sf87",
         "nome": "Refinamento",
-        "status": "concluida",
+        "status": "pendente",
         "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 5,
@@ -707,7 +708,7 @@
       {
         "id": "fase_1786635305941_9tdz",
         "nome": "Aprovação (Conclusão)",
-        "status": "concluida",
+        "status": "pendente",
         "responsavel": "Osmar",
         "descricao": "",
         "ordem": 6,
@@ -722,6 +723,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786993480553",
+        "timestamp": "2026-08-17T19:04:40.553Z",
+        "action": "Projeto editado",
+        "descricao": "Status: pausado, Fases: 6"
+      },
       {
         "id": "hist_1786990027950",
         "timestamp": "2026-08-17T18:07:07.950Z",
@@ -916,7 +923,6 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-17T18:07:07.950Z",
-    "categoria": "cat_1786984972435_fmjc"
+    "updatedAt": "2026-08-17T19:04:40.553Z"
   }
 ]
