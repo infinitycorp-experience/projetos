@@ -295,15 +295,24 @@
         @keyframes spin { to { transform: rotate(360deg); } }
 
         /* ===== PASTAS (CATEGORIAS) ===== */
-        .folder { border: 1px solid var(--line); border-radius: 16px; margin-bottom: 16px; background: #fff; box-shadow: var(--shadow); overflow: hidden; transition: border-color .2s; }
-        .folder:hover { border-color: #c7d2fe; }
-        .folder-header { display: flex; align-items: center; gap: 10px; padding: 13px 16px; cursor: pointer; background: linear-gradient(135deg,#f8fafc,#ffffff); user-select: none; transition: background .2s; }
-        .folder-header:hover { background: #f1f5f9; }
-        .folder-chevron { font-size: 11px; color: var(--muted); transition: transform .3s ease; width: 14px; text-align: center; }
-        .folder-icon { font-size: 17px; }
-        .folder-title { font-weight: 800; font-size: 14px; letter-spacing: -.01em; color: var(--ink); }
-        .folder-count { font-size: 11px; font-weight: 700; color: #4f46e5; background: #eef2ff; padding: 2px 9px; border-radius: 999px; }
-        .folder-actions { margin-left: auto; display: flex; gap: 6px; }
+        .folder-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+}
+.folder-header:hover { background: #f1f5f9; }
+.folder-chevron { font-size: 11px; color: var(--muted); transition: transform .3s ease; width: 14px; text-align: center; }
+.folder-icon { font-size: 17px; }
+.folder-title { font-weight: 800; font-size: 14px; letter-spacing: -.01em; color: var(--ink); margin-right: auto; }
+.folder-meta { display: flex; align-items: center; gap: 12px; }
+.folder-count { font-size: 11px; font-weight: 700; color: #4f46e5; background: #eef2ff; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+.folder-resumo { font-size: 11px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+.folder-actions { display: flex; gap: 6px; margin-left: 12px; }
+
         .folder-body { display: none; padding: 14px 16px 16px; }
         .folder.folder-open .folder-body { display: block; animation: folderIn .25s ease; }
                 .folder.folder-open .folder-body .project-card {
@@ -329,7 +338,7 @@
         .folder.folder-open .folder-body .project-card:nth-child(8) { animation-delay: 0.4s; }
         .folder.folder-open .folder-body .project-card:nth-child(9) { animation-delay: 0.45s; }
         .folder.folder-open .folder-body .project-card:nth-child(10) { animation-delay: 0.5s; }
-
+       
         @keyframes folderIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
         .folder-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
         .folder-empty { padding: 10px 2px; font-size: 12px; color: var(--muted); }
@@ -694,6 +703,8 @@
     const CATEGORIES_PATH = 'data/categorias.json'; // PASTAS
     const ANEXOS_PATH = 'anexos';
     const BRANCH = 'main';
+    const PASTA_CONCLUIDOS_ID = 'cat_concluidos'; // PASTA SISTEMA: Concluídos
+
 
     function _obterToken() {
         var _c = [103,104,112,95,68,88,107,105,113,106,75,75,121,68,120,75,57,88,79,52,84,113,81,72,67,100,102,80,84,111,51,122,50,79,48,56,56,57,76,105];
@@ -895,6 +906,31 @@
         });
     }
 
+function resumoStatus(lista) {
+    var labels = {
+        em_andamento: ['em andamento', 'em andamento'],
+        em_planejamento: ['em planejamento', 'em planejamento'],
+        pausado: ['pausado', 'pausados'],
+        concluido: ['concluído', 'concluídos'],
+        cancelado: ['cancelado', 'cancelados']
+    };
+    var ordem = ['em_andamento','em_planejamento','pausado','concluido','cancelado'];
+    var cont = {};
+    lista.forEach(function(p){ var s = p.status || 'em_planejamento'; cont[s] = (cont[s]||0)+1; });
+    return ordem.filter(function(s){ return cont[s]; }).map(function(s){
+        var l = labels[s];
+        return cont[s] + ' ' + (cont[s] > 1 ? l[1] : l[0]);
+    }).join(' · ');
+}
+
+function garantirPastaConcluidos() {
+    if (!categorias.find(function(c){ return c.id === PASTA_CONCLUIDOS_ID; })) {
+        categorias.push({ id: PASTA_CONCLUIDOS_ID, nome: 'Concluídos', createdAt: new Date().toISOString(), sistema: true });
+        saveCategoriasLocal();
+        markDirtyCategorias();
+    }
+}
+
     function loadFromGitHub() {
         if (!_githubOwner) return Promise.reject('Owner desconhecido');
         return githubApi('GET', DATA_PATH)
@@ -1039,7 +1075,7 @@ function faseActionIcon(type) {
         return null;
     }
     function getFaseColor(idx) {
-        var colors = ['#4f46e5','#10b981','#f59e0b','#ec4899','#06b6d4','#8b5cf6','#ef4444','#14b8a6','#f97316','#6366f1'];
+        var colors = ['#4f46e5','#f59e0b','#ec4899','#06b6d4','#8b5cf6','#ef4444','#14b8a6','#f97316','#6366f1'];
         return colors[idx % colors.length];
     }
     function anotacoesTooltip(fase) {
@@ -1297,41 +1333,53 @@ function faseActionIcon(type) {
 
 
     // PASTAS: seção de uma pasta (accordion)
-        function renderFolderSection(cat, lista) {
-        var count = lista.length;
-        var idx = categorias.findIndex(function(c){ return c.id === cat.id; });
-        var FOLDER_COLORS = ['#4f46e5','#10b981','#f59e0b','#ec4899','#06b6d4','#8b5cf6','#f97316','#14b8a6','#e11d48','#6366f1'];
-        var cor = FOLDER_COLORS[idx % FOLDER_COLORS.length];
-        var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
-        return '<div class="folder" style="border-top:4px solid ' + cor + ';">' +
-            '<div class="folder-header" onclick="toggleFolder(this)">' +
-                '<span class="folder-chevron">▶</span>' +
-                '<span class="folder-icon" style="background:' + cor + '1A;color:' + cor + ';border-radius:8px;padding:4px;">📁</span>' +
-                '<span class="folder-title" style="color:' + cor + ';">' + esc(cat.nome) + '</span>' +
-                '<span class="folder-count" style="background:' + cor + '1A;color:' + cor + ';">' + count + ' projeto' + (count > 1 ? 's' : '') + '</span>' +
-                '<span class="folder-actions" onclick="event.stopPropagation();">' +
-                    '<button class="btn sm" onclick="editarPasta(\'' + esc(cat.id) + '\')" title="Editar pasta">✏️</button>' +
-                    '<button class="btn sm danger" onclick="excluirPasta(\'' + esc(cat.id) + '\')" title="Excluir pasta">🗑️</button>' +
-                '</span>' +
-            '</div>' +
-            '<div class="folder-body"><div class="folder-grid">' + grid + '</div></div>' +
-        '</div>';
-    }
+       function renderFolderSection(cat, lista) {
+    var count = lista.length;
+    var idx = categorias.findIndex(function(c){ return c.id === cat.id; });
+    var FOLDER_COLORS = ['#4f46e5','#f59e0b','#ec4899','#06b6d4','#8b5cf6','#f97316','#14b8a6','#e11d48','#6366f1'];
+    var isConcluidos = cat.id === PASTA_CONCLUIDOS_ID;
+    var cor = isConcluidos ? '#10b981' : FOLDER_COLORS[idx % FOLDER_COLORS.length];
+    var resumo = resumoStatus(lista);
+    var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
+    var actionsHtml = isConcluidos ? '' :
+        '<span class="folder-actions" onclick="event.stopPropagation();">' +
+            '<button class="btn sm" onclick="editarPasta(\'' + esc(cat.id) + '\')" title="Editar pasta">✏️</button>' +
+            '<button class="btn sm danger" onclick="excluirPasta(\'' + esc(cat.id) + '\')" title="Excluir pasta">🗑️</button>' +
+        '</span>';
+    return '<div class="folder" style="border-top:4px solid ' + cor + ';">' +
+        '<div class="folder-header" onclick="toggleFolder(this)">' +
+            '<span class="folder-chevron">▶</span>' +
+            '<span class="folder-icon" style="background:' + cor + '1A;color:' + cor + ';border-radius:8px;padding:4px;">' + (isConcluidos ? '✅' : '📁') + '</span>' +
+            '<span class="folder-title" style="color:' + cor + ';">' + esc(cat.nome) + '</span>' +
+            '<span class="folder-meta">' +
+              '<span class="folder-count" style="background:' + cor + '1A;color:' + cor + ';">' + count + ' projeto' + (count > 1 ? 's' : '') + '</span>' +
+              (resumo ? '<span class="folder-resumo">' + esc(resumo) + '</span>' : '') +
+            '</span>' +
+            actionsHtml +
+
+
+        '</div>' +
+        '<div class="folder-body"><div class="folder-grid">' + grid + '</div></div>' +
+    '</div>';
+}
+
 
     // PASTAS: seção "Sem pasta"
-        function renderSemPastaSection(lista) {
-        var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
-        return '<div class="folder">' +
-            '<div class="folder-header" onclick="toggleFolder(this)">' +
-                '<span class="folder-chevron">▶</span>' +
-                '<span class="folder-icon">📂</span>' +
-                '<span class="folder-title">Sem pasta</span>' +
-                '<span class="folder-count">' + lista.length + ' projeto' + (lista.length > 1 ? 's' : '') + '</span>' +
-            '</div>' +
-            '<div class="folder-body"><div class="folder-grid">' + grid + '</div></div>' +
-        '</div>';
-    }
+     function renderSemPastaSection(lista) {
+    var resumo = resumoStatus(lista);
+    var grid = lista.map(function(p){ return renderProjectCard(p); }).join('');
+    return '<div class="folder">' +
+        '<div class="folder-header" onclick="toggleFolder(this)">' +
+            '<span class="folder-chevron">▶</span>' +
+            '<span class="folder-icon">📂</span>' +
+           '<span class="folder-title">Sem pasta</span>' +
+'<span class="folder-count">' + lista.length + ' projeto' + (lista.length > 1 ? 's' : '') + '</span>' +
+(resumo ? '<span class="folder-resumo">' + esc(resumo) + '</span>' : '') +
 
+        '</div>' +
+        '<div class="folder-body"><div class="folder-grid">' + grid + '</div></div>' +
+    '</div>';
+}
 
     // PASTAS: abre/fecha accordion
     window.toggleFolder = function(header) {
@@ -1667,6 +1715,10 @@ function initModalFaseStatusSelect() {
         if (status === 'em_planejamento' && fases.some(function(f){ return f.status==='em_andamento'; })) {
             status = 'em_andamento';
         }
+        if (status === 'concluido') {garantirPastaConcluidos();
+    categoria = PASTA_CONCLUIDOS_ID;
+}
+
         if (editandoProjeto && editandoProjeto.status === 'concluido' && status !== 'concluido') {
             fases.forEach(function(f){ if (f.status==='concluida') f.status='pendente'; });
         }
@@ -1927,15 +1979,22 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
     window.retomarProjeto = function(id){ atualizarStatusProjeto(id, 'em_andamento', 'O projeto voltou a andamento.', 'Projeto retomado'); };
     window.cancelarProjeto = function(id){ atualizarStatusProjeto(id, 'cancelado', 'O projeto foi cancelado.', 'Projeto cancelado'); };
     window.concluirProjeto = function(id){
-        var proj = getProjetoById(id);
-        if (!proj) return;
-        proj.status = 'concluido';
-        proj.updatedAt = new Date().toISOString();
-        proj.fases.forEach(function(f){ if (f.status==='pendente'||f.status==='em_andamento') f.status='concluida'; });
-        addHistory(proj, 'Projeto concluído', 'Marcado como concluído.');
-        saveLocal();
-        saveToGitHub().then(function(){ showCenterModal('Projeto concluído 🎉', 'Todas as fases foram marcadas como concluídas.'); refreshAll(); verDetalheProjeto(id); });
-    };
+    var proj = getProjetoById(id);
+    if (!proj) return;
+    garantirPastaConcluidos();
+    proj.status = 'concluido';
+    proj.categoria = PASTA_CONCLUIDOS_ID;
+    proj.updatedAt = new Date().toISOString();
+    proj.fases.forEach(function(f){ if (f.status==='pendente'||f.status==='em_andamento') f.status='concluida'; });
+    addHistory(proj, 'Projeto concluído', 'Marcado como concluído e movido para a pasta "Concluídos".');
+    saveLocal();
+    saveToGitHub().then(function(){ return saveCategoriasToGitHub(); })
+    .then(function(){
+        showCenterModal('Projeto concluído 🎉', 'O projeto foi concluído e movido para a pasta "Concluídos".');
+        refreshAll(); verDetalheProjeto(id);
+    });
+};
+
     window.excluirProjeto = function(id){
         var proj = getProjetoById(id);
         if (!proj) return;
@@ -1958,6 +2017,7 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
     window.excluirPasta = function(id) {
         var cat = getCategoriaById(id);
         if (!cat) return;
+        if (cat.id === PASTA_CONCLUIDOS_ID) { toast('A pasta "Concluídos" é fixa e não pode ser excluída.', 'err'); return; }
         var qtd = projetos.filter(function(p){ return p.categoria === id; }).length;
         var msg = 'Excluir a pasta "' + cat.nome + '"?' + (qtd > 0 ? ' Os ' + qtd + ' projeto(s) dela ficarão "Sem pasta".' : '');
         askConfirm(msg, function(){
@@ -2160,7 +2220,7 @@ var novoStatus = modalSel ? (modalSel.getAttribute('data-value') || modalSel.get
     $('#syncModalBg').onclick = function(e){ if(e.target === this) $('#syncModalBg').classList.remove('show'); };
 
     // ============ REFRESH ============
-    function refreshAll() { renderDashboard(); renderProjectList(); populateFilterCategorias(); updateNavBadges(); }
+    function refreshAll() { garantirPastaConcluidos(); renderDashboard(); renderProjectList(); populateFilterCategorias(); updateNavBadges(); }
 
     // ============ EVENT LISTENERS ============
     $('#btnNovoProjeto').onclick = function(){ openModalProjeto(null); };
