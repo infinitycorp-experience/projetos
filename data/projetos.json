@@ -388,6 +388,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786985000459",
+        "timestamp": "2026-08-17T16:43:20.459Z",
+        "action": "Projeto movido",
+        "descricao": "Movido para a pasta \"Novos Produtos\"."
+      },
+      {
         "id": "hist_1786558958701",
         "timestamp": "2026-08-12T18:22:38.701Z",
         "action": "Projeto criado",
@@ -395,8 +401,8 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-12T18:22:38.701Z",
-    "categoria": ""
+    "updatedAt": "2026-08-17T16:43:20.459Z",
+    "categoria": "cat_1786984994987_5x4c"
   },
   {
     "id": "proj_1786558567290_gegfxl",
