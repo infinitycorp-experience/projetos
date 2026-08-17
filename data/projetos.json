@@ -687,7 +687,7 @@
       {
         "id": "fase_1786548769043_sf87",
         "nome": "Refinamento",
-        "status": "pausada",
+        "status": "concluida",
         "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 5,
@@ -711,11 +711,23 @@
         "responsavel": "Osmar",
         "descricao": "",
         "ordem": 6,
-        "anotacoes": []
+        "anotacoes": [
+          {
+            "id": "anot_1786990011798_hftq",
+            "ts": "2026-08-17T18:06:51.798Z",
+            "texto": "Ajuste de pastas para organização"
+          }
+        ]
       }
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1786989989448",
+        "timestamp": "2026-08-17T18:06:29.448Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Refinamento\": concluida"
+      },
       {
         "id": "hist_1786984983150",
         "timestamp": "2026-08-17T16:43:03.150Z",
@@ -886,7 +898,7 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-17T16:43:03.150Z",
+    "updatedAt": "2026-08-17T18:06:51.798Z",
     "categoria": "cat_1786984972435_fmjc"
   }
 ]
