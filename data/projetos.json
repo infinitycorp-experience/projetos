@@ -711,6 +711,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1786984983150",
+        "timestamp": "2026-08-17T16:43:03.150Z",
+        "action": "Projeto movido",
+        "descricao": "Movido para a pasta \"Páginas WEB\"."
+      },
+      {
         "id": "hist_1786643401414",
         "timestamp": "2026-08-13T17:50:01.414Z",
         "action": "Fase pausada",
@@ -874,7 +880,7 @@
       }
     ],
     "createdAt": "2026-08-12T15:32:56.137Z",
-    "updatedAt": "2026-08-13T17:50:01.414Z",
-    "categoria": ""
+    "updatedAt": "2026-08-17T16:43:03.150Z",
+    "categoria": "cat_1786984972435_fmjc"
   }
 ]
