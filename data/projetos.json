@@ -3,12 +3,12 @@
     "id": "proj_1787166456641_ou8bje",
     "nome": "Video - Tela Interativa",
     "responsavel": "Tacio",
-    "status": "em_andamento",
+    "status": "concluido",
     "dataInicio": "2026-08-19",
     "dataFim": "2026-08-21",
     "descricao": "Criar video demonstrativo",
     "procedimentos": "",
-    "categoria": "cat_1787166386972_tu5t",
+    "categoria": "cat_concluidos",
     "fases": [
       {
         "id": "fase_1787166425761_9w2j",
@@ -31,6 +31,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787166480565",
+        "timestamp": "2026-08-19T19:08:00.565Z",
+        "action": "Projeto concluído",
+        "descricao": "Marcado como concluído e movido para a pasta \"Concluídos\"."
+      },
       {
         "id": "hist_1787166476411",
         "timestamp": "2026-08-19T19:07:56.411Z",
@@ -63,7 +69,7 @@
       }
     ],
     "createdAt": "2026-08-19T19:07:36.641Z",
-    "updatedAt": "2026-08-19T19:07:56.411Z"
+    "updatedAt": "2026-08-19T19:08:00.565Z"
   },
   {
     "id": "proj_1787139893024_n8e12m",
