@@ -6,7 +6,7 @@
     "status": "em_planejamento",
     "dataInicio": "2026-08-18",
     "dataFim": "2026-09-10",
-    "descricao": "Listar o que precisa para montar o case de sucesso no Portal",
+    "descricao": "Montar um case de sucesso para Portal",
     "procedimentos": "Se já tiverem algum material pronto (apresentação, relatório etc.), pode mandar junto que a gente já aproveita como base!\nCase da Vibra - https://cafecomcomprador.com/insights/case/?id=647&title=o-fim-das-tres-cotacoes\nCase SLA Agrícola - https://cafecomcomprador.com/insights/case/?id=615&title=jornada-de-transformacao-de-suprimentos",
     "categoria": "cat_1787139563701_6mkh",
     "fases": [
@@ -134,6 +134,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787141256057",
+        "timestamp": "2026-08-19T12:07:36.057Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_planejamento, Fases: 8"
+      },
+      {
         "id": "hist_1787140974685",
         "timestamp": "2026-08-19T12:02:54.685Z",
         "action": "Projeto editado",
@@ -159,7 +165,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-08-19T12:02:54.685Z"
+    "updatedAt": "2026-08-19T12:07:36.057Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
