@@ -28,6 +28,7 @@
   {
     "id": "cat_1787166386972_tu5t",
     "nome": "Videos",
-    "createdAt": "2026-08-19T19:06:26.972Z"
+    "createdAt": "2026-08-19T19:06:26.972Z",
+    "oculta": true
   }
 ]
