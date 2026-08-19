@@ -22,7 +22,7 @@
       {
         "id": "fase_1787166448844_l61w",
         "nome": "Criação",
-        "status": "pendente",
+        "status": "em_andamento",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
@@ -31,6 +31,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787166468694",
+        "timestamp": "2026-08-19T19:07:48.694Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Criação\": em_andamento"
+      },
       {
         "id": "hist_1787166467282",
         "timestamp": "2026-08-19T19:07:47.282Z",
@@ -51,7 +57,7 @@
       }
     ],
     "createdAt": "2026-08-19T19:07:36.641Z",
-    "updatedAt": "2026-08-19T19:07:47.282Z"
+    "updatedAt": "2026-08-19T19:07:48.694Z"
   },
   {
     "id": "proj_1787139893024_n8e12m",
