@@ -1,7 +1,7 @@
 [
   {
     "id": "proj_1787139893024_n8e12m",
-    "nome": "CASE DE SUCESSO PORTAL",
+    "nome": "Case De Sucesso Portal",
     "responsavel": "Todos",
     "status": "em_planejamento",
     "dataInicio": "2026-08-18",
@@ -134,6 +134,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787140974685",
+        "timestamp": "2026-08-19T12:02:54.685Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_planejamento, Fases: 8"
+      },
+      {
         "id": "hist_1787140622231",
         "timestamp": "2026-08-19T11:57:02.231Z",
         "action": "Projeto editado",
@@ -153,7 +159,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-08-19T11:57:02.231Z"
+    "updatedAt": "2026-08-19T12:02:54.685Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
