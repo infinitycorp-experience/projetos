@@ -1,5 +1,89 @@
 [
   {
+    "id": "proj_1787139893024_n8e12m",
+    "nome": "CASE DE SUCESSO PORTAL",
+    "responsavel": "Todos",
+    "status": "em_planejamento",
+    "dataInicio": "2026-08-18",
+    "dataFim": "2026-09-01",
+    "descricao": "Listar o que precisa para montar o case de sucesso no Portal",
+    "procedimentos": "",
+    "categoria": "cat_1787139563701_6mkh",
+    "fases": [
+      {
+        "id": "fase_1787139733276_pzzn",
+        "nome": "Dados da Empresa",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": [
+          {
+            "id": "anot_1787139786077_a16z",
+            "ts": "2026-08-19T11:43:06.077Z",
+            "texto": "Nome, segmento, porte, região + logo em alta resolução"
+          }
+        ]
+      },
+      {
+        "id": "fase_1787139734726_3ixi",
+        "nome": "Desafio",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [
+          {
+            "id": "anot_1787139821610_9xqf",
+            "ts": "2026-08-19T11:43:41.610Z",
+            "texto": "Qual era a principal dor de compras/procurement antes da solução"
+          }
+        ]
+      },
+      {
+        "id": "fase_1787139735599_2613",
+        "nome": "Solução aplicada",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [
+          {
+            "id": "anot_1787139857888_fajn",
+            "ts": "2026-08-19T11:44:17.888Z",
+            "texto": "Produto/serviço da Infinity implementado, escopo e processo (prazo, equipe, etapas)"
+          }
+        ]
+      },
+      {
+        "id": "fase_1787139736286_2x05",
+        "nome": "Resultados",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 4,
+        "anotacoes": [
+          {
+            "id": "anot_1787139890880_qyr1",
+            "ts": "2026-08-19T11:44:50.880Z",
+            "texto": "Métricas concretas (redução de custos, ganho de eficiência, ROI etc.) e, se tiver, dado visual de antes x depois"
+          }
+        ]
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1787139893024",
+        "timestamp": "2026-08-19T11:44:53.024Z",
+        "action": "Projeto criado",
+        "descricao": "\"CASE DE SUCESSO PORTAL\" com 4 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-19T11:44:53.024Z",
+    "updatedAt": "2026-08-19T11:44:53.024Z"
+  },
+  {
     "id": "proj_1786617800801_xrhfs2",
     "nome": "1º Evento InfinityCorp",
     "responsavel": "Todos",
