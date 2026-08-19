@@ -645,7 +645,7 @@
       {
         "id": "fase_1786558560792_38t0",
         "nome": "Refinamento",
-        "status": "pausada",
+        "status": "em_andamento",
         "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 5,
@@ -669,6 +669,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787147963370",
+        "timestamp": "2026-08-19T13:59:23.370Z",
+        "action": "Fase retomada",
+        "descricao": "Fase \"Refinamento\" retomada."
+      },
       {
         "id": "hist_1786984979496",
         "timestamp": "2026-08-17T16:42:59.496Z",
@@ -797,7 +803,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-17T16:42:59.496Z",
+    "updatedAt": "2026-08-19T13:59:23.370Z",
     "categoria": "cat_1786984972435_fmjc"
   },
   {
