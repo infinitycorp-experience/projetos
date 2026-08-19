@@ -32,6 +32,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787168265686",
+        "timestamp": "2026-08-19T19:37:45.686Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 2"
+      },
+      {
         "id": "hist_1787168264519",
         "timestamp": "2026-08-19T19:37:44.519Z",
         "action": "Projeto editado",
@@ -81,7 +87,7 @@
       }
     ],
     "createdAt": "2026-08-19T19:07:36.641Z",
-    "updatedAt": "2026-08-19T19:37:44.518Z"
+    "updatedAt": "2026-08-19T19:37:45.686Z"
   },
   {
     "id": "proj_1787139893024_n8e12m",
