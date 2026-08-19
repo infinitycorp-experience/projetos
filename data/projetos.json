@@ -7,7 +7,7 @@
     "dataInicio": "2026-08-18",
     "dataFim": "2026-09-01",
     "descricao": "Listar o que precisa para montar o case de sucesso no Portal",
-    "procedimentos": "",
+    "procedimentos": "Se já tiverem algum material pronto (apresentação, relatório etc.), pode mandar junto que a gente já aproveita como base!\nCase da Vibra - https://cafecomcomprador.com/insights/case/?id=647&title=o-fim-das-tres-cotacoes\nCase SLA Agrícola - https://cafecomcomprador.com/insights/case/?id=615&title=jornada-de-transformacao-de-suprimentos",
     "categoria": "cat_1787139563701_6mkh",
     "fases": [
       {
@@ -69,10 +69,76 @@
             "texto": "Métricas concretas (redução de custos, ganho de eficiência, ROI etc.) e, se tiver, dado visual de antes x depois"
           }
         ]
+      },
+      {
+        "id": "fase_1787139924567_9oe2",
+        "nome": "Depoimento",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 5,
+        "anotacoes": [
+          {
+            "id": "anot_1787139951980_o8w8",
+            "ts": "2026-08-19T11:45:51.980Z",
+            "texto": "Quote de um representante do cliente (nome, cargo, empresa) + foto, se possível"
+          }
+        ]
+      },
+      {
+        "id": "fase_1787139963689_xqa7",
+        "nome": "Autorização",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 6,
+        "anotacoes": [
+          {
+            "id": "anot_1787140003914_xz84",
+            "ts": "2026-08-19T11:46:43.915Z",
+            "texto": "Confirmação de que podemos usar nome, logo e dados no case publicado"
+          }
+        ]
+      },
+      {
+        "id": "fase_1787140006985_9fjq",
+        "nome": "Contato para Validação",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 7,
+        "anotacoes": [
+          {
+            "id": "anot_1787140036616_w1sn",
+            "ts": "2026-08-19T11:47:16.616Z",
+            "texto": "Alguém para revisar o texto antes de publicarmos"
+          }
+        ]
+      },
+      {
+        "id": "fase_1787140038764_5tdg",
+        "nome": "Período do Projeto",
+        "status": "pendente",
+        "responsavel": "Tacio/Osmar",
+        "descricao": "",
+        "ordem": 8,
+        "anotacoes": [
+          {
+            "id": "anot_1787140068014_nrwu",
+            "ts": "2026-08-19T11:47:48.014Z",
+            "texto": "Quando ocorreu e duração da implementação"
+          }
+        ]
       }
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787140121265",
+        "timestamp": "2026-08-19T11:48:41.265Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_planejamento, Fases: 8"
+      },
       {
         "id": "hist_1787139893024",
         "timestamp": "2026-08-19T11:44:53.024Z",
@@ -81,7 +147,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-08-19T11:44:53.024Z"
+    "updatedAt": "2026-08-19T11:48:41.265Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
