@@ -1,5 +1,47 @@
 [
   {
+    "id": "proj_1787166456641_ou8bje",
+    "nome": "Video - Tela Interativa",
+    "responsavel": "Tacio",
+    "status": "em_andamento",
+    "dataInicio": "2026-08-19",
+    "dataFim": "2026-08-21",
+    "descricao": "Criar video demonstrativo",
+    "procedimentos": "",
+    "categoria": "cat_1787166386972_tu5t",
+    "fases": [
+      {
+        "id": "fase_1787166425761_9w2j",
+        "nome": "Idéia",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": []
+      },
+      {
+        "id": "fase_1787166448844_l61w",
+        "nome": "Criação",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": []
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1787166456641",
+        "timestamp": "2026-08-19T19:07:36.641Z",
+        "action": "Projeto criado",
+        "descricao": "\"Video - Tela Interativa\" com 2 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-19T19:07:36.641Z",
+    "updatedAt": "2026-08-19T19:07:36.641Z"
+  },
+  {
     "id": "proj_1787139893024_n8e12m",
     "nome": "Case De Sucesso Portal",
     "responsavel": "Todos",
