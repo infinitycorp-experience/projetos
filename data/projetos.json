@@ -779,6 +779,11 @@
             "id": "anot_1787234290135_ug63",
             "ts": "2026-08-20T13:58:10.135Z",
             "texto": "Solicitado alteração de visual por grupo"
+          },
+          {
+            "id": "anot_1787234299443_tkqr",
+            "ts": "2026-08-20T13:58:19.443Z",
+            "texto": "Grupo criado"
           }
         ]
       },
@@ -928,7 +933,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-20T13:58:10.135Z",
+    "updatedAt": "2026-08-20T13:58:19.443Z",
     "categoria": "cat_1786984972435_fmjc"
   },
   {
