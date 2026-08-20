@@ -784,6 +784,11 @@
             "id": "anot_1787234299443_tkqr",
             "ts": "2026-08-20T13:58:19.443Z",
             "texto": "Grupo criado"
+          },
+          {
+            "id": "anot_1787234314145_7gq2",
+            "ts": "2026-08-20T13:58:34.145Z",
+            "texto": "Verificando a possibilidade de Historico"
           }
         ]
       },
@@ -933,7 +938,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-20T13:58:19.443Z",
+    "updatedAt": "2026-08-20T13:58:34.145Z",
     "categoria": "cat_1786984972435_fmjc"
   },
   {
