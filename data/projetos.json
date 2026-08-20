@@ -774,6 +774,11 @@
             "id": "anot_1786643299955_us5w",
             "ts": "2026-08-13T17:48:19.955Z",
             "texto": "Discutir sobre o visual"
+          },
+          {
+            "id": "anot_1787234290135_ug63",
+            "ts": "2026-08-20T13:58:10.135Z",
+            "texto": "Solicitado alteração de visual por grupo"
           }
         ]
       },
@@ -923,7 +928,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-19T13:59:23.370Z",
+    "updatedAt": "2026-08-20T13:58:10.135Z",
     "categoria": "cat_1786984972435_fmjc"
   },
   {
