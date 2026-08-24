@@ -799,7 +799,13 @@
         "responsavel": "Osmar",
         "descricao": "",
         "ordem": 6,
-        "anotacoes": []
+        "anotacoes": [
+          {
+            "id": "anot_1787575660537_89vp",
+            "ts": "2026-08-24T12:47:40.537Z",
+            "texto": "Efetuado inclusão de Grupos por cliente"
+          }
+        ]
       }
     ],
     "anexos": [],
@@ -950,7 +956,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-24T12:47:22.740Z",
+    "updatedAt": "2026-08-24T12:47:40.537Z",
     "categoria": "cat_1786984972435_fmjc"
   },
   {
