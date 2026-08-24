@@ -296,29 +296,15 @@
     "dataFim": "2026-09-30",
     "descricao": "Criar o primeiro evento InfinityCorp",
     "procedimentos": "Cotações, pesquisa, preparação de equipamentos, apresentações, lugares e temas",
+    "categoria": "cat_1786984930955_uka1",
     "fases": [
-      {
-        "id": "fase_1786617559573_z8oz",
-        "nome": "Definir Data e Local",
-        "status": "pausada",
-        "responsavel": "Osmar",
-        "descricao": "",
-        "ordem": 1,
-        "anotacoes": [
-          {
-            "id": "anot_1786715150069_7xoy",
-            "ts": "2026-08-14T13:45:50.069Z",
-            "texto": "Pinheiros - SP"
-          }
-        ]
-      },
       {
         "id": "fase_1786617561672_dtj1",
         "nome": "Compra de Equipamentos",
         "status": "concluida",
         "responsavel": "",
         "descricao": "",
-        "ordem": 2,
+        "ordem": 1,
         "anotacoes": [
           {
             "id": "anot_1786617838393_13xm",
@@ -328,12 +314,42 @@
         ]
       },
       {
+        "id": "fase_1786617564857_lrzw",
+        "nome": "Brindes",
+        "status": "concluida",
+        "responsavel": "Todos",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [
+          {
+            "id": "anot_1786617974529_o8d0",
+            "ts": "2026-08-13T10:46:14.529Z",
+            "texto": "Definidos com o material já existente"
+          }
+        ]
+      },
+      {
+        "id": "fase_1786715082098_5bgk",
+        "nome": "Sorteio",
+        "status": "pausada",
+        "responsavel": "Todos",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [
+          {
+            "id": "anot_1786715104066_ap6v",
+            "ts": "2026-08-14T13:45:04.066Z",
+            "texto": "Mochila"
+          }
+        ]
+      },
+      {
         "id": "fase_1786617562565_il9l",
         "nome": "Preparar Equipamentos",
         "status": "pausada",
         "responsavel": "Tácio",
         "descricao": "",
-        "ordem": 3,
+        "ordem": 4,
         "anotacoes": [
           {
             "id": "anot_1786617876959_x27d",
@@ -353,12 +369,27 @@
         ]
       },
       {
+        "id": "fase_1786617559573_z8oz",
+        "nome": "Definir Data e Local",
+        "status": "pausada",
+        "responsavel": "Osmar",
+        "descricao": "",
+        "ordem": 5,
+        "anotacoes": [
+          {
+            "id": "anot_1786715150069_7xoy",
+            "ts": "2026-08-14T13:45:50.069Z",
+            "texto": "Pinheiros - SP"
+          }
+        ]
+      },
+      {
         "id": "fase_1786617563229_adrd",
         "nome": "Buffet",
         "status": "pausada",
         "responsavel": "Jonathan",
         "descricao": "Cotação de buffets",
-        "ordem": 4,
+        "ordem": 6,
         "anotacoes": [
           {
             "id": "anot_1786617937190_8ccz",
@@ -368,27 +399,12 @@
         ]
       },
       {
-        "id": "fase_1786617564857_lrzw",
-        "nome": "Brindes",
-        "status": "concluida",
-        "responsavel": "Todos",
-        "descricao": "",
-        "ordem": 5,
-        "anotacoes": [
-          {
-            "id": "anot_1786617974529_o8d0",
-            "ts": "2026-08-13T10:46:14.529Z",
-            "texto": "Definidos com o material já existente"
-          }
-        ]
-      },
-      {
         "id": "fase_1786617565551_yzwt",
         "nome": "Temas",
         "status": "pendente",
         "responsavel": "Osmar",
         "descricao": "Temas para palestra/workshop",
-        "ordem": 6,
+        "ordem": 7,
         "anotacoes": []
       },
       {
@@ -397,7 +413,7 @@
         "status": "pendente",
         "responsavel": "Todos",
         "descricao": "",
-        "ordem": 7,
+        "ordem": 8,
         "anotacoes": []
       },
       {
@@ -406,7 +422,7 @@
         "status": "pendente",
         "responsavel": "Osmar",
         "descricao": "",
-        "ordem": 8,
+        "ordem": 9,
         "anotacoes": []
       },
       {
@@ -415,7 +431,7 @@
         "status": "pendente",
         "responsavel": "Tácio",
         "descricao": "",
-        "ordem": 9,
+        "ordem": 10,
         "anotacoes": [
           {
             "id": "anot_1786715058201_vbxz",
@@ -428,25 +444,16 @@
             "texto": "Arte"
           }
         ]
-      },
-      {
-        "id": "fase_1786715082098_5bgk",
-        "nome": "Sorteio",
-        "status": "pausada",
-        "responsavel": "Todos",
-        "descricao": "",
-        "ordem": 10,
-        "anotacoes": [
-          {
-            "id": "anot_1786715104066_ap6v",
-            "ts": "2026-08-14T13:45:04.066Z",
-            "texto": "Mochila"
-          }
-        ]
       }
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787577203804",
+        "timestamp": "2026-08-24T13:13:23.804Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 10"
+      },
       {
         "id": "hist_1786984945866",
         "timestamp": "2026-08-17T16:42:25.866Z",
@@ -623,8 +630,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-17T16:42:25.866Z",
-    "categoria": "cat_1786984930955_uka1"
+    "updatedAt": "2026-08-24T13:13:23.804Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
