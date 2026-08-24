@@ -696,7 +696,7 @@
     "id": "proj_1786558567290_gegfxl",
     "nome": "Página Web de Equipamentos",
     "responsavel": "Tácio",
-    "status": "em_andamento",
+    "status": "concluido",
     "dataInicio": "2026-08-12",
     "dataFim": "2026-08-20",
     "descricao": "Criar página com quantidade de equipamentos locados",
@@ -810,6 +810,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787575669082",
+        "timestamp": "2026-08-24T12:47:49.082Z",
+        "action": "Projeto concluído",
+        "descricao": "Marcado como concluído e movido para a pasta \"Concluídos\"."
+      },
       {
         "id": "hist_1787575662960",
         "timestamp": "2026-08-24T12:47:42.960Z",
@@ -962,8 +968,8 @@
       }
     ],
     "createdAt": "2026-08-12T18:16:07.290Z",
-    "updatedAt": "2026-08-24T12:47:42.960Z",
-    "categoria": "cat_1786984972435_fmjc"
+    "updatedAt": "2026-08-24T12:47:49.082Z",
+    "categoria": "cat_concluidos"
   },
   {
     "id": "proj_1786548776137_o68d9i",
