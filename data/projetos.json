@@ -730,7 +730,7 @@
       {
         "id": "fase_1786558854920_xhz2",
         "nome": "Entender o Produto",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
@@ -852,6 +852,12 @@
     ],
     "historico": [
       {
+        "id": "hist_1787590396699",
+        "timestamp": "2026-08-24T16:53:16.699Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Entender o Produto\": concluida"
+      },
+      {
         "id": "hist_1787590212132",
         "timestamp": "2026-08-24T16:50:12.132Z",
         "action": "Projeto editado",
@@ -931,7 +937,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-24T16:50:12.132Z"
+    "updatedAt": "2026-08-24T16:53:16.699Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
