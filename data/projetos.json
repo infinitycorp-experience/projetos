@@ -1,5 +1,69 @@
 [
   {
+    "id": "proj_1787590385859_av4rfk",
+    "nome": "Carregador Veicular",
+    "responsavel": "Tacio / Osmar",
+    "status": "em_planejamento",
+    "dataInicio": "2026-08-24",
+    "dataFim": "2026-12-30",
+    "descricao": "Entender para agregar no portifólio carregadores para carro elétrico",
+    "procedimentos": "",
+    "categoria": "cat_1786984994987_5x4c",
+    "fases": [
+      {
+        "id": "fase_1787590329609_7w6q",
+        "nome": "Entender o Produto",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1787590345223_3942",
+        "nome": "Preços",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1787590356527_av0g",
+        "nome": "Pós e Contras",
+        "status": "pendente",
+        "responsavel": "Tacio / Osmar",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1787590358839_uzwn",
+        "nome": "Debate",
+        "status": "pendente",
+        "responsavel": "Tacio / Osmar",
+        "descricao": "",
+        "ordem": 4,
+        "anotacoes": [],
+        "anexos": []
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1787590385859",
+        "timestamp": "2026-08-24T16:53:05.859Z",
+        "action": "Projeto criado",
+        "descricao": "\"Carregador Veicular\" com 4 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-24T16:53:05.859Z",
+    "updatedAt": "2026-08-24T16:53:05.859Z"
+  },
+  {
     "id": "proj_1787166456641_ou8bje",
     "nome": "Video - Tela Interativa",
     "responsavel": "Tacio",
