@@ -685,6 +685,14 @@
             "tipoIcon": "image",
             "tamanho": 115457,
             "uploadedAt": "2026-08-24T15:14:46.179Z"
+          },
+          {
+            "id": "att_1787584590256_gtmz",
+            "nome": "starlinkres.png",
+            "tipo": "image/png",
+            "tipoIcon": "image",
+            "tamanho": 97186,
+            "uploadedAt": "2026-08-24T15:16:30.256Z"
           }
         ]
       },
@@ -763,7 +771,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-24T15:15:57.779Z"
+    "updatedAt": "2026-08-24T15:16:31.921Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
