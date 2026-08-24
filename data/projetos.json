@@ -367,7 +367,7 @@
     "id": "proj_1786617800801_xrhfs2",
     "nome": "1º Evento InfinityCorp",
     "responsavel": "Todos",
-    "status": "em_andamento",
+    "status": "pausado",
     "dataInicio": "2026-08-13",
     "dataFim": "2026-09-30",
     "descricao": "Criar o primeiro evento InfinityCorp",
@@ -534,6 +534,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787602079501",
+        "timestamp": "2026-08-24T20:07:59.501Z",
+        "action": "Projeto pausado",
+        "descricao": "Status: pausado"
+      },
       {
         "id": "hist_1787577203804",
         "timestamp": "2026-08-24T13:13:23.804Z",
@@ -716,7 +722,7 @@
       }
     ],
     "createdAt": "2026-08-13T10:43:20.801Z",
-    "updatedAt": "2026-08-24T13:13:23.804Z"
+    "updatedAt": "2026-08-24T20:07:59.501Z"
   },
   {
     "id": "proj_1786558958701_u2wis4",
