@@ -783,7 +783,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1787590409087_j3rr",
+            "ts": "2026-08-24T16:53:29.087Z",
+            "texto": "Incluso nos anexos"
+          }
+        ],
         "anexos": []
       },
       {
@@ -943,7 +949,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-24T16:53:19.241Z"
+    "updatedAt": "2026-08-24T16:53:29.087Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
