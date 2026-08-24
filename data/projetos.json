@@ -667,7 +667,7 @@
         "id": "fase_1786558854920_xhz2",
         "nome": "Entender o Produto",
         "status": "em_andamento",
-        "responsavel": "",
+        "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
         "anotacoes": [
@@ -713,20 +713,20 @@
         ]
       },
       {
-        "id": "fase_1786558871090_hm4o",
-        "nome": "Pós e Contras",
+        "id": "fase_1786558871920_ctyq",
+        "nome": "Preços",
         "status": "pendente",
-        "responsavel": "",
+        "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
         "anotacoes": [],
         "anexos": []
       },
       {
-        "id": "fase_1786558871920_ctyq",
-        "nome": "Preços",
+        "id": "fase_1786558871090_hm4o",
+        "nome": "Pós e Contras",
         "status": "pendente",
-        "responsavel": "",
+        "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 3,
         "anotacoes": [],
@@ -736,7 +736,7 @@
         "id": "fase_1786558953097_wgql",
         "nome": "Debate",
         "status": "pendente",
-        "responsavel": "",
+        "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 4,
         "anotacoes": [],
@@ -789,6 +789,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1787589234757",
+        "timestamp": "2026-08-24T16:33:54.757Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 4"
+      },
       {
         "id": "hist_1787589174813",
         "timestamp": "2026-08-24T16:32:54.813Z",
@@ -851,7 +857,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-24T16:32:54.813Z"
+    "updatedAt": "2026-08-24T16:33:54.757Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
