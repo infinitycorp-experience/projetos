@@ -6,7 +6,7 @@
     "status": "em_planejamento",
     "dataInicio": "2026-08-24",
     "dataFim": "2026-12-30",
-    "descricao": "Entender para agregar no portifólio carregadores para carro elétrico",
+    "descricao": "Agregar no portifólio carregadores para carro elétrico",
     "procedimentos": "",
     "categoria": "cat_1786984994987_5x4c",
     "fases": [
@@ -44,6 +44,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787590754051",
+        "timestamp": "2026-08-24T16:59:14.051Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_planejamento, Fases: 3"
+      },
+      {
         "id": "hist_1787590457393",
         "timestamp": "2026-08-24T16:54:17.393Z",
         "action": "Projeto editado",
@@ -57,7 +63,7 @@
       }
     ],
     "createdAt": "2026-08-24T16:53:05.859Z",
-    "updatedAt": "2026-08-24T16:54:17.393Z"
+    "updatedAt": "2026-08-24T16:59:14.051Z"
   },
   {
     "id": "proj_1787166456641_ou8bje",
