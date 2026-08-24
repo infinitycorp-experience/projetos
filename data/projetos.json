@@ -801,16 +801,6 @@
         "ordem": 3,
         "anotacoes": [],
         "anexos": []
-      },
-      {
-        "id": "fase_1786558953097_wgql",
-        "nome": "Debate",
-        "status": "pendente",
-        "responsavel": "Tacio / Osmar",
-        "descricao": "",
-        "ordem": 4,
-        "anotacoes": [],
-        "anexos": []
       }
     ],
     "anexos": [
@@ -857,6 +847,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1787590434321",
+        "timestamp": "2026-08-24T16:53:54.321Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 3"
+      },
       {
         "id": "hist_1787590399241",
         "timestamp": "2026-08-24T16:53:19.241Z",
@@ -949,7 +945,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-24T16:53:29.087Z"
+    "updatedAt": "2026-08-24T16:53:54.321Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
