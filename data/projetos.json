@@ -13,7 +13,7 @@
       {
         "id": "fase_1787669070436_9pqp",
         "nome": "Coletar Material",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
@@ -64,6 +64,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787669202234",
+        "timestamp": "2026-08-25T14:46:42.234Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Coletar Material\": concluida"
+      },
+      {
         "id": "hist_1787669199552",
         "timestamp": "2026-08-25T14:46:39.552Z",
         "action": "Fase iniciada",
@@ -89,7 +95,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:46:39.552Z"
+    "updatedAt": "2026-08-25T14:46:42.234Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
