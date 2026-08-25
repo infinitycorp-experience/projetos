@@ -44,7 +44,7 @@
         "id": "fase_1787669114332_eb84",
         "nome": "Aprovação",
         "status": "em_andamento",
-        "responsavel": "Tacio",
+        "responsavel": "Osmar",
         "descricao": "",
         "ordem": 4,
         "anotacoes": [],
@@ -63,6 +63,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787669232095",
+        "timestamp": "2026-08-25T14:47:12.095Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Aprovação\" atualizada."
+      },
       {
         "id": "hist_1787669224492",
         "timestamp": "2026-08-25T14:47:04.492Z",
@@ -125,7 +131,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:47:04.491Z"
+    "updatedAt": "2026-08-25T14:47:12.095Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
