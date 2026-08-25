@@ -3,12 +3,12 @@
     "id": "proj_1787669162496_ufilfp",
     "nome": "Video Propaganda",
     "responsavel": "Tacio",
-    "status": "em_andamento",
+    "status": "concluido",
     "dataInicio": "2026-08-25",
     "dataFim": "2026-08-26",
     "descricao": "Video Propaganda destinado ao TOTEM",
     "procedimentos": "",
-    "categoria": "",
+    "categoria": "cat_concluidos",
     "fases": [
       {
         "id": "fase_1787669070436_9pqp",
@@ -69,6 +69,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787669266441",
+        "timestamp": "2026-08-25T14:47:46.441Z",
+        "action": "Projeto concluído",
+        "descricao": "Marcado como concluído e movido para a pasta \"Concluídos\"."
+      },
       {
         "id": "hist_1787669260171",
         "timestamp": "2026-08-25T14:47:40.171Z",
@@ -155,7 +161,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:47:40.171Z"
+    "updatedAt": "2026-08-25T14:47:46.441Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
