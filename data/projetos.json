@@ -3,7 +3,7 @@
     "id": "proj_1787669162496_ufilfp",
     "nome": "Video Propaganda",
     "responsavel": "Tacio",
-    "status": "em_planejamento",
+    "status": "em_andamento",
     "dataInicio": "2026-08-25",
     "dataFim": "2026-08-26",
     "descricao": "Video Propaganda destinado ao TOTEM",
@@ -13,7 +13,7 @@
       {
         "id": "fase_1787669070436_9pqp",
         "nome": "Coletar Material",
-        "status": "pendente",
+        "status": "em_andamento",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
@@ -64,6 +64,18 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787669199552",
+        "timestamp": "2026-08-25T14:46:39.552Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Coletar Material\": em_andamento"
+      },
+      {
+        "id": "hist_1787669199552",
+        "timestamp": "2026-08-25T14:46:39.552Z",
+        "action": "Projeto em andamento",
+        "descricao": "Status alterado automaticamente (fase iniciada)."
+      },
+      {
         "id": "hist_1787669188121",
         "timestamp": "2026-08-25T14:46:28.121Z",
         "action": "Fase editada",
@@ -77,7 +89,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:46:28.121Z"
+    "updatedAt": "2026-08-25T14:46:39.552Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
