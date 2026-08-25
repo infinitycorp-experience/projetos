@@ -23,7 +23,7 @@
       {
         "id": "fase_1787669101998_2xbv",
         "nome": "Produção",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
@@ -64,6 +64,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787669208327",
+        "timestamp": "2026-08-25T14:46:48.327Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Produção\": concluida"
+      },
+      {
         "id": "hist_1787669205020",
         "timestamp": "2026-08-25T14:46:45.020Z",
         "action": "Fase iniciada",
@@ -101,7 +107,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:46:45.020Z"
+    "updatedAt": "2026-08-25T14:46:48.327Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
