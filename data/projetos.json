@@ -43,7 +43,7 @@
       {
         "id": "fase_1787669114332_eb84",
         "nome": "Aprovação",
-        "status": "pendente",
+        "status": "em_andamento",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 4,
@@ -63,6 +63,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787669214412",
+        "timestamp": "2026-08-25T14:46:54.412Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Aprovação\": em_andamento"
+      },
       {
         "id": "hist_1787669211127",
         "timestamp": "2026-08-25T14:46:51.127Z",
@@ -113,7 +119,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:46:51.127Z"
+    "updatedAt": "2026-08-25T14:46:54.411Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
