@@ -1,5 +1,79 @@
 [
   {
+    "id": "proj_1787669162496_ufilfp",
+    "nome": "Video Propaganda",
+    "responsavel": "Tacio",
+    "status": "em_planejamento",
+    "dataInicio": "2026-08-25",
+    "dataFim": "2026-08-26",
+    "descricao": "Video Propaganda destinado ao TOTEM",
+    "procedimentos": "",
+    "categoria": "",
+    "fases": [
+      {
+        "id": "fase_1787669070436_9pqp",
+        "nome": "Arrecadar Material",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1787669101998_2xbv",
+        "nome": "Produção",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1787669108838_ffvo",
+        "nome": "Testes",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1787669114332_eb84",
+        "nome": "Aprovação",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 4,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1787669146814_c86i",
+        "nome": "Compartilhamento",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 5,
+        "anotacoes": [],
+        "anexos": []
+      }
+    ],
+    "anexos": [],
+    "historico": [
+      {
+        "id": "hist_1787669162496",
+        "timestamp": "2026-08-25T14:46:02.496Z",
+        "action": "Projeto criado",
+        "descricao": "\"Video Propaganda\" com 5 fase(s)."
+      }
+    ],
+    "createdAt": "2026-08-25T14:46:02.496Z",
+    "updatedAt": "2026-08-25T14:46:02.496Z"
+  },
+  {
     "id": "proj_1787590385859_av4rfk",
     "nome": "Carregador Veicular",
     "responsavel": "Tacio / Osmar",
