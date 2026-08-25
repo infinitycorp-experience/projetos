@@ -12,7 +12,7 @@
     "fases": [
       {
         "id": "fase_1787669070436_9pqp",
-        "nome": "Arrecadar Material",
+        "nome": "Coletar Material",
         "status": "pendente",
         "responsavel": "Tacio",
         "descricao": "",
@@ -64,6 +64,12 @@
     "anexos": [],
     "historico": [
       {
+        "id": "hist_1787669188121",
+        "timestamp": "2026-08-25T14:46:28.121Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Coletar Material\" atualizada."
+      },
+      {
         "id": "hist_1787669162496",
         "timestamp": "2026-08-25T14:46:02.496Z",
         "action": "Projeto criado",
@@ -71,7 +77,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:46:02.496Z"
+    "updatedAt": "2026-08-25T14:46:28.121Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
