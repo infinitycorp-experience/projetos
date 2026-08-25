@@ -53,7 +53,7 @@
       {
         "id": "fase_1787669146814_c86i",
         "nome": "Compartilhamento",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 5,
@@ -69,6 +69,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787669260171",
+        "timestamp": "2026-08-25T14:47:40.171Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Compartilhamento\": concluida"
+      },
       {
         "id": "hist_1787669254035",
         "timestamp": "2026-08-25T14:47:34.035Z",
@@ -149,7 +155,7 @@
       }
     ],
     "createdAt": "2026-08-25T14:46:02.496Z",
-    "updatedAt": "2026-08-25T14:47:34.035Z"
+    "updatedAt": "2026-08-25T14:47:40.171Z"
   },
   {
     "id": "proj_1787590385859_av4rfk",
