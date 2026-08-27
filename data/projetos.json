@@ -209,7 +209,7 @@
       {
         "id": "fase_1787590356527_av0g",
         "nome": "Pós e Contras",
-        "status": "pendente",
+        "status": "em_andamento",
         "responsavel": "Tacio / Osmar",
         "descricao": "",
         "ordem": 3,
@@ -219,6 +219,12 @@
     ],
     "anexos": [],
     "historico": [
+      {
+        "id": "hist_1787828079319",
+        "timestamp": "2026-08-27T10:54:39.319Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Pós e Contras\": em_andamento"
+      },
       {
         "id": "hist_1787828064287",
         "timestamp": "2026-08-27T10:54:24.287Z",
@@ -257,7 +263,7 @@
       }
     ],
     "createdAt": "2026-08-24T16:53:05.859Z",
-    "updatedAt": "2026-08-27T10:54:24.287Z"
+    "updatedAt": "2026-08-27T10:54:39.319Z"
   },
   {
     "id": "proj_1787166456641_ou8bje",
