@@ -235,8 +235,21 @@
       }
     ],
     "anexos": [],
-    "links": [],
+    "links": [
+      {
+        "id": "link_1787830153877_qvsz",
+        "titulo": "Apresentação",
+        "url": "https://sites.google.com/infinitycorp.com.br/deptocomercial/projetos/carregador-veicular",
+        "criadoEm": "2026-08-27T11:29:13.877Z"
+      }
+    ],
     "historico": [
+      {
+        "id": "hist_1787830159215",
+        "timestamp": "2026-08-27T11:29:19.215Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 4"
+      },
       {
         "id": "hist_1787830126261",
         "timestamp": "2026-08-27T11:28:46.261Z",
@@ -329,7 +342,7 @@
       }
     ],
     "createdAt": "2026-08-24T16:53:05.859Z",
-    "updatedAt": "2026-08-27T11:28:46.260Z"
+    "updatedAt": "2026-08-27T11:29:19.215Z"
   },
   {
     "id": "proj_1787166456641_ou8bje",
