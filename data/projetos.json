@@ -487,7 +487,7 @@
     "dataInicio": "2026-08-18",
     "dataFim": "2026-09-10",
     "descricao": "Montar um case de sucesso para Portal",
-    "procedimentos": "Se já tiverem algum material pronto (apresentação, relatório etc.), pode mandar junto que a gente já aproveita como base!\nCase da Vibra - https://cafecomcomprador.com/insights/case/?id=647&title=o-fim-das-tres-cotacoes\nCase SLA Agrícola - https://cafecomcomprador.com/insights/case/?id=615&title=jornada-de-transformacao-de-suprimentos",
+    "procedimentos": "Se já tiverem algum material pronto (apresentação, relatório etc.), pode mandar junto que a gente já aproveita como base!",
     "categoria": "cat_1787139563701_6mkh",
     "fases": [
       {
@@ -620,7 +620,27 @@
       }
     ],
     "anexos": [],
+    "links": [
+      {
+        "id": "link_1787831861521_hgf6",
+        "titulo": "Case da Vibra",
+        "url": "https://cafecomcomprador.com/insights/case/?id=647&title=o-fim-das-tres-cotacoes",
+        "criadoEm": "2026-08-27T11:57:41.521Z"
+      },
+      {
+        "id": "link_1787831884083_rlym",
+        "titulo": "Case SLA Agrícola",
+        "url": "https://cafecomcomprador.com/insights/case/?id=615&title=jornada-de-transformacao-de-suprimentos",
+        "criadoEm": "2026-08-27T11:58:04.083Z"
+      }
+    ],
     "historico": [
+      {
+        "id": "hist_1787831935454",
+        "timestamp": "2026-08-27T11:58:55.454Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_planejamento, Fases: 8"
+      },
       {
         "id": "hist_1787141256057",
         "timestamp": "2026-08-19T12:07:36.057Z",
@@ -653,8 +673,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-08-19T12:07:36.057Z",
-    "links": []
+    "updatedAt": "2026-08-27T11:58:55.454Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
