@@ -234,7 +234,26 @@
         "anexos": []
       }
     ],
-    "anexos": [],
+    "anexos": [
+      {
+        "id": "att_1787838636505_cw2s",
+        "nome": "parametro.png",
+        "tipo": "image/png",
+        "tipoIcon": "image",
+        "tamanho": 38610,
+        "uploadedAt": "2026-08-27T13:50:36.505Z",
+        "_pending": true
+      },
+      {
+        "id": "att_1787838636506_cxe8",
+        "nome": "Custo.png",
+        "tipo": "image/png",
+        "tipoIcon": "image",
+        "tamanho": 51901,
+        "uploadedAt": "2026-08-27T13:50:36.506Z",
+        "_pending": true
+      }
+    ],
     "links": [
       {
         "id": "link_1787830153877_qvsz",
@@ -244,6 +263,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1787838651087",
+        "timestamp": "2026-08-27T13:50:51.087Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 4"
+      },
       {
         "id": "hist_1787830236980",
         "timestamp": "2026-08-27T11:30:36.980Z",
@@ -348,7 +373,7 @@
       }
     ],
     "createdAt": "2026-08-24T16:53:05.859Z",
-    "updatedAt": "2026-08-27T11:51:12.331Z"
+    "updatedAt": "2026-08-27T13:50:51.087Z"
   },
   {
     "id": "proj_1787166456641_ou8bje",
