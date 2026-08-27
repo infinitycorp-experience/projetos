@@ -214,13 +214,7 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 3,
-        "anotacoes": [
-          {
-            "id": "anot_1787828180268_5ind",
-            "ts": "2026-08-27T10:56:20.268Z",
-            "texto": "Criado um anexo para analise"
-          }
-        ],
+        "anotacoes": [],
         "anexos": []
       },
       {
@@ -348,7 +342,7 @@
       }
     ],
     "createdAt": "2026-08-24T16:53:05.859Z",
-    "updatedAt": "2026-08-27T11:30:36.980Z"
+    "updatedAt": "2026-08-27T11:50:59.583Z"
   },
   {
     "id": "proj_1787166456641_ou8bje",
