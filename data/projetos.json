@@ -221,11 +221,6 @@
             "texto": "Criado um link para apresentação"
           },
           {
-            "id": "anot_1787839624490_yrlh",
-            "ts": "2026-08-27T14:07:04.490Z",
-            "texto": "Anexos de parametros para custo"
-          },
-          {
             "id": "anot_1787839665756_wj5g",
             "ts": "2026-08-27T14:07:45.756Z",
             "texto": "Criado um link para apresentação\nAnexos de parametros para custo"
@@ -383,7 +378,7 @@
       }
     ],
     "createdAt": "2026-08-24T16:53:05.859Z",
-    "updatedAt": "2026-08-27T14:07:45.756Z"
+    "updatedAt": "2026-08-27T14:07:48.124Z"
   },
   {
     "id": "proj_1787166456641_ou8bje",
