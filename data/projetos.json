@@ -1135,7 +1135,7 @@
       {
         "id": "fase_1786558871920_ctyq",
         "nome": "Preços",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
@@ -1221,6 +1221,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1787934478383",
+        "timestamp": "2026-08-28T16:27:58.383Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Preços\": concluida"
+      },
       {
         "id": "hist_1787934458117",
         "timestamp": "2026-08-28T16:27:38.117Z",
@@ -1355,7 +1361,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-28T16:27:54.641Z"
+    "updatedAt": "2026-08-28T16:27:58.383Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
