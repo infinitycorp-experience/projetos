@@ -1155,7 +1155,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 3,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1787934487121_cqqa",
+            "ts": "2026-08-28T16:28:07.121Z",
+            "texto": "Criado um link para apresentação\n***Simulador***\nAnexos de parametros para custo"
+          }
+        ],
         "anexos": []
       },
       {
@@ -1367,7 +1373,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-28T16:28:01.589Z"
+    "updatedAt": "2026-08-28T16:28:07.121Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
