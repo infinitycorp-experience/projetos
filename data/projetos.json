@@ -1151,7 +1151,7 @@
       {
         "id": "fase_1787934442311_r34t",
         "nome": "Apresentação",
-        "status": "pendente",
+        "status": "em_andamento",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 3,
@@ -1221,6 +1221,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1787934481589",
+        "timestamp": "2026-08-28T16:28:01.589Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Apresentação\": em_andamento"
+      },
       {
         "id": "hist_1787934478383",
         "timestamp": "2026-08-28T16:27:58.383Z",
@@ -1361,7 +1367,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-28T16:27:58.383Z"
+    "updatedAt": "2026-08-28T16:28:01.589Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
