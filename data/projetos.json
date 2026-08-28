@@ -1079,7 +1079,7 @@
     "status": "em_andamento",
     "dataInicio": "2026-08-12",
     "dataFim": "2026-09-30",
-    "descricao": "Entender para colocar como produto no portfólio",
+    "descricao": "Entender para colocar produto no portfólio",
     "procedimentos": "",
     "categoria": "cat_1786984994987_5x4c",
     "fases": [
@@ -1228,6 +1228,12 @@
     ],
     "historico": [
       {
+        "id": "hist_1787934574324",
+        "timestamp": "2026-08-28T16:29:34.324Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 4"
+      },
+      {
         "id": "hist_1787934481589",
         "timestamp": "2026-08-28T16:28:01.589Z",
         "action": "Fase iniciada",
@@ -1373,7 +1379,7 @@
       }
     ],
     "createdAt": "2026-08-12T18:22:38.701Z",
-    "updatedAt": "2026-08-28T16:28:07.121Z"
+    "updatedAt": "2026-08-28T16:29:34.324Z"
   },
   {
     "id": "proj_1786558567290_gegfxl",
