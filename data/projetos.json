@@ -1,5 +1,80 @@
 [
   {
+    "id": "proj_1788445726441_0t0vsq",
+    "nome": "Postagens",
+    "responsavel": "Tacio / Osmar",
+    "status": "em_planejamento",
+    "dataInicio": "2026-09-03",
+    "dataFim": "2026-12-31",
+    "descricao": "Pesquisa sobre postagens",
+    "procedimentos": "",
+    "categoria": "",
+    "fases": [
+      {
+        "id": "fase_1788445628668_1ed0",
+        "nome": "Aprendizado",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788445642026_rqdt",
+        "nome": "Estratégia",
+        "status": "pendente",
+        "responsavel": "Tacio / Osmar",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788445665862_swo2",
+        "nome": "Criação",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788445693465_whaf",
+        "nome": "Aprovação",
+        "status": "pendente",
+        "responsavel": "Osmar",
+        "descricao": "",
+        "ordem": 4,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788445701160_8dbw",
+        "nome": "Postagens",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 5,
+        "anotacoes": [],
+        "anexos": []
+      }
+    ],
+    "anexos": [],
+    "links": [],
+    "historico": [
+      {
+        "id": "hist_1788445726441",
+        "timestamp": "2026-09-03T14:28:46.441Z",
+        "action": "Projeto criado",
+        "descricao": "\"Postagens\" com 5 fase(s)."
+      }
+    ],
+    "createdAt": "2026-09-03T14:28:46.441Z",
+    "updatedAt": "2026-09-03T14:28:46.441Z"
+  },
+  {
     "id": "proj_1787669162496_ufilfp",
     "nome": "Video Propaganda Totem",
     "responsavel": "Tacio",
