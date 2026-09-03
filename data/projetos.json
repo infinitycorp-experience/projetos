@@ -1,5 +1,70 @@
 [
   {
+    "id": "proj_1788445966452_2ig24u",
+    "nome": "Postagem 1º Conteúdo",
+    "responsavel": "",
+    "status": "em_planejamento",
+    "dataInicio": "2026-09-20",
+    "dataFim": "2026-10-05",
+    "descricao": "Preparação de conteúdo e postagem Insta e Linkedin",
+    "procedimentos": "",
+    "categoria": "cat_1788445746119_zn8g",
+    "fases": [
+      {
+        "id": "fase_1788445902565_2tc2",
+        "nome": "Debate de Idéias",
+        "status": "pendente",
+        "responsavel": "Tacio / Osmar",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788445932704_r0hs",
+        "nome": "Criação de Conteúdo",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788445946102_152z",
+        "nome": "Aprovação",
+        "status": "pendente",
+        "responsavel": "Osmar",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788445954636_bm71",
+        "nome": "Postagem",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 4,
+        "anotacoes": [],
+        "anexos": []
+      }
+    ],
+    "anexos": [],
+    "links": [],
+    "historico": [
+      {
+        "id": "hist_1788445966452",
+        "timestamp": "2026-09-03T14:32:46.452Z",
+        "action": "Projeto criado",
+        "descricao": "\"Postagem 1º Conteúdo\" com 4 fase(s)."
+      }
+    ],
+    "createdAt": "2026-09-03T14:32:46.452Z",
+    "updatedAt": "2026-09-03T14:32:46.452Z"
+  },
+  {
     "id": "proj_1788445726441_0t0vsq",
     "nome": "Postagens Redes Sociais",
     "responsavel": "Tacio / Osmar",
