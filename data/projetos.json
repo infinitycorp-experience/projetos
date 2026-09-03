@@ -1,7 +1,7 @@
 [
   {
     "id": "proj_1788445726441_0t0vsq",
-    "nome": "Postagens",
+    "nome": "Postagens Redes Sociais",
     "responsavel": "Tacio / Osmar",
     "status": "em_planejamento",
     "dataInicio": "2026-09-03",
@@ -65,6 +65,12 @@
     "links": [],
     "historico": [
       {
+        "id": "hist_1788445810831",
+        "timestamp": "2026-09-03T14:30:10.831Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_planejamento, Fases: 5"
+      },
+      {
         "id": "hist_1788445751536",
         "timestamp": "2026-09-03T14:29:11.536Z",
         "action": "Projeto movido",
@@ -78,7 +84,7 @@
       }
     ],
     "createdAt": "2026-09-03T14:28:46.441Z",
-    "updatedAt": "2026-09-03T14:29:11.536Z"
+    "updatedAt": "2026-09-03T14:30:10.831Z"
   },
   {
     "id": "proj_1787669162496_ufilfp",
