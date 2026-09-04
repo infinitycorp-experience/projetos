@@ -418,7 +418,7 @@
     "status": "em_andamento",
     "dataInicio": "2026-08-24",
     "dataFim": "2026-12-30",
-    "descricao": "Portifólio Carregadores para carro elétrico",
+    "descricao": "Portfólio Carregadores para carro elétrico",
     "procedimentos": "",
     "categoria": "cat_1786984994987_5x4c",
     "fases": [
@@ -508,6 +508,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1788523043059",
+        "timestamp": "2026-09-04T11:57:23.059Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 4"
+      },
       {
         "id": "hist_1787934624971",
         "timestamp": "2026-08-28T16:30:24.971Z",
@@ -624,7 +630,7 @@
       }
     ],
     "createdAt": "2026-08-24T16:53:05.859Z",
-    "updatedAt": "2026-08-28T16:30:24.971Z"
+    "updatedAt": "2026-09-04T11:57:23.059Z"
   },
   {
     "id": "proj_1787166456641_ou8bje",
