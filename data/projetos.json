@@ -13,7 +13,7 @@
       {
         "id": "fase_1788522929425_50g6",
         "nome": "Idéia e Elaboração",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
@@ -61,6 +61,12 @@
     "links": [],
     "historico": [
       {
+        "id": "hist_1788523114477",
+        "timestamp": "2026-09-04T11:58:34.477Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Idéia e Elaboração\": concluida"
+      },
+      {
         "id": "hist_1788523111285",
         "timestamp": "2026-09-04T11:58:31.285Z",
         "action": "Fase atualizada",
@@ -98,7 +104,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-04T11:58:31.285Z"
+    "updatedAt": "2026-09-04T11:58:34.477Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
