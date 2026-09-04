@@ -17,7 +17,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1788523097567_u9ii",
+            "ts": "2026-09-04T11:58:17.567Z",
+            "texto": "Idéia nova e automatica"
+          }
+        ],
         "anexos": []
       },
       {
@@ -80,7 +86,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-04T11:57:59.627Z"
+    "updatedAt": "2026-09-04T11:58:17.567Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
