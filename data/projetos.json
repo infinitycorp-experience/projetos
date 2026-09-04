@@ -902,6 +902,11 @@
             "id": "anot_1787139951980_o8w8",
             "ts": "2026-08-19T11:45:51.980Z",
             "texto": "Quote de um representante do cliente (nome, cargo, empresa) + foto, se possível"
+          },
+          {
+            "id": "anot_1788539864243_gn5b",
+            "ts": "2026-09-04T16:37:44.243Z",
+            "texto": "Jardel - APCD"
           }
         ],
         "anexos": []
@@ -1009,7 +1014,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-08-27T11:58:55.454Z"
+    "updatedAt": "2026-09-04T16:37:44.243Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
