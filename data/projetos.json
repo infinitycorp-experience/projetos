@@ -33,7 +33,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1788523126169_1xl4",
+            "ts": "2026-09-04T11:58:46.169Z",
+            "texto": "Criação de Site"
+          }
+        ],
         "anexos": []
       },
       {
@@ -110,7 +116,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-04T11:58:36.991Z"
+    "updatedAt": "2026-09-04T11:58:46.169Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
