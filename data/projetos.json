@@ -13,7 +13,7 @@
       {
         "id": "fase_1788522929425_50g6",
         "nome": "Idéia e Elaboração",
-        "status": "pulada",
+        "status": "em_andamento",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 1,
@@ -61,6 +61,12 @@
     "links": [],
     "historico": [
       {
+        "id": "hist_1788523111285",
+        "timestamp": "2026-09-04T11:58:31.285Z",
+        "action": "Fase atualizada",
+        "descricao": "Fase \"Idéia e Elaboração\": status pulada → em_andamento"
+      },
+      {
         "id": "hist_1788523102517",
         "timestamp": "2026-09-04T11:58:22.517Z",
         "action": "Fase pulada",
@@ -92,7 +98,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-04T11:58:22.517Z"
+    "updatedAt": "2026-09-04T11:58:31.285Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
