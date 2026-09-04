@@ -1,5 +1,70 @@
 [
   {
+    "id": "proj_1788522997008_a7f1d3",
+    "nome": "Portfólio",
+    "responsavel": "Tacio",
+    "status": "em_planejamento",
+    "dataInicio": "2026-09-04",
+    "dataFim": "2026-09-30",
+    "descricao": "Criação de Novo Portfólio",
+    "procedimentos": "",
+    "categoria": "cat_1786984994987_5x4c",
+    "fases": [
+      {
+        "id": "fase_1788522929425_50g6",
+        "nome": "Idéia e Elaboração",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788522946674_63ih",
+        "nome": "Site Automático",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788522967992_sqag",
+        "nome": "Aprovação",
+        "status": "pendente",
+        "responsavel": "Osmar",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1788522976369_mcr7",
+        "nome": "Inclusão de Conteúdo",
+        "status": "pendente",
+        "responsavel": "Tácio",
+        "descricao": "",
+        "ordem": 4,
+        "anotacoes": [],
+        "anexos": []
+      }
+    ],
+    "anexos": [],
+    "links": [],
+    "historico": [
+      {
+        "id": "hist_1788522997008",
+        "timestamp": "2026-09-04T11:56:37.008Z",
+        "action": "Projeto criado",
+        "descricao": "\"Portfólio\" com 4 fase(s)."
+      }
+    ],
+    "createdAt": "2026-09-04T11:56:37.008Z",
+    "updatedAt": "2026-09-04T11:56:37.008Z"
+  },
+  {
     "id": "proj_1788445966452_2ig24u",
     "nome": "Postagem 1º Conteúdo",
     "responsavel": "",
