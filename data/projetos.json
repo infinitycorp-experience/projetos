@@ -8,7 +8,7 @@
     "dataFim": "2026-09-30",
     "descricao": "Criação de Novo Portfólio",
     "procedimentos": "",
-    "categoria": "cat_1786984994987_5x4c",
+    "categoria": "cat_1788445746119_zn8g",
     "fases": [
       {
         "id": "fase_1788522929425_50g6",
@@ -55,6 +55,12 @@
     "links": [],
     "historico": [
       {
+        "id": "hist_1788523067559",
+        "timestamp": "2026-09-04T11:57:47.559Z",
+        "action": "Projeto movido",
+        "descricao": "Movido para a pasta \"Markenting\"."
+      },
+      {
         "id": "hist_1788522997008",
         "timestamp": "2026-09-04T11:56:37.008Z",
         "action": "Projeto criado",
@@ -62,7 +68,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-04T11:56:37.008Z"
+    "updatedAt": "2026-09-04T11:57:47.559Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
