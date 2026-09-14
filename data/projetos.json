@@ -29,7 +29,7 @@
       {
         "id": "fase_1788522946674_63ih",
         "nome": "Site Automático",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
@@ -66,6 +66,12 @@
     "anexos": [],
     "links": [],
     "historico": [
+      {
+        "id": "hist_1789411669738",
+        "timestamp": "2026-09-14T18:47:49.738Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Site Automático\": concluida"
+      },
       {
         "id": "hist_1788523116991",
         "timestamp": "2026-09-04T11:58:36.991Z",
@@ -116,7 +122,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-04T11:58:46.169Z"
+    "updatedAt": "2026-09-14T18:47:49.738Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
