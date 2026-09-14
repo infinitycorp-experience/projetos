@@ -67,11 +67,27 @@
         "ordem": 4,
         "anotacoes": [],
         "anexos": []
+      },
+      {
+        "id": "fase_1789411705790_j923",
+        "nome": "Inclusão Domínio",
+        "status": "pendente",
+        "responsavel": "Tacio/Otoniel",
+        "descricao": "",
+        "ordem": 5,
+        "anotacoes": [],
+        "anexos": []
       }
     ],
     "anexos": [],
     "links": [],
     "historico": [
+      {
+        "id": "hist_1789411740205",
+        "timestamp": "2026-09-14T18:49:00.205Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 5"
+      },
       {
         "id": "hist_1789411695930",
         "timestamp": "2026-09-14T18:48:15.930Z",
@@ -146,7 +162,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-14T18:48:15.930Z"
+    "updatedAt": "2026-09-14T18:49:00.205Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
