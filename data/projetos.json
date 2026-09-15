@@ -65,7 +65,13 @@
         "responsavel": "Tácio",
         "descricao": "",
         "ordem": 4,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1789485456997_2ks8",
+            "ts": "2026-09-15T15:17:36.997Z",
+            "texto": "incluindo produtos"
+          }
+        ],
         "anexos": []
       },
       {
@@ -218,7 +224,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-15T15:17:23.459Z"
+    "updatedAt": "2026-09-15T15:17:36.997Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
