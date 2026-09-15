@@ -91,7 +91,13 @@
         "responsavel": "Tácio",
         "descricao": "",
         "ordem": 6,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1789485418935_2lwt",
+            "ts": "2026-09-15T15:16:58.935Z",
+            "texto": "Idéia de cotação para chegar no email"
+          }
+        ],
         "anexos": []
       }
     ],
@@ -202,7 +208,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-15T15:16:39.379Z"
+    "updatedAt": "2026-09-15T15:16:58.935Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
