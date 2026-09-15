@@ -96,6 +96,11 @@
             "id": "anot_1789485418935_2lwt",
             "ts": "2026-09-15T15:16:58.935Z",
             "texto": "Idéia de cotação para chegar no email"
+          },
+          {
+            "id": "anot_1789485430158_us0b",
+            "ts": "2026-09-15T15:17:10.158Z",
+            "texto": "Implantando para teste"
           }
         ],
         "anexos": []
@@ -208,7 +213,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-15T15:16:58.935Z"
+    "updatedAt": "2026-09-15T15:17:10.159Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
