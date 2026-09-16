@@ -61,7 +61,7 @@
       {
         "id": "fase_1788522976369_mcr7",
         "nome": "Inclusão de Conteúdo",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tácio",
         "descricao": "",
         "ordem": 4,
@@ -135,6 +135,12 @@
     "anexos": [],
     "links": [],
     "historico": [
+      {
+        "id": "hist_1789568307457",
+        "timestamp": "2026-09-16T14:18:27.457Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Inclusão de Conteúdo\": concluida"
+      },
       {
         "id": "hist_1789568197451",
         "timestamp": "2026-09-16T14:16:37.451Z",
@@ -245,7 +251,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-16T14:18:24.379Z"
+    "updatedAt": "2026-09-16T14:18:27.457Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
