@@ -138,8 +138,21 @@
       }
     ],
     "anexos": [],
-    "links": [],
+    "links": [
+      {
+        "id": "link_1789568402540_ak2e",
+        "titulo": "Portfólio",
+        "url": "https://infinitycorp-experience.github.io/portfolio/",
+        "criadoEm": "2026-09-16T14:20:02.540Z"
+      }
+    ],
     "historico": [
+      {
+        "id": "hist_1789568405430",
+        "timestamp": "2026-09-16T14:20:05.430Z",
+        "action": "Projeto editado",
+        "descricao": "Status: em_andamento, Fases: 6"
+      },
       {
         "id": "hist_1789568307457",
         "timestamp": "2026-09-16T14:18:27.457Z",
@@ -256,7 +269,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-16T14:18:52.494Z"
+    "updatedAt": "2026-09-16T14:20:05.430Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
