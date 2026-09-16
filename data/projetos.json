@@ -96,6 +96,11 @@
             "id": "anot_1789485443459_t76o",
             "ts": "2026-09-15T15:17:23.459Z",
             "texto": "Aguardando retorno"
+          },
+          {
+            "id": "anot_1789568332493_df26",
+            "ts": "2026-09-16T14:18:52.493Z",
+            "texto": "Aguardando o Otoniel para a atualização do DNS"
           }
         ],
         "anexos": []
@@ -251,7 +256,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-16T14:18:27.457Z"
+    "updatedAt": "2026-09-16T14:18:52.494Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
