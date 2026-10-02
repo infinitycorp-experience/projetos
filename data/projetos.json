@@ -33,7 +33,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 2,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1790948721176_mqtu",
+            "ts": "2026-10-02T13:45:21.176Z",
+            "texto": "Sheets e Github"
+          }
+        ],
         "anexos": []
       },
       {
@@ -126,7 +132,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:45:07.064Z"
+    "updatedAt": "2026-10-02T13:45:21.176Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
