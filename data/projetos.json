@@ -1271,7 +1271,7 @@
     "id": "proj_1787139893024_n8e12m",
     "nome": "Case De Sucesso Portal",
     "responsavel": "Todos",
-    "status": "em_planejamento",
+    "status": "em_andamento",
     "dataInicio": "2026-08-18",
     "dataFim": "2026-09-10",
     "descricao": "Montar um case de sucesso para Portal",
@@ -1366,7 +1366,7 @@
       {
         "id": "fase_1787139963689_xqa7",
         "nome": "Autorização",
-        "status": "pendente",
+        "status": "em_andamento",
         "responsavel": "Tacio/Osmar",
         "descricao": "",
         "ordem": 6,
@@ -1434,6 +1434,18 @@
     ],
     "historico": [
       {
+        "id": "hist_1790949090107",
+        "timestamp": "2026-10-02T13:51:30.107Z",
+        "action": "Fase iniciada",
+        "descricao": "Fase \"Autorização\": em_andamento"
+      },
+      {
+        "id": "hist_1790949090107",
+        "timestamp": "2026-10-02T13:51:30.107Z",
+        "action": "Projeto em andamento",
+        "descricao": "Status alterado automaticamente (fase iniciada)."
+      },
+      {
         "id": "hist_1787831935454",
         "timestamp": "2026-08-27T11:58:55.454Z",
         "action": "Projeto editado",
@@ -1471,7 +1483,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-10-02T13:51:23.335Z"
+    "updatedAt": "2026-10-02T13:51:30.107Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
