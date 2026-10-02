@@ -81,7 +81,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 5,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1790948776843_9kjt",
+            "ts": "2026-10-02T13:46:16.843Z",
+            "texto": "Receber acesso via Whats"
+          }
+        ],
         "anexos": []
       },
       {
@@ -168,7 +174,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:46:01.561Z"
+    "updatedAt": "2026-10-02T13:46:16.843Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
