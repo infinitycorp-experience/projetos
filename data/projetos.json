@@ -1,5 +1,116 @@
 [
   {
+    "id": "proj_1790948657499_1cqxmv",
+    "nome": "Dash Portfólio",
+    "responsavel": "Tacio",
+    "status": "em_andamento",
+    "dataInicio": "2026-09-15",
+    "dataFim": "2026-10-10",
+    "descricao": "Controle de Acessos ao Portfólio",
+    "procedimentos": "",
+    "categoria": "cat_1786984972435_fmjc",
+    "fases": [
+      {
+        "id": "fase_1790948551530_51wk",
+        "nome": "Estrutura",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 1,
+        "anotacoes": [
+          {
+            "id": "anot_1790948695698_frrn",
+            "ts": "2026-10-02T13:44:55.698Z",
+            "texto": "Idéias, criação bruta"
+          }
+        ],
+        "anexos": []
+      },
+      {
+        "id": "fase_1790948567076_z8nx",
+        "nome": "Criação Base",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 2,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1790948581548_v5cr",
+        "nome": "Armazenamento",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 3,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1790948591310_n33w",
+        "nome": "Página WEB",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 4,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1790948604434_0zg9",
+        "nome": "Inclusão de Alertas",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 5,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1790948615180_rr0g",
+        "nome": "Link Personalizado",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 6,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1790948630825_8w6q",
+        "nome": "Dash Completa",
+        "status": "pendente",
+        "responsavel": "Tacio",
+        "descricao": "",
+        "ordem": 7,
+        "anotacoes": [],
+        "anexos": []
+      },
+      {
+        "id": "fase_1790948640882_q0et",
+        "nome": "Testes e Aprovação",
+        "status": "pendente",
+        "responsavel": "Tacio / Osmar",
+        "descricao": "",
+        "ordem": 8,
+        "anotacoes": [],
+        "anexos": []
+      }
+    ],
+    "anexos": [],
+    "links": [],
+    "historico": [
+      {
+        "id": "hist_1790948657499",
+        "timestamp": "2026-10-02T13:44:17.499Z",
+        "action": "Projeto criado",
+        "descricao": "\"Dash Portfólio\" com 8 fase(s)."
+      }
+    ],
+    "createdAt": "2026-10-02T13:44:17.499Z",
+    "updatedAt": "2026-10-02T13:44:55.699Z"
+  },
+  {
     "id": "proj_1788522997008_a7f1d3",
     "nome": "Portfólio",
     "responsavel": "Tacio",
