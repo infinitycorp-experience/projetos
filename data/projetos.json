@@ -3,12 +3,12 @@
     "id": "proj_1788522997008_a7f1d3",
     "nome": "Portfólio",
     "responsavel": "Tacio",
-    "status": "em_andamento",
+    "status": "concluido",
     "dataInicio": "2026-09-04",
     "dataFim": "2026-09-30",
     "descricao": "Criação de Novo Portfólio",
     "procedimentos": "",
-    "categoria": "cat_1786984994987_5x4c",
+    "categoria": "cat_concluidos",
     "fases": [
       {
         "id": "fase_1788522929425_50g6",
@@ -148,6 +148,12 @@
     ],
     "historico": [
       {
+        "id": "hist_1790948438279",
+        "timestamp": "2026-10-02T13:40:38.279Z",
+        "action": "Projeto concluído",
+        "descricao": "Marcado como concluído e movido para a pasta \"Concluídos\"."
+      },
+      {
         "id": "hist_1790948432755",
         "timestamp": "2026-10-02T13:40:32.755Z",
         "action": "Fase concluída",
@@ -275,7 +281,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-10-02T13:40:32.755Z"
+    "updatedAt": "2026-10-02T13:40:38.279Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
