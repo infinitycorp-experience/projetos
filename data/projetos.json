@@ -1375,6 +1375,11 @@
             "id": "anot_1787140003914_xz84",
             "ts": "2026-08-19T11:46:43.915Z",
             "texto": "Confirmação de que podemos usar nome, logo e dados no case publicado"
+          },
+          {
+            "id": "anot_1790949083334_8e3z",
+            "ts": "2026-10-02T13:51:23.334Z",
+            "texto": "APCD"
           }
         ],
         "anexos": []
@@ -1466,7 +1471,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-09-04T16:37:44.243Z"
+    "updatedAt": "2026-10-02T13:51:23.335Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
