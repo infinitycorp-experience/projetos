@@ -1366,7 +1366,7 @@
       {
         "id": "fase_1787139963689_xqa7",
         "nome": "Autorização",
-        "status": "em_andamento",
+        "status": "pausada",
         "responsavel": "Tacio/Osmar",
         "descricao": "",
         "ordem": 6,
@@ -1434,6 +1434,12 @@
     ],
     "historico": [
       {
+        "id": "hist_1790949098026",
+        "timestamp": "2026-10-02T13:51:38.026Z",
+        "action": "Fase pausada",
+        "descricao": "Fase \"Autorização\" foi pausada."
+      },
+      {
         "id": "hist_1790949090107",
         "timestamp": "2026-10-02T13:51:30.107Z",
         "action": "Fase iniciada",
@@ -1483,7 +1489,7 @@
       }
     ],
     "createdAt": "2026-08-19T11:44:53.024Z",
-    "updatedAt": "2026-10-02T13:51:30.107Z"
+    "updatedAt": "2026-10-02T13:51:38.026Z"
   },
   {
     "id": "proj_1786617800801_xrhfs2",
