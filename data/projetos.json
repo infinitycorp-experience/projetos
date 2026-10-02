@@ -82,7 +82,7 @@
       {
         "id": "fase_1789411705790_j923",
         "nome": "Inclusão Domínio",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio/Otoniel",
         "descricao": "",
         "ordem": 5,
@@ -147,6 +147,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1790948432755",
+        "timestamp": "2026-10-02T13:40:32.755Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Inclusão Domínio\": concluida"
+      },
       {
         "id": "hist_1789568405430",
         "timestamp": "2026-09-16T14:20:05.430Z",
@@ -269,7 +275,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-09-16T14:20:05.430Z"
+    "updatedAt": "2026-10-02T13:40:32.755Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
