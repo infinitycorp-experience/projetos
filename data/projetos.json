@@ -102,7 +102,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 6,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1790948814242_frt6",
+            "ts": "2026-10-02T13:46:54.242Z",
+            "texto": "Envio personalizado"
+          }
+        ],
         "anexos": []
       },
       {
@@ -197,7 +203,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:46:39.742Z"
+    "updatedAt": "2026-10-02T13:46:54.242Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
