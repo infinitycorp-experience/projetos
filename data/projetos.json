@@ -84,7 +84,7 @@
         "nome": "Inclusão Domínio",
         "status": "concluida",
         "responsavel": "Tacio/Otoniel",
-        "descricao": "",
+        "descricao": "Efetuado em 01/10",
         "ordem": 5,
         "anotacoes": [
           {
@@ -147,6 +147,12 @@
       }
     ],
     "historico": [
+      {
+        "id": "hist_1790948456773",
+        "timestamp": "2026-10-02T13:40:56.773Z",
+        "action": "Fase editada",
+        "descricao": "Fase \"Inclusão Domínio\" atualizada."
+      },
       {
         "id": "hist_1790948438279",
         "timestamp": "2026-10-02T13:40:38.279Z",
@@ -281,7 +287,7 @@
       }
     ],
     "createdAt": "2026-09-04T11:56:37.008Z",
-    "updatedAt": "2026-10-02T13:40:38.279Z"
+    "updatedAt": "2026-10-02T13:40:56.773Z"
   },
   {
     "id": "proj_1788445966452_2ig24u",
