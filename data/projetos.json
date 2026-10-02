@@ -61,7 +61,7 @@
       {
         "id": "fase_1790948591310_n33w",
         "nome": "Página WEB",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 4,
@@ -136,6 +136,12 @@
     "links": [],
     "historico": [
       {
+        "id": "hist_1790948848146",
+        "timestamp": "2026-10-02T13:47:28.146Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Página WEB\": concluida"
+      },
+      {
         "id": "hist_1790948819188",
         "timestamp": "2026-10-02T13:46:59.188Z",
         "action": "Fase concluída",
@@ -209,7 +215,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:46:59.188Z"
+    "updatedAt": "2026-10-02T13:47:28.146Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
