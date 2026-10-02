@@ -65,7 +65,13 @@
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 4,
-        "anotacoes": [],
+        "anotacoes": [
+          {
+            "id": "anot_1790948756964_x5y5",
+            "ts": "2026-10-02T13:45:56.964Z",
+            "texto": "Página Base Criada"
+          }
+        ],
         "anexos": []
       },
       {
@@ -156,7 +162,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:45:42.343Z"
+    "updatedAt": "2026-10-02T13:45:56.964Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
