@@ -45,7 +45,7 @@
       {
         "id": "fase_1790948581548_v5cr",
         "nome": "Armazenamento",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 3,
@@ -113,6 +113,12 @@
     "links": [],
     "historico": [
       {
+        "id": "hist_1790948742343",
+        "timestamp": "2026-10-02T13:45:42.343Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Armazenamento\": concluida"
+      },
+      {
         "id": "hist_1790948739704",
         "timestamp": "2026-10-02T13:45:39.704Z",
         "action": "Fase iniciada",
@@ -150,7 +156,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:45:39.704Z"
+    "updatedAt": "2026-10-02T13:45:42.343Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
