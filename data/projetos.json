@@ -77,7 +77,7 @@
       {
         "id": "fase_1790948604434_0zg9",
         "nome": "Inclusão de Alertas",
-        "status": "em_andamento",
+        "status": "concluida",
         "responsavel": "Tacio",
         "descricao": "",
         "ordem": 5,
@@ -129,6 +129,12 @@
     "anexos": [],
     "links": [],
     "historico": [
+      {
+        "id": "hist_1790948796526",
+        "timestamp": "2026-10-02T13:46:36.526Z",
+        "action": "Fase concluída",
+        "descricao": "Fase \"Inclusão de Alertas\": concluida"
+      },
       {
         "id": "hist_1790948780982",
         "timestamp": "2026-10-02T13:46:20.982Z",
@@ -185,7 +191,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:46:32.565Z"
+    "updatedAt": "2026-10-02T13:46:36.526Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
