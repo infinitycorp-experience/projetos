@@ -86,6 +86,11 @@
             "id": "anot_1790948776843_9kjt",
             "ts": "2026-10-02T13:46:16.843Z",
             "texto": "Receber acesso via Whats"
+          },
+          {
+            "id": "anot_1790948792564_4fdj",
+            "ts": "2026-10-02T13:46:32.564Z",
+            "texto": "Inclusão de 2 numeros"
           }
         ],
         "anexos": []
@@ -180,7 +185,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-02T13:46:20.982Z"
+    "updatedAt": "2026-10-02T13:46:32.565Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
