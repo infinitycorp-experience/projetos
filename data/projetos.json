@@ -3,12 +3,12 @@
     "id": "proj_1790948657499_1cqxmv",
     "nome": "Dash Portfólio",
     "responsavel": "Tacio",
-    "status": "em_andamento",
+    "status": "concluido",
     "dataInicio": "2026-09-15",
     "dataFim": "2026-10-10",
     "descricao": "Controle de Acessos ao Portfólio",
     "procedimentos": "",
-    "categoria": "cat_1786984972435_fmjc",
+    "categoria": "cat_concluidos",
     "fases": [
       {
         "id": "fase_1790948551530_51wk",
@@ -157,6 +157,12 @@
     "links": [],
     "historico": [
       {
+        "id": "hist_1791489501598",
+        "timestamp": "2026-10-08T19:58:21.598Z",
+        "action": "Projeto concluído",
+        "descricao": "Marcado como concluído e movido para a pasta \"Concluídos\"."
+      },
+      {
         "id": "hist_1791489498490",
         "timestamp": "2026-10-08T19:58:18.490Z",
         "action": "Fase concluída",
@@ -266,7 +272,7 @@
       }
     ],
     "createdAt": "2026-10-02T13:44:17.499Z",
-    "updatedAt": "2026-10-08T19:58:18.490Z"
+    "updatedAt": "2026-10-08T19:58:21.598Z"
   },
   {
     "id": "proj_1788522997008_a7f1d3",
